@@ -1,0 +1,433 @@
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Email" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <% if @edit_status == "on" %>
+          <%= f.text_field :email, :disabled => 'disabled' %>
+      <% else %>
+          <%= f.text_field :email %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Patient Email" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :patient_email %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label "First Name" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <% if @edit_status == "on" %>
+          <%= f.text_field :first_name, :disabled => 'disabled' %>
+      <% else %>
+          <%= f.text_field :first_name %>
+      <% end %>
+    </div>
+
+    <div class="form_left" style="height: 42px;">
+      <%= f.label "Primary Phone" %><span class="star">*</span><br/>
+      <span class="fontsize00">(XXX-XXX-XXXX)</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :primary_phone %>
+    </div>
+  </div>
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Account Number" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <% if @edit_status == "on" %>
+          <%= f.text_field :account_no, :disabled => 'disabled' %>
+      <% else %>
+          <%= f.text_field :account_no %>
+      <% end %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label "Last Name" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <% if @edit_status == "on" %>
+          <%= f.text_field :last_name, :disabled => 'disabled' %>
+      <% else %>
+          <%= f.text_field :last_name %>
+      <% end %>
+    </div>
+
+    <div class="form_left" style="height: 42px;">
+      <%= f.label :mobile_phone %><br/>
+      <span class="fontsize00">(XXX-XXX-XXXX)</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :mobile_phone %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Number of Delivery Cycle Days" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :no_delivery_cycle_days %>
+    </div>
+
+    <div class="form_left" style="height: 42px;">
+      <%= f.label "Delivery Date" %><span class="star">*</span><br/>
+      <span class="fontsize00">(YYYY-MM-DD)</span>
+    </div>
+    <div class="form_right">
+      <% if @user.delivery_date %>
+          <%= f.text_field :delivery_date, :value => format_date(@user.delivery_date) %>
+      <% else %>
+          <%= f.text_field :delivery_date %>
+      <% end %>
+    </div>
+  </div>
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Number of Reserved Days" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :no_reserved_days %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "Patient Primary Shipping Address" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :address1 %>
+    </div>
+
+    <div class="form_left">
+
+    </div>
+    <div class="form_right">
+      <%= f.text_field :address2 %>
+    </div>
+  </div>
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label "City" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :city %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label "State" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :state, :style => "width: 25px;" %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label "Postal Code" %><span class="star">*</span>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :postal_code, :style => "width: 100px;" %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label :caregiver_first_name %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :caregiver_first_name %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label :caregiver_phone %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :caregiver_phone %>
+    </div>
+  </div>
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label :caregiver_last_name %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :caregiver_last_name %>
+    </div>
+
+    <div class="form_left">
+      <%= f.label :caregiver_email %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :caregiver_email %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label :clinic_email %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :clinic_email %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<div id="form_panel">
+  <div class="form_column">
+    <div class="form_left" style="height: 42px;">
+      <%= f.label "JDE Reconciliation Date" %><span class="star">*</span><br/>
+      <span class="fontsize00">(YYYY-MM-DD)</span>
+    </div>
+    <div class="form_right">
+      <% if @user.JDE_reconciliation_date %>
+          <%= f.text_field :JDE_reconciliation_date, :value => format_date(@user.JDE_reconciliation_date) %>
+      <% else %>
+          <%= f.text_field :JDE_reconciliation_date %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<hr class="spliter"/>
+
+<p class="center"><span class="star">*</span> indicates required field</p>
+
+<br/>
+<br/>
+
+
+
+
+<!-- solution and supplies  -->
+<h2>Dialysis Solution</h2>
+<div class=solution_container>
+  <div class="solution_header_container">
+    <div class="solution_left_header row1">
+    </div>
+    <div class=solution_right_header>
+      <div class=solution_header_top>
+        1 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        1.5 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        2 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        2.5 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        3 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        5 Liter<br/>(boxes)
+      </div>
+      <div class=solution_header_top>
+        6 Liter<br/>(boxes)
+      </div>
+      <% 7.times do %>
+          <div class=solution_header_bottom>
+            inc?
+          </div>
+          <div class=solution_header_bottom>
+            Line Max
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= hidden_field_tag "user[solution_ids][]", "" %>
+
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Yellow", :solution_type => "Ultrabag", :row_style => "row2"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Green", :solution_type => "Ultrabag", :row_style => "row3"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Red", :solution_type => "Ultrabag", :row_style => "row2"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Purple", :solution_type => "Ultrabag", :row_style => "row3"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Yellow", :solution_type => "Cycler", :row_style => "row2"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Green", :solution_type => "Cycler", :row_style => "row3"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Red", :solution_type => "Cycler", :row_style => "row2"} %>
+  <%= render :partial => 'users/solution_form', :locals => {:color => "Purple", :solution_type => "Cycler", :row_style => "row3"} %>
+
+</div>
+
+
+
+<br/><br/>
+<h2>APD Supplies</h2>
+<div class=solution_row>
+  <div class=solution_header_name>
+    Product Name
+  </div>
+  <div class=solution_header_top>
+    Included?
+  </div>
+  <div class=solution_header_top>
+    Line Max
+  </div>
+  <div class=solution_header_top>
+    Individual Pieces per Cycle
+  </div>
+</div>
+<%= hidden_field_tag "user[apd_supply_ids][]", "" %>
+<% for apd_supply in ApdSupply.find(:all) %>
+    <div class=solution_row>
+      <% alternate = cycle("row2", "row3") %>
+      <div class="solution_row_name  <%= alternate -%>">
+        <%= apd_supply.name %>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <div class="checkbox_padding">
+          <%= check_box_tag "user[apd_supply_ids][]",
+                            apd_supply.id, @user.include_apd_supply?(apd_supply) %>
+          <%= hidden_field_tag "user[apd_supply_ids_all][]", apd_supply.id %>
+        </div>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <% restore_val = @user.restore_apd_supplies_line_max(apd_supply.id) %>
+        <% if restore_val %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", restore_val, :size => 1 %>
+        <% elsif @user.apd_supplies.include?(apd_supply) %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]",
+                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max, :size => 1 %>
+
+        <% else %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", "", :size => 1 %>
+        <% end %>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <% restore_val = @user.restore_apd_supplies_usage(apd_supply.id) %>
+        <% if restore_val %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1 %>
+        <% elsif @user.apd_supplies.include?(apd_supply) %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]",
+                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).units_per_cycle, :size => 1 %>
+
+        <% else %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", "", :size => 1 %>
+        <% end %>
+      </div>
+    </div>
+<% end %>
+</p>
+
+
+
+<br/><br/>
+<h2>CAPD Supplies</h2>
+<div class=solution_row>
+  <div class=solution_header_name>
+    Product Name
+  </div>
+  <div class=solution_header_top>
+    Included?
+  </div>
+  <div class=solution_header_top>
+    Line Max
+  </div>
+  <div class=solution_header_top>
+    Individual Pieces per Cycle
+  </div>
+</div>
+<%= hidden_field_tag "user[capd_supply_ids][]", "" %>
+<% for capd_supply in CapdSupply.find(:all) %>
+    <div class=solution_row>
+      <% alternate = cycle("row2", "row3") %>
+      <div class="solution_row_name <%= alternate -%>">
+        <%= capd_supply.name %>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <div class="checkbox_padding">
+          <%= check_box_tag "user[capd_supply_ids][]",
+                            capd_supply.id, @user.include_capd_supply?(capd_supply) %>
+          <%= hidden_field_tag "user[capd_supply_ids_all][]", capd_supply.id %>
+        </div>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <% restore_val = @user.restore_capd_supplies_line_max(capd_supply.id) %>
+        <% if restore_val %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", restore_val, :size => 1 %>
+        <% elsif @user.capd_supplies.include?(capd_supply) %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]",
+                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max, :size => 1 %>
+
+        <% else %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", "", :size => 1 %>
+        <% end %>
+      </div>
+      <div class="solution_row_element2 <%= alternate -%>">
+        <% restore_val = @user.restore_capd_supplies_usage(capd_supply.id) %>
+        <% if restore_val %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1 %>
+        <% elsif @user.capd_supplies.include?(capd_supply) %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]",
+                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).units_per_cycle, :size => 1 %>
+
+        <% else %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", "", :size => 1 %>
+        <% end %>
+      </div>
+    </div>
+<% end %>
+</p>
+
+
+
+<br/><br/>
+<h2>Ancillary Supplies</h2>
+<div class=solution_row>
+  <div class="solution_header_name cell_width_2">
+    Product Name
+  </div>
+  <div class=solution_header_top>
+    Included?
+  </div>
+</div>
+<%= hidden_field_tag "user[ancillary_supply_ids][]", "" %>
+<% for ancillary_supply in AncillarySupply.find(:all) %>
+    <div class=solution_row>
+      <% alternate = cycle("row2", "row3") %>
+      <div class="solution_row_name cell_width_1 <%= alternate %>">
+        <%= ancillary_supply.name %>
+      </div>
+      <div class="solution_row_element2 <%= alternate %>">
+        <div class="checkbox_padding">
+          <%= check_box_tag "user[ancillary_supply_ids][]",
+                            ancillary_supply.id, @user.include_ancillary_supply?(ancillary_supply) %>
+          <%= hidden_field_tag "user[ancillary_supply_ids_all][]", ancillary_supply.id %>
+        </div>
+      </div>
+    </div>
+<% end %>
+</p>
+
+<br/><br/>
+

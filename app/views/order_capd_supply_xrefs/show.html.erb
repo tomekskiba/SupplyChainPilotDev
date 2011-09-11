@@ -1,0 +1,20 @@
+<% title "Order Capd Supply Xref" %>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_capd_supply_xref.order_id %>
+</p>
+<p>
+  <strong>Capd Supply:</strong>
+  <%= @order_capd_supply_xref.capd_supply_id %>
+</p>
+<p>
+  <strong>On Hand:</strong>
+  <%= @order_capd_supply_xref.on_hand %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_order_capd_supply_xref_path(@order_capd_supply_xref) %> |
+  <%= link_to "Destroy", @order_capd_supply_xref, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", order_capd_supply_xrefs_path %>
+</p>

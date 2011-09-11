@@ -1,0 +1,2 @@
+module CapdSuppliesHelper
+end

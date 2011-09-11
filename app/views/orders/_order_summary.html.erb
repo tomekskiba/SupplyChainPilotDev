@@ -1,0 +1,145 @@
+<% if @order.order_solution_xrefs.count > 0 %>
+    <p class="clear"></p>
+    <p>&nbsp;</p>
+    <h3 class="h3_style">Dialysis Solutions</h3>
+    <% for solution in Solution.all %>
+        <% if @user.solutions.include?(solution) %>
+            <% if @order.solutions.include?(solution) %>
+                <div class="margin_left4 left2">
+                <div class="order_summary top1">
+                  <strong class="fontsize0"><%= solution.name %></strong>
+                </div>
+                <div>
+                  <div class="order_summary">
+                    <div class="order_summary2 color2">on Hand (boxes)</div>
+                    <div class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand %></div>
+                  </div>
+                  <div class="order_summary">
+                    <div class="order_summary2 color2">Usage per Week (boxes)</div>
+                    <div class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week %></div>
+                  </div>
+                  <div class="order_summary">
+                    <% on_hand_at_delivery = @order.calculate_solutions(solution.id)["on_hand_at_delivery"] %>
+                    <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
+
+                    <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                    <div class="order_summary3 color2">
+                      <strong>: <%= projected_order_quantity %>   <%#= on_hand_at_delivery %></strong>
+                    </div>
+                    <div class="order_summary4 color2">
+                      (Line Max - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)
+                    </div>
+                  </div>
+                  <% if on_hand_at_delivery < 0 %>
+                      <div class="order_summary">
+                        <p class="alert">
+                          <%= $OUT_OF_SUPPLIES_ALERT %>
+                        </p>
+                      </div>
+                  <% end %>
+                </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+<% if @order.order_apd_supply_xrefs.count > 0 %>
+    <p class="clear"></p>
+    <p>&nbsp;</p>
+    <h3 class="h3_style">APD Supplies</h3>
+    <% for apd_supply in ApdSupply.all %>
+        <% if @user.apd_supplies.include?(apd_supply) %>
+            <% if @order.apd_supplies.include?(apd_supply) %>
+                <div class="margin_left4 left2">
+                  <div class="order_summary top1">
+                    <strong class="fontsize0"><%= apd_supply.name %></strong>
+                  </div>
+                  <div>
+                    <div class="order_summary">
+                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary3 color2">: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand %></div>
+                    </div>
+                    <div class="order_summary">
+                      <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(apd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_apd_supplies(apd_supply.id)["projected_order_quantity"] %>
+
+                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary3 color2">
+                        <strong>: <%= projected_order_quantity %>  <%#= on_hand_at_delivery %></strong>
+                      </div>
+                      <div class="order_summary4 color2">
+                        (Line Max - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)
+                      </div>
+                    </div>
+                    <% if on_hand_at_delivery < 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+<% if @order.order_capd_supply_xrefs.count > 0 %>
+    <p class="clear"></p>
+    <p>&nbsp;</p>
+    <h3 class="h3_style">CAPD Supplies</h3>
+    <% for capd_supply in CapdSupply.all %>
+        <% if @user.capd_supplies.include?(capd_supply) %>
+            <% if @order.capd_supplies.include?(capd_supply) %>
+                <div class="margin_left4 left2">
+                  <div class="order_summary top1">
+                    <strong class="fontsize0"><%= capd_supply.name %></strong>
+                  </div>
+                  <div>
+                    <div class="order_summary">
+                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary3 color2">: <%= @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand %></div>
+                    </div>
+                    <div class="order_summary">
+                      <% on_hand_at_delivery = @order.order_quantity_for_capd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_capd_supplies(capd_supply.id)["projected_order_quantity"] %>
+
+                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary3 color2">
+                        <strong>: <%= projected_order_quantity %></strong>
+                      </div>
+                      <div class="order_summary4 color2">
+                        (Line Max - <%= @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max %>)
+                      </div>
+                    </div>
+                    <% if on_hand_at_delivery < 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+
+<% if @order.order_ancillary_supply_xrefs.count > 0 %>
+    <p class="clear"></p>
+    <p>&nbsp;</p>
+    <h3 class="h3_style">Ancillary Supplies</h3>
+    <% for ancillary_supply in AncillarySupply.all %>
+        <% if @user.ancillary_supplies.include?(ancillary_supply) %>
+            <% if @order.ancillary_supplies.include?(ancillary_supply) %>
+                <div class="order_summary margin_left4">
+                  <strong class="fontsize0"><%= ancillary_supply.name %></strong>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

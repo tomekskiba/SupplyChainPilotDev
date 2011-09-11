@@ -1,0 +1,16 @@
+<% title "Ancillary Supply" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ancillary_supply.name %>
+</p>
+<p>
+  <strong>Picture:</strong>
+  <%= @ancillary_supply.picture %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ancillary_supply_path(@ancillary_supply) %> |
+  <%= link_to "Destroy", @ancillary_supply, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ancillary_supplies_path %>
+</p>

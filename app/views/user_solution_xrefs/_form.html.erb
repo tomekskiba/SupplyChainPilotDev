@@ -1,0 +1,16 @@
+<%= form_for @user_solution_xref do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :solution_id %><br />
+    <%= f.text_field :solution_id %>
+  </p>
+  <p>
+    <%= f.label :line_max %><br />
+    <%= f.text_field :line_max %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,24 @@
+<% title "Solution" %>
+
+<p>
+  <strong>Size:</strong>
+  <%= @solution.size %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%= @solution.color %>
+</p>
+<p>
+  <strong>Solution Type:</strong>
+  <%= @solution.solution_type %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @solution.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_solution_path(@solution) %> |
+  <%= link_to "Destroy", @solution, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", solutions_path %>
+</p>

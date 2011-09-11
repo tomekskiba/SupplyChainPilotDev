@@ -1,0 +1,41 @@
+<%# title "Users" %>
+
+<p><%= link_to "Create New Patient", new_user_registration_path %></p>
+
+<table id="data_table">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Primary Phone</th>
+    <th>Account No</th>
+    <th>Confirmation request date</th>
+    <th>JDE Reconciliation Date</th>
+    <th>Is User confirmed?</th>
+  </tr>
+  <%
+     for user in @users
+  %>
+    <tr style="background-color:<%#= cycle("red","white") %>">
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.primary_phone %></td>
+      <td><%= user.account_no %></td>
+      <td><%= format_date(user.confirmation_sent_at) %></td>
+      <td><%= format_date(user.JDE_reconciliation_date) %></td>
+      <td>
+      <%=
+         if user.confirmed_at.nil?
+             'No'
+         else
+             'Yes'
+         end
+      %>
+      </td>
+      <td><%= link_to "Edit", edit_user_path(user) %></td>
+      <td><%= link_to "Delete", user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate %>

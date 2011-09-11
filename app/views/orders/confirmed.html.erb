@@ -1,0 +1,34 @@
+<br/>
+<div id="progress_bar">
+  <div class="progress_bar_cell">
+    <p>1) Order</p>
+  </div>
+  <div class="progress_bar_cell">
+    <p>2) Order Summary Header</p>
+  </div>
+  <div class="progress_bar_cell active">
+    <p>3) Order Confirmation</p>
+  </div>
+</div>
+
+<div id="content" class="left top5">
+  <h2>Thank you for submitting your order.</h2>
+
+  <p>You will receive an order confirmation in your email within 1 business day.</p>
+
+  <p>The order confirmation email will include the following:</p>
+  <ul>
+    <li>Order confirmation number.</li>
+    <li>Projected delivery date.</li>
+    <li>Delivery address for this order.</li>
+    <li>Next order due date.</li>
+    <li>Supply Storage instructions.</li>
+  </ul>
+  <p>For additional questions or order changes call Baxter Home Services : 1-800-284-4060</p>
+
+  <br/>
+  <p>
+    <%#= link_to "(Logout)", destroy_user_session_path, :method => :delete %>
+    <%= button("Sign out", destroy_user_session_path, "button_green") %>
+  </p>
+</div>

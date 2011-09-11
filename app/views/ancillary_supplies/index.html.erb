@@ -1,0 +1,19 @@
+<% title "Ancillary Supplies" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Picture</th>
+  </tr>
+  <% for ancillary_supply in @ancillary_supplies %>
+    <tr>
+      <td><%= ancillary_supply.name %></td>
+      <td><%= ancillary_supply.picture %></td>
+      <td><%= link_to "Show", ancillary_supply %></td>
+      <td><%= link_to "Edit", edit_ancillary_supply_path(ancillary_supply) %></td>
+      <td><%= link_to "Destroy", ancillary_supply, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ancillary Supply", new_ancillary_supply_path %></p>

@@ -1,0 +1,32 @@
+<%# @title = 'Account Activation' %>
+
+<%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f| %>
+    <%= devise_error_messages! %>
+    <fieldset>
+      <legend><span class="color1"> Account Activation
+        <% if resource.email %> for <%= resource.email %><% end %></span></legend>
+
+      <% if @requires_password %>
+          <p class="clear color1 fontsize4"><%= f.label :password, 'Choose a Password:' %></p>
+
+          <div class="login_input">
+            <%= f.password_field :password, :class => "login_input_box" %>
+          </div>
+
+          <br/>
+
+          <p class="clear color1 fontsize4"><%= f.label :password_confirmation, 'Password Confirmation:' %></p>
+
+          <div class="login_input">
+            <%= f.password_field :password_confirmation, :class => "login_input_box" %>
+          </div>
+
+      <% end %>
+
+      <br/>
+      <%= hidden_field_tag :confirmation_token, @confirmation_token %>
+      <p><%= f.submit "Activate", :class => 'login_submit2', :style => 'width: 120px;' %></p>
+    </fieldset>
+<% end %>
+
+<%= javascript_tag('Form.focusFirstElement("activation-form");') %>

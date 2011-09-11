@@ -1,0 +1,11 @@
+one:
+  order_id: 1
+  solution_id: 1
+  on_hand: 1
+  usage_per_week: 1
+
+two:
+  order_id: 1
+  solution_id: 1
+  on_hand: 1
+  usage_per_week: 1

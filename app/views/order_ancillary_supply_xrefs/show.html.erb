@@ -1,0 +1,16 @@
+<% title "Order Ancillary Supply Xref" %>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_ancillary_supply_xref.order_id %>
+</p>
+<p>
+  <strong>Ancillary Supply:</strong>
+  <%= @order_ancillary_supply_xref.ancillary_supply_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_order_ancillary_supply_xref_path(@order_ancillary_supply_xref) %> |
+  <%= link_to "Destroy", @order_ancillary_supply_xref, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", order_ancillary_supply_xrefs_path %>
+</p>

@@ -1,0 +1,24 @@
+<% title "Order Solution Xref" %>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_solution_xref.order_id %>
+</p>
+<p>
+  <strong>Solution:</strong>
+  <%= @order_solution_xref.solution_id %>
+</p>
+<p>
+  <strong>On Hand:</strong>
+  <%= @order_solution_xref.on_hand %>
+</p>
+<p>
+  <strong>Usage Per Week:</strong>
+  <%= @order_solution_xref.usage_per_week %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_order_solution_xref_path(@order_solution_xref) %> |
+  <%= link_to "Destroy", @order_solution_xref, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", order_solution_xrefs_path %>
+</p>

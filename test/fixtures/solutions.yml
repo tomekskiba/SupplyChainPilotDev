@@ -1,0 +1,11 @@
+one:
+  size: 9.99
+  color: MyString
+  solution_type: MyString
+  name: MyString
+
+two:
+  size: 9.99
+  color: MyString
+  solution_type: MyString
+  name: MyString

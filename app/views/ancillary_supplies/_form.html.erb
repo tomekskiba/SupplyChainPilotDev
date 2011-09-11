@@ -1,0 +1,12 @@
+<%= form_for @ancillary_supply do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :picture %><br />
+    <%= f.text_field :picture %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

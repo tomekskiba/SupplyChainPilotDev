@@ -1,0 +1,21 @@
+<% title "Orders" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Submitted Flag</th>
+    <th>Opt In</th>
+  </tr>
+  <% for order in @orders %>
+    <tr>
+      <td><%= order.user_id %></td>
+      <td><%= order.submitted_flag %></td>
+      <td><%= order.opt_in %></td>
+      <td><%= link_to "Show", order %></td>
+      <td><%= link_to "Edit", edit_order_path(order) %></td>
+      <td><%= link_to "Destroy", order, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order", new_order_path %></p>

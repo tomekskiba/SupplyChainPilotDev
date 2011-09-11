@@ -1,0 +1,19 @@
+<% title "User Ancillary Supply Xrefs" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Ancillary Supply</th>
+  </tr>
+  <% for user_ancillary_supply_xref in @user_ancillary_supply_xrefs %>
+    <tr>
+      <td><%= user_ancillary_supply_xref.user_id %></td>
+      <td><%= user_ancillary_supply_xref.ancillary_supply_id %></td>
+      <td><%= link_to "Show", user_ancillary_supply_xref %></td>
+      <td><%= link_to "Edit", edit_user_ancillary_supply_xref_path(user_ancillary_supply_xref) %></td>
+      <td><%= link_to "Destroy", user_ancillary_supply_xref, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New User Ancillary Supply Xref", new_user_ancillary_supply_xref_path %></p>

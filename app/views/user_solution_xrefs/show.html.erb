@@ -1,0 +1,20 @@
+<% title "User Solution Xref" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_solution_xref.user_id %>
+</p>
+<p>
+  <strong>Solution:</strong>
+  <%= @user_solution_xref.solution_id %>
+</p>
+<p>
+  <strong>Line Max:</strong>
+  <%= @user_solution_xref.line_max %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_user_solution_xref_path(@user_solution_xref) %> |
+  <%= link_to "Destroy", @user_solution_xref, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", user_solution_xrefs_path %>
+</p>

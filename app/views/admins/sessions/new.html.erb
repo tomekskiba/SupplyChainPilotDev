@@ -1,0 +1,39 @@
+<div class="login_window2_1">
+
+  <%- if !notice.nil? -%>
+      <p class="notice"><%= notice %></p>
+  <%- end -%>
+  <%- if !alert.nil? -%>
+      <p class="alert"><%= alert %></p>
+  <%- end -%>
+
+</div>
+
+<h2 class="color1">Administrator Sign in</h2>
+
+<div>
+  <p class="clear2 color1 fontsize4 width28 login_input2" style="margin-right: 23px;">Email</p>
+
+  <p class="clear2 color1 fontsize4 login_input2 width28">Password</p>
+</div>
+
+<div class="login_window2_2">
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+      <div class="login_input login_input2">
+        <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off" %>
+      </div>
+
+      <div class="login_input login_input2">
+        <%= f.password_field :password, :class => "login_input_box", :autocomplete => "off" %>
+      </div>
+
+      <p class="left"><%= f.submit "", :class => "login_submit" %></p>
+  <% end %>
+
+</div>
+
+<div class="login_window2_3">
+  <%= render :partial => "admins/shared/links" %>
+</div>

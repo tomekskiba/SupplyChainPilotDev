@@ -1,0 +1,289 @@
+<br/>
+<div id="progress_bar">
+  <div class="progress_bar_cell active">
+    <p>1) Order</p>
+  </div>
+  <div class="progress_bar_cell">
+    <p>2) Order Summary Header</p>
+  </div>
+  <div class="progress_bar_cell">
+    <p>3) Order Confirmation</p>
+  </div>
+</div>
+
+<div id="order_info">
+  <div class="info_both info_left">
+    Your shipping address on our file for online orders is:<br/>
+    <%= current_user.address1 %>
+    <% if !current_user.address2.blank? %>
+        <%= ", "+ current_user.address2 %>
+    <% end %>
+    <br/>
+    <%= current_user.city %> <%= current_user.state %><%= ", "+current_user.postal_code %>
+    <br/>
+    <br/><br/>
+    If you wish to change this address call your HomeCare Service Representative @ 1-800-284-4060.
+
+  </div>
+  <div class="info_both info_right">
+    <p>Instructions:</p>
+    <ul>
+      <li>If you wish to print a paper inventory form to write your supply information down
+        <a href="/docs/English-Example-HP-Inventory-Form.pdf" target="_blank"><strong>click here</strong></a></li>
+      <li>Orders placed online will default to your primary shipping address. To change the address refer to the contact
+        information below.
+      </li>
+      <li>Please contact Baxter @ 1-800-284-4060 or email if you wish to:</li>
+      <ul>
+        <li class="alpha">Change your shipping address</li>
+        <li class="alpha">Change anything on this order</li>
+        <li class="alpha">Order an item not shown but included in your prescription</li>
+      </ul>
+    </ul>
+    <p>If you wish to order an item not shown but included in your prescription please send an email request to email or
+      call Baxter @ 1-800-284-4060. </p>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
+
+<p>
+  Enter Date the Supplies are Actually Counted<span class="star">*</span>
+  <br/>
+  <% if @order.supplies_counted_at.nil? %>
+      <%= f.text_field :supplies_counted_at %>
+  <% else %>
+      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at) %>
+  <% end %>
+</p>
+
+<br/>
+
+<!-- solution and supplies  -->
+<h3>Dialysis Solution</h3>
+<div id="tbl" class="tbl_width0">
+  <div class="tbl_width0">
+    <div class="tbl_width3 tbl_height1 tbl_bg1 left2"></div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>1L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>1.5L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>2L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>2.5L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>3L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>5L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>6L</p>
+    </div>
+    <div class="tbl_width1 tbl_height1 tbl_common1">
+      <p>Boxes</p>
+    </div>
+
+    <div class="tbl_width3 tbl_height3 left2"></div>
+    <% 7.times do %>
+        <div class="tbl_width1 tbl_height3 tbl_common2">
+          <p>On Hand </p>
+        </div>
+        <div class="tbl_width1 tbl_height3 tbl_common2">
+          <p>Usage/<br/>Week</p>
+        </div>
+    <% end %>
+  </div>
+
+  <%= hidden_field_tag "order[solution_ids][]", "" %>
+
+  <% @solution_template = @user.solutions %>
+
+  <%= render :partial => 'solution_form', :locals => {:color => "Yellow", :solution_type => "Ultrabag", :row_style => "row4"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Green", :solution_type => "Ultrabag", :row_style => "row5"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Red", :solution_type => "Ultrabag", :row_style => "row4"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Purple", :solution_type => "Ultrabag", :row_style => "row5"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Yellow", :solution_type => "Cycler", :row_style => "row4"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Green", :solution_type => "Cycler", :row_style => "row5"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Red", :solution_type => "Cycler", :row_style => "row4"} %>
+  <%= render :partial => 'solution_form', :locals => {:color => "Purple", :solution_type => "Cycler", :row_style => "row5"} %>
+
+</div>
+
+
+<% if @user.apd_supplies.count > 0 %>
+    <p class="clear"></p>
+    <br/><br/><br/>
+    <h3>APD Supplies</h3>
+    <div id="tbl" class="tbl_width5">
+      <div class="tbl_width5">
+        <div class="tbl_width4 tbl_height3 tbl_common1">
+          <p>Product Name</p>
+        </div>
+        <div class="tbl_width2 tbl_height3 tbl_common1">
+          <p>Individual Pieces<br/>on Hand</p>
+        </div>
+      </div>
+      <%= hidden_field_tag "order[apd_supply_ids][]", "" %>
+
+      <% for apd_supply in ApdSupply.find(:all) %>
+
+          <% if @user.apd_supplies.include?(apd_supply) %>
+              <div class="tbl_width5">
+                <%- alternate = cycle("row4", "row5") -%>
+                <div class="tbl_width4 tbl_height3 tbl_common3 <%= alternate -%>">
+                  <p class="p2 left2"><%= apd_supply.name %></p>
+                  <% pic = apd_supply.picture %>
+                  <% unless pic.nil? || pic.blank? %>
+                      <div class="button_blue right button_width3 top0">
+                        <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= apd_supply.name %>">See
+                          Photo</a>
+                      </div>
+                  <% end %>
+                </div>
+                <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
+                  <p class="p3">
+                    <% restore_val = @order.restore_apd_supplies_on_hand(@order.get_apd_supply_ids_array_index(apd_supply.id)) %>
+                    <% if restore_val %>
+                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
+                    <% elsif @order.apd_supplies.include?(apd_supply) %>
+                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]",
+                                           @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand, :size => 1 %>
+                    <% else %>
+                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", "", :size => 1 %>
+                    <% end %>
+                    <%= hidden_field_tag "order[apd_supply_ids][]", apd_supply.id %>
+                  </p>
+                </div>
+              </div>
+          <% end %>
+
+      <% end %>
+    </div>
+<% end %>
+
+
+<% if @user.capd_supplies.count > 0 %>
+    <p class="clear"></p>
+    <br/><br/><br/>
+    <h3>CAPD Supplies</h3>
+    <div id="tbl" class="tbl_width5">
+      <div class="tbl_width5">
+        <div class="tbl_width4 tbl_height3 tbl_common1">
+          <p>Product Name</p>
+        </div>
+        <div class="tbl_width2 tbl_height3 tbl_common1">
+          <p>Individual Pieces<br/>on Hand</p>
+        </div>
+      </div>
+      <%= hidden_field_tag "order[capd_supply_ids][]", "" %>
+      <% for capd_supply in CapdSupply.find(:all) %>
+
+          <% if @user.capd_supplies.include?(capd_supply) %>
+              <div class="tbl_width5">
+                <% alternate = cycle("row44", "row55") %>
+                <div class="tbl_width4 tbl_height3 tbl_common3  <%= alternate -%>">
+                  <p class="p2 left2"><%= capd_supply.name %></p>
+                  <% pic = capd_supply.picture %>
+                  <% unless pic.nil? || pic.blank? %>
+                      <div class="button_blue right button_width3 top0">
+                        <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
+                          Photo</a>
+                      </div>
+                  <% end %>
+                </div>
+                <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
+                  <p class="p3">
+                    <% restore_val = @order.restore_capd_supplies_on_hand(@order.get_capd_supply_ids_array_index(capd_supply.id)) %>
+                    <% if restore_val %>
+                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
+                    <% elsif @order.capd_supplies.include?(capd_supply) %>
+                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]",
+                                           @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand, :size => 1 %>
+                    <% else %>
+                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", "", :size => 1 %>
+                    <% end %>
+                    <%= hidden_field_tag "order[capd_supply_ids][]", capd_supply.id %>
+                  </p>
+                </div>
+              </div>
+          <% end %>
+
+      <% end %>
+    </div>
+<% end %>
+
+
+<% if @user.ancillary_supplies.count > 0 %>
+    <p class="clear"></p>
+    <br/><br/><br/>
+    <h3>Ancillary Supplies</h3>
+    <div id="tbl" class="tbl_width7">
+      <div class="tbl_width7">
+        <div class="tbl_width6 tbl_height3 tbl_common1">
+          <p>Product Name</p>
+        </div>
+        <div class="tbl_width2 tbl_height3 tbl_common1">
+          <p>Reorder Supply</p>
+        </div>
+      </div>
+      <%= hidden_field_tag "order[ancillary_supply_ids][]", "" %>
+      <% for ancillary_supply in AncillarySupply.find(:all) %>
+          <% if @user.ancillary_supplies.include?(ancillary_supply) %>
+
+              <div class="tbl_width7">
+                <% alternate = cycle("row444", "row555") %>
+                <div class="tbl_width6 tbl_height3 tbl_common3 <%= alternate -%>">
+                  <p class="p2 left2"><%= ancillary_supply.name %></p>
+                  <% pic = ancillary_supply.picture %>
+                  <% unless pic.nil? || pic.blank? %>
+                      <div class="button_blue right button_width3 top0">
+                        <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= ancillary_supply.name %>">See
+                          Photo</a>
+                      </div>
+                  <% end %>
+                </div>
+                <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate %>">
+                  <div class="checkbox_padding2">
+
+                    <%= check_box_tag "order[ancillary_supply_ids][]",
+                                      ancillary_supply.id, @order.include_ancillary_supply?(ancillary_supply) %>
+
+                  </div>
+                </div>
+              </div>
+
+          <% end %>
+      <% end %>
+    </div>
+<% end %>
+
+<br/><br/>
+

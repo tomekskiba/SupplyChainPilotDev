@@ -1,0 +1,23 @@
+<% title "User Capd Supply Xrefs" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Capd Supply</th>
+    <th>Line Max</th>
+    <th>Units Per Cycle</th>
+  </tr>
+  <% for user_capd_supply_xref in @user_capd_supply_xrefs %>
+    <tr>
+      <td><%= user_capd_supply_xref.user_id %></td>
+      <td><%= user_capd_supply_xref.capd_supply_id %></td>
+      <td><%= user_capd_supply_xref.line_max %></td>
+      <td><%= user_capd_supply_xref.units_per_cycle %></td>
+      <td><%= link_to "Show", user_capd_supply_xref %></td>
+      <td><%= link_to "Edit", edit_user_capd_supply_xref_path(user_capd_supply_xref) %></td>
+      <td><%= link_to "Destroy", user_capd_supply_xref, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New User Capd Supply Xref", new_user_capd_supply_xref_path %></p>

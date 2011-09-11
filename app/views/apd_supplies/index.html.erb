@@ -1,0 +1,19 @@
+<% title "Apd Supplies" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Picture</th>
+  </tr>
+  <% for apd_supply in @apd_supplies %>
+    <tr>
+      <td><%= apd_supply.name %></td>
+      <td><%= apd_supply.picture %></td>
+      <td><%= link_to "Show", apd_supply %></td>
+      <td><%= link_to "Edit", edit_apd_supply_path(apd_supply) %></td>
+      <td><%= link_to "Destroy", apd_supply, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Apd Supply", new_apd_supply_path %></p>

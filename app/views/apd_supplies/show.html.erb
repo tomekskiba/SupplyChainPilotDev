@@ -1,0 +1,16 @@
+<% title "Apd Supply" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @apd_supply.name %>
+</p>
+<p>
+  <strong>Picture:</strong>
+  <%= @apd_supply.picture %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_apd_supply_path(@apd_supply) %> |
+  <%= link_to "Destroy", @apd_supply, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", apd_supplies_path %>
+</p>

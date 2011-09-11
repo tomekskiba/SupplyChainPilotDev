@@ -1,0 +1,24 @@
+<% content_for :javascript do %>
+    <%= render 'users/header_includes' %>
+<% end %>
+
+
+
+<% title "Edit User" %>
+<h2 class="center">Edit Patient</h2>
+
+<%= form_for @user do |f| %>
+    <%#= f.error_messages %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <%#= devise_error_messages! %>
+
+    <% @edit_status = "on" %>
+    <%= render :partial => 'users/form', :locals => {:f => f} %>
+
+
+    <p>
+      <%= f.submit "Update" %>
+      &nbsp;&nbsp;&nbsp;
+      <%= button("Cancel", users_path) %>
+    </p>
+<% end %>

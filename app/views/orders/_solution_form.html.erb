@@ -1,0 +1,46 @@
+<div class="tbl_width0">
+  <div class="tbl_width3 tbl_height3 tbl_common3 <%= row_style %>">
+    <% object_solutions = Solution.order("size").find_all_by_color_and_solution_type(color, solution_type) %>
+    <p class="p2"><%= object_solutions.first.name %></p>
+  </div>
+
+  <% for solution in object_solutions %>
+
+      <div class="tbl_width1 tbl_height3 tbl_common4 <%= row_style %>">
+        <%#= @order.form_val_solutions_on_hand(2)  %>
+        <% if @solution_template.include?(solution) %>
+            <p class="p3">
+              <% restore_val = @order.restore_solutions_on_hand(@order.get_solution_ids_array_index(solution.id)) %>
+              <% if restore_val %>
+                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", restore_val, :size => 1 %>
+              <% elsif @order.solutions.include?(solution) %>
+                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]",
+                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand, :size => 1 %>
+              <% else %>
+                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", "", :size => 1 %>
+              <% end %>
+
+              <%= hidden_field_tag "order[solution_ids][]", solution.id %>
+            </p>
+        <% end %>
+
+      </div>
+      <div class="tbl_width1 tbl_height3 tbl_common4 <%= row_style %>">
+
+        <% if @solution_template.include?(solution) %>
+            <p class="p3">
+              <% restore_val = @order.restore_solutions_usage_per_week(@order.get_solution_ids_array_index(solution.id)) %>
+              <% if restore_val %>
+                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", restore_val, :size => 1 %>
+              <% elsif @order.solutions.include?(solution) %>
+                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]",
+                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week, :size => 1 %>
+              <% else %>
+                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", "", :size => 1 %>
+              <% end %>
+            </p>
+        <% end %>
+
+      </div>
+  <% end %>
+</div>

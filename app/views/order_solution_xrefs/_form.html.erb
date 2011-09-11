@@ -1,0 +1,20 @@
+<%= form_for @order_solution_xref do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :order_id %><br />
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.label :solution_id %><br />
+    <%= f.text_field :solution_id %>
+  </p>
+  <p>
+    <%= f.label :on_hand %><br />
+    <%= f.text_field :on_hand %>
+  </p>
+  <p>
+    <%= f.label :usage_per_week %><br />
+    <%= f.text_field :usage_per_week %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

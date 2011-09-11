@@ -1,0 +1,16 @@
+<%= form_for @order_apd_supply_xref do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :order_id %><br />
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.label :apd_supply_id %><br />
+    <%= f.text_field :apd_supply_id %>
+  </p>
+  <p>
+    <%= f.label :on_hand %><br />
+    <%= f.text_field :on_hand %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

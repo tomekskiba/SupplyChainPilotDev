@@ -1,0 +1,2 @@
+module ApdSuppliesHelper
+end

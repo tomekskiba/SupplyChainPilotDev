@@ -1,0 +1,11 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  activerecord:
+    attributes:
+      user:
+        account_no: "Account Number"
+        no_reserved_days: "Number of reserved days"
+        no_delivery_cycle_days: "Number of delivery cycle days"
+        address1: "Patient Primary Shipping Address"

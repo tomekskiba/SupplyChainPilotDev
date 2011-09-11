@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supply Chain Pilot</title>
+  <%= render 'layouts/stylesheets' %>
+  <%= render 'layouts/javascript' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+
+<div class="container">
+
+  <div style="font-size:9px;">
+    Demo credentials: <br>
+    admin - L: b@b.com, P: x <br>
+    user - L: u@u.com, P: x <br>
+    user2 - L: u3@u.com, P: x <br>
+  </div>
+
+  <% if admin_signed_in? -%>
+
+      <div id="header">
+        <%= render 'layouts/top_header' %>
+      </div>
+
+      <div id="main_panel">
+        <%- if !notice.nil? -%>
+            <p class="notice"><%= notice %></p>
+        <%- end -%>
+        <%- if !alert.nil? -%>
+            <p class="alert"><%= alert %></p>
+        <%- end -%>
+
+        <%= yield %>
+      </div>
+
+  <% elsif user_signed_in? -%>
+
+      <div id="header">
+        <%= render 'layouts/top_header' %>
+      </div>
+
+      <div id="main_panel">
+        <%- if !notice.nil? -%>
+            <p class="notice"><%= notice %></p>
+        <%- end -%>
+        <%- if !alert.nil? -%>
+            <p class="alert"><%= alert %></p>
+        <%- end -%>
+
+        <%= yield %>
+      </div>
+
+  <% else -%>
+
+      <div>
+        || Patient -
+        <% unless user_signed_in? -%>
+
+            <%= link_to "Sign in", new_user_session_path %>
+
+        <% else -%>
+
+            <%= link_to "(Logout)", destroy_user_session_path, :method => :delete %>
+
+        <% end -%>
+
+
+        || Admin -
+        <% unless admin_signed_in? -%>
+
+            <%= link_to "Sign in", new_admin_session_path %>
+
+        <% else -%>
+
+            <%= link_to "(Logout)", destroy_admin_session_path, :method => :delete %>
+
+        <% end -%>
+      </div>
+
+      <div id="main2">
+        <div class="baxter_logo">
+          <img src="/images/baxter-logo.png" width="143" height="25" border="0" />
+        </div>
+        <div id="login_window">
+          <h1>MyDialysisSupply.com</h1>
+
+          <%= yield %>
+        </div>
+      </div>
+
+  <% end -%>
+
+
+  <% if admin_signed_in? or user_signed_in? -%>
+      <div id="footer">
+        <%= render 'layouts/footer' %>
+      </div>
+  <% end -%>
+
+</div>
+<%#= debug(params) if Rails.env.development? %>
+</body>
+</html>

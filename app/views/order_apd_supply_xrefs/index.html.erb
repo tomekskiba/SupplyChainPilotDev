@@ -1,0 +1,21 @@
+<% title "Order Apd Supply Xrefs" %>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Apd Supply</th>
+    <th>On Hand</th>
+  </tr>
+  <% for order_apd_supply_xref in @order_apd_supply_xrefs %>
+    <tr>
+      <td><%= order_apd_supply_xref.order_id %></td>
+      <td><%= order_apd_supply_xref.apd_supply_id %></td>
+      <td><%= order_apd_supply_xref.on_hand %></td>
+      <td><%= link_to "Show", order_apd_supply_xref %></td>
+      <td><%= link_to "Edit", edit_order_apd_supply_xref_path(order_apd_supply_xref) %></td>
+      <td><%= link_to "Destroy", order_apd_supply_xref, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order Apd Supply Xref", new_order_apd_supply_xref_path %></p>

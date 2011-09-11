@@ -1,0 +1,9 @@
+one:
+  order_id: 1
+  capd_supply_id: 1
+  on_hand: 1
+
+two:
+  order_id: 1
+  capd_supply_id: 1
+  on_hand: 1

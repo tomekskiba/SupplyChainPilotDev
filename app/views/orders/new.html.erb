@@ -1,0 +1,25 @@
+<% content_for :javascript do %>
+    <%= render 'orders/header_includes' %>
+<% end %>
+
+
+
+<br/><br/>
+<% title "Order Form" %>
+<h2 class="center">Order Form</h2>
+
+<%= form_for @order do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <%#= error_messages_for :order %>
+<%#= error_messages_for :order_apd_supply_xref %>
+
+    <%= render :partial => 'form', :locals => {:f => f} %>
+
+    <p class="clear"></p>
+    <br/><br/>
+    <p>
+      <%= f.submit "Continue", :class => "button_green" %>
+      &nbsp;&nbsp;&nbsp;
+      <%#= button("Cancel", users_path) %>
+    </p>
+<% end %>

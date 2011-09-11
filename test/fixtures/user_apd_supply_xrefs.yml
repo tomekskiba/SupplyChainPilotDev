@@ -1,0 +1,11 @@
+one:
+  user_id: 1
+  apd_supply_id: 1
+  line_max: 1
+  units_per_cycle: 1
+
+two:
+  user_id: 1
+  apd_supply_id: 1
+  line_max: 1
+  units_per_cycle: 1

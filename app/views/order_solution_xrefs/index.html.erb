@@ -1,0 +1,23 @@
+<% title "Order Solution Xrefs" %>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Solution</th>
+    <th>On Hand</th>
+    <th>Usage Per Week</th>
+  </tr>
+  <% for order_solution_xref in @order_solution_xrefs %>
+    <tr>
+      <td><%= order_solution_xref.order_id %></td>
+      <td><%= order_solution_xref.solution_id %></td>
+      <td><%= order_solution_xref.on_hand %></td>
+      <td><%= order_solution_xref.usage_per_week %></td>
+      <td><%= link_to "Show", order_solution_xref %></td>
+      <td><%= link_to "Edit", edit_order_solution_xref_path(order_solution_xref) %></td>
+      <td><%= link_to "Destroy", order_solution_xref, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order Solution Xref", new_order_solution_xref_path %></p>

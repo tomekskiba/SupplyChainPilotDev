@@ -1,0 +1,31 @@
+<div class="solution_row">
+  <div class="solution_row_title <%= row_style %>">
+    <% object_solutions = Solution.order("size").find_all_by_color_and_solution_type(color, solution_type) %>
+    <%= object_solutions.first.name %>
+  </div>
+
+  <% for solution in object_solutions %>
+
+      <div class="solution_row_element <%= row_style %>">
+        <div class="checkbox_padding">
+          <%= check_box_tag "user[solution_ids][]", solution.id, @user.include_solution?(solution) %>
+          <%= hidden_field_tag "user[solution_ids_all][]", solution.id %>
+        </div>
+      </div>
+      <div class="solution_row_element <%= row_style %>">
+
+        <% restore_val = @user.restore_solutions_line_max(@user.get_solution_ids_array_index(solution.id)) %>
+        <% if restore_val %>
+            <%= text_field_tag "user[user_solution_xrefs_line_max][]", restore_val, :size => 1 %>
+        <% elsif @user.solutions.include?(solution) %>
+            <%= text_field_tag "user[user_solution_xrefs_line_max][]",
+                               @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max, :size => 1 %>
+            <%#= hidden_field_tag "user[solution_ids][]", solution.id %>
+        <% else %>
+            <%= text_field_tag "user[user_solution_xrefs_line_max][]", "", :size => 1 %>
+            <%#= hidden_field_tag "user[solution_ids][]", "" %>
+        <% end %>
+
+      </div>
+  <% end %>
+</div>

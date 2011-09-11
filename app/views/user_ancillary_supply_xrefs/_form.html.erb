@@ -1,0 +1,12 @@
+<%= form_for @user_ancillary_supply_xref do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :ancillary_supply_id %><br />
+    <%= f.text_field :ancillary_supply_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
