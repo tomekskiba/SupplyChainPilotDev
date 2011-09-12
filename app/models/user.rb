@@ -49,8 +49,9 @@ class User < ActiveRecord::Base
     #^[0-9]{5}(-[0-9]{4})?$
   phone_regex = /^\d{3}-\d{3}-\d{4}$/ #/^[0-9]{3}+\-[0-9]{7}$/             /^\d{3}-\d{7}$/
 
-  #validates :password, :presence => true,
-   #                    :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
+  validates :password,
+                       :allow_nil => true, :allow_blank => true,
+                       :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
 
   validates :first_name,
             :presence => true

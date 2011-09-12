@@ -183,7 +183,7 @@ body {
 }
 
 .login_window2_1 {
-    height: 50px;
+    height: 57px;
     width: 100%;
 }
 
@@ -965,6 +965,19 @@ input[type='submit'], button {
     font-weight: normal;
     height: 28px;
     border: 1px solid #38a15a;
+    padding: 1px 4px 0 4px;
+    text-align: center;
+    width: 90px;
+}
+
+.button_grey {
+    color: #b4b4b4;
+    font-family: arial;
+    background: white url("/images/button_grey_1.png");
+    font-size: 14px;
+    font-weight: normal;
+    height: 28px;
+    border: 1px solid #b4b4b4;
     padding: 1px 4px 0 4px;
     text-align: center;
     width: 90px;
