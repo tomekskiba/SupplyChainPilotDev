@@ -151,6 +151,7 @@ ActiveRecord::Schema.define(:version => 20110825195240) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "patient_email"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "account_no"
@@ -170,7 +171,6 @@ ActiveRecord::Schema.define(:version => 20110825195240) do
     t.string   "caregiver_email"
     t.string   "clinic_email"
     t.datetime "JDE_reconciliation_date"
-    t.string   "patient_email"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
