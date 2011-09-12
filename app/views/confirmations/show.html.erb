@@ -10,7 +10,7 @@
           <p class="clear color1 fontsize4"><%= f.label :password, 'Choose a Password:' %></p>
 
           <div class="login_input">
-            <%= f.password_field :password, :class => "login_input_box" %>
+            <%= f.password_field :password, :class => "login_input_box", :style => "border:none;" %>
           </div>
 
           <br/>
@@ -18,7 +18,7 @@
           <p class="clear color1 fontsize4"><%= f.label :password_confirmation, 'Password Confirmation:' %></p>
 
           <div class="login_input">
-            <%= f.password_field :password_confirmation, :class => "login_input_box" %>
+            <%= f.password_field :password_confirmation, :class => "login_input_box", :style => "border:none;" %>
           </div>
 
       <% end %>

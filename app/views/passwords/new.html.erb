@@ -9,7 +9,9 @@
     <p class="clear2 color1 fontsize4"><%= f.label :email %></p>
 
     <div class="login_input">
-      <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off" %>
+      <p class="p4">
+        <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
+      </p>
     </div>
     <br/>
     <p><%= f.submit "Send me reset password instructions", :class => "login_submit2" %></p>

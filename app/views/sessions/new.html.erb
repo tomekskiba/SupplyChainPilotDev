@@ -14,20 +14,26 @@
 
   <p class="clear2 color1 fontsize4 login_input2 width28">Password</p>
 </div>
+<div class="clear3"></div>
 
 <div class="login_window2_2">
 
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
       <div class="login_input login_input2">
-        <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off" %>
+        <p class="p4">
+          <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
+        </p>
       </div>
 
       <div class="login_input login_input2">
-        <%= f.password_field :password, :class => "login_input_box", :autocomplete => "off" %>
+        <p class="p4">
+          <%= f.password_field :password, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
+        </p>
       </div>
 
       <p class="left2"><%= f.submit "", :class => "login_submit" %></p>
+
   <% end %>
 
 </div>

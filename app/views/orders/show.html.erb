@@ -14,11 +14,15 @@
 </div>
 
 <div id="content" class="left2 top5">
-  <p style="font-size: 1.2em">Your order information is summarized below for your final review.  If the information is accurate you may submit your order using the “Submit Order” button below.
-   <br/><br/>
-Note that the Estimated Order Quantities shown are for information purposes only during this pilot website program and that your HomeCare Service Representative will review your information and send you an order confirmation with actual order quantities within 1 business day.
+  <p style="font-size: 1.2em">Your order information is summarized below for your final review. If the information is
+    accurate you may submit your order using the “Submit Order” button below.
+    <br/><br/>
+    Note that the Estimated Order Quantities shown are for information purposes only during this pilot website program
+    and that your HomeCare Service Representative will review your information and send you an order confirmation with
+    actual order quantities within 1 business day.
   </p>
   <br/>
+
   <p>
     <strong>Date supplies were counted at:</strong>
     <%= format_date(@order.supplies_counted_at) %>
@@ -26,7 +30,7 @@ Note that the Estimated Order Quantities shown are for information purposes only
 
   <%= render :partial => 'order_summary' %>
 
-  <div class="left">
+  <div class="clear">
     <br/><br/>
     <%= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s do |f| %>
 <%#=form_for {:controller => "orders", :action => "confirmed"} do |f| %>
@@ -36,7 +40,8 @@ Note that the Estimated Order Quantities shown are for information purposes only
         <p>
           <%= f.hidden_field :submitted_flag, :value => 'f' %>
           <%= f.check_box :opt_in %>
-          <%#= check_box_tag "order[opt_in]", true, @order.opt_in? %>    Please click here to allow us to get your feedback on this online ordering program as well as future service offering programs.
+          <%#= check_box_tag "order[opt_in]", true, @order.opt_in? %>    Please click here to allow us to get your
+          feedback on this online ordering program as well as future service offering programs.
         </p>
 
         <p>
@@ -47,12 +52,18 @@ Note that the Estimated Order Quantities shown are for information purposes only
         </p>
 
         <br/>
-        <p>
-          <%= button("Change Order", edit_order_path(@order), "button_green button_width6") %>
 
-          <%= f.submit "Submit Order", :class => "button_blue button_width6", :style => "margin-left:20px;" %>
-          <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
-        </p>
+        <div>
+          <div class="left2">
+            <%= button("Change Order", edit_order_path(@order), "button_green button_width6") %>
+
+            <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
+          </div>
+          <div class="left2 button_blue_specific">
+            <%= f.submit "Submit Order", :class => "button_blue button_width6", :style => "margin-left:20px;" %>
+
+          </div>
+        </div>
 
     <% end %>
   </div>

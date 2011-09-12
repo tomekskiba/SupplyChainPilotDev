@@ -152,9 +152,9 @@ body {
     float: left;
 }
 
-.login_input_box, input[type='password'].login_input_box {
-    padding-left: 6px;
-    padding-top: 6px;
+/*, input[type='password'].login_input_box*/
+.login_input_box {
+    padding: 0 0 0 6px;
     width: 260px;
     color: #013d9d;
     background-color: transparent;
@@ -896,6 +896,15 @@ a.lightBox {
     clear: both;
 }
 
+.clear3 {
+    width: 100%;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    height: 0px;
+    display: inline;
+}
+
 .margin_left4 {
     margin-left: 20px;
 }
@@ -906,7 +915,7 @@ input[type='text'], input[type='password'] {
     border: 1px solid #7a8fab;
     color: #7a8fab;
     font-style: italic;
-    padding: 3px;
+   /* padding: 3px; */
 }
 
 input[disabled='disabled'] {
@@ -1010,9 +1019,13 @@ input[type='submit'], button {
     list-style: square;
 }
 
+p.p4 {
+    padding: 4px 0 0 0;
+}
+
 /*
 .field_with_errors input {
- border: 1px solid red;
+border: 1px solid red;
 }   */
 
 /*.field_with_errors label {

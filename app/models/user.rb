@@ -62,20 +62,20 @@ class User < ActiveRecord::Base
   validates :account_no,
             :presence => true,
             :length => {:minimum => 8, :maximum => 8},
-            :numericality => {:integer_only => true, :message => " should be numeric."}
+            :numericality => {:integer_only => true, :message => " must be numeric."}
   validates :primary_phone,
             :presence => true,
-            :format => {:with => phone_regex, :message => " number should have correct format (xxx-xxx-xxxx)"}
+            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
   validates :mobile_phone,
             :allow_nil => true,
             :allow_blank => true,
-            :format => {:with => phone_regex, :message => " number should have correct format (xxx-xxx-xxxx)"}
+            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
   validates :no_reserved_days,
             :presence => true,
-            :numericality => {:greater_than => 0, :message => " should be a number."}
+            :numericality => {:greater_than => 0, :message => " must be a number."}
   validates :no_delivery_cycle_days,
             :presence => true,
-            :numericality => {:greater_than => 0, :message => " should be a number."}
+            :numericality => {:greater_than => 0, :message => " must be a number."}
   validates :address1,
             :presence => true
   validates :city,

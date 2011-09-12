@@ -116,13 +116,17 @@ body {
 /* login page */
 #main2 {
     width: 100%;
-    min-height: 567px;
+    height: 767px;
     background: white url(/images/log_in_bg.jpg) no-repeat;
 }
 
+.baxter_logo {
+    padding: 30px 0 0 168px;
+}
+
 #login_window {
-    width: 695px;
-    padding: 126px 0 0 168px;
+    width: 705px;
+    padding: 80px 0 0 168px;
 }
 
 #login_window h1 {
@@ -143,7 +147,7 @@ body {
 
 .login_input {
     border: 1px solid #003C9C;
-    background: white url("/images/log_in_input_box.png") no-repeat;
+    background: #dddddd url("/images/log_in_input_box.png") no-repeat;
     width: 283px;
     height: 33px;
 }
@@ -153,9 +157,9 @@ body {
     float: left;
 }
 
+/*, input[type='password'].login_input_box*/
 .login_input_box {
-    padding-left: 6px;
-    padding-top: 6px;
+    padding: 0 0 0 6px;
     width: 260px;
     color: #013d9d;
     background-color: transparent;
@@ -308,7 +312,7 @@ body {
     float: left;
     margin: 2px;
     background-color: white;
-    height: 203px;
+    height: 213px;
     padding: 5px;
     color: #000000;
     border: 2px solid #184ea6;
@@ -320,7 +324,7 @@ body {
 }
 
 #order_info .info_right {
-    width: 76%;
+    width: 73%;
     margin-left: 4px;
 }
 
@@ -346,7 +350,6 @@ body {
     list-style-type: none;
     margin: 2px 0 2px 0px;
 }
-
 
 .order_summary {
     width: 100%;
@@ -384,13 +387,13 @@ body {
 }
 
 .footer_helper {
-    padding: 35px 0 0 35px;
+    padding: 35px 0 21px 20px;
     height: 30px;
     float: left;
 }
 
 .footer_padding {
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 #footer p {
@@ -454,12 +457,29 @@ body {
     float: left;
 }
 
+#tbl input {
+    font-size: 14px;
+    border-top: 3px solid #7a8fab;
+    border-bottom: 1px solid #7a8fab;
+    border-left: 1px solid #7a8fab;
+    border-right: 1px solid #7a8fab;
+    color: #7a8fab;
+    padding: 2px;
+    margin: 0;
+    width: 20px;
+}
+
 #tbl p {
     padding: 3px 2px 3px 2px;
+    line-height: 15px;
 }
 
 #tbl p.p2 {
     padding: 8px 7px 3px 8px;
+}
+
+#tbl p.p3 {
+    padding: 6px 0 0 0;
 }
 
 .tbl_common1 {
@@ -487,11 +507,11 @@ body {
     text-align: center;
 }
 
-.row4 {
+.row4, .row44, .row444 {
     background-color: #f2f2f2;
 }
 
-.row5 {
+.row5, .row55, .row555 {
     background-color: #cccccc;
 }
 
@@ -607,6 +627,7 @@ body {
     color: white;
     background-color: #3873d4;
     padding-top: 5px;
+    line-height: 15px;
 }
 
 .solution_row {
@@ -770,7 +791,7 @@ a.lightBox {
 }
 
 #form_panel {
-    width: 870px;
+    width: 970px;
 }
 
 #form_panel label {
@@ -785,11 +806,11 @@ a.lightBox {
     width: 700px;
     height: 2px;
     background: orange;
-    margin: 15px 0px 15px 85px;
+    margin: 15px 0px 15px 155px;
 }
 
 .form_column {
-    width: 435px;
+    width: 485px;
     padding: 0;
     margin: 0;
     float: left;
@@ -798,7 +819,7 @@ a.lightBox {
 
 .form_left {
     float: left;
-    width: 200px;
+    width: 250px;
     height: 26px;
     text-align: right;
     padding-top: 6px;
@@ -839,6 +860,10 @@ a.lightBox {
     font-size: larger;
 }
 
+.fontsize00 {
+    font-size: smaller;
+}
+
 .fontsize4 {
     font-size: 1.2em;
 }
@@ -876,17 +901,26 @@ a.lightBox {
     clear: both;
 }
 
+.clear3 {
+    width: 100%;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    height: 0px;
+    display: inline;
+}
+
 .margin_left4 {
     margin-left: 20px;
 }
 
 /* generic */
-input[type='text'] {
+input[type='text'], input[type='password'] {
     font-size: 13px;
     border: 1px solid #7a8fab;
     color: #7a8fab;
     font-style: italic;
-    padding: 3px;
+   /* padding: 3px; */
 }
 
 input[disabled='disabled'] {
@@ -990,9 +1024,13 @@ input[type='submit'], button {
     list-style: square;
 }
 
+p.p4 {
+    padding: 4px 0 0 0;
+}
+
 /*
 .field_with_errors input {
- border: 1px solid red;
+border: 1px solid red;
 }   */
 
 /*.field_with_errors label {
@@ -1018,7 +1056,7 @@ input[type='submit'], button {
 
 <p>
   <strong>User opted in for follow up:</strong>
-  <%= @order.opt_in %>
+  <%= (@order.opt_in==true ? "Yes" : "No" )  %>
 </p>
 
 <br/>
