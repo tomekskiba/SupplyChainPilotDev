@@ -477,6 +477,10 @@ body {
     padding: 6px 0 0 0;
 }
 
+#tbl p.p4 {
+    padding-top: 5px;
+}
+
 .tbl_common1 {
     float: left;
     color: #184ea6;
@@ -881,10 +885,6 @@ a.lightBox {
 
 .top5 {
     margin-top: 40px;
-}
-
-p.padding_top3 {
-    padding-top: 6px;
 }
 
 .center {
