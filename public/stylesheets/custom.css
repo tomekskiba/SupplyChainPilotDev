@@ -991,6 +991,10 @@ input[type='submit'], button {
     width: 120px;
 }
 
+.width3 {
+    width: 25px;
+}
+
 .width28 {
     width: 283px;
 }
