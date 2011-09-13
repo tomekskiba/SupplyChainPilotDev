@@ -18,7 +18,8 @@ class Emailer < ActionMailer::Base
   def representative_order_notification(user, order)
     @user = user
     @order = order
-    mail(:to => "terry_morabito@baxter.com",
+    mail(:to => "tomekskiba@yahoo.com",
+    #mail(:to => "terry_morabito@baxter.com",
          :subject => "New Order Notification")
   end
 end
