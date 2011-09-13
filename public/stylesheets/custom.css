@@ -883,6 +883,10 @@ a.lightBox {
     margin-top: 40px;
 }
 
+.padding_top3 {
+    padding-top: 6px;
+}
+
 .center {
     text-align: center;
 }

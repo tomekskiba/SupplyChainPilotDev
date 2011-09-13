@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="$PROJECT_DIR$/public/stylesheets/custom.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +65,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="47" selection-start="5890" selection-end="5890" vertical-scroll-proportion="0.5248042">
+            <state line="165" column="55" selection-start="5898" selection-end="5898" vertical-scroll-proportion="0.5248042">
               <folding />
             </state>
           </provider>
@@ -73,7 +74,7 @@
       <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="993" column="7" selection-start="14595" selection-end="14602" vertical-scroll-proportion="-7.4615383">
+            <state line="885" column="13" selection-start="12734" selection-end="12746" vertical-scroll-proportion="-12.846154">
               <folding />
             </state>
           </provider>
@@ -138,8 +139,8 @@
         <option value="$PROJECT_DIR$/app/views/passwords/edit.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie6.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie7.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
       </list>
     </option>
@@ -935,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="993" column="7" selection-start="14595" selection-end="14602" vertical-scroll-proportion="-7.4615383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="90" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-2.1">
@@ -949,9 +943,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="885" column="13" selection-start="12734" selection-end="12746" vertical-scroll-proportion="-12.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="47" selection-start="5890" selection-end="5890" vertical-scroll-proportion="0.5248042">
+        <state line="165" column="55" selection-start="5898" selection-end="5898" vertical-scroll-proportion="0.5248042">
           <folding />
         </state>
       </provider>
