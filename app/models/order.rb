@@ -30,9 +30,6 @@ class Order < ActiveRecord::Base
 
   attr_accessor :ancillary_supply_ids
 
-    #attr_accessor :opt_in
-    #logger.info("XXXXXXXXXXXXXXXXXXXXX"+opt_in.to_s)
-
   $OUT_OF_SUPPLIES_ALERT = "The calculations indicate that you may run out of this item before your next delivery.   A Baxter HomeCare Services Representative will review your order after you submit it and provide you further assistance via email."
 
 
@@ -68,14 +65,8 @@ class Order < ActiveRecord::Base
     )
   end
 
-  #before_save :opt_in_check
   after_save :update_xrefs
 
-#  def opt_in_check
- #   unless params[:order][:opt_in].nil? and params[:order][:opt_in] == "1"
-
-  #  end
- # end
 
   def update_xrefs
 
