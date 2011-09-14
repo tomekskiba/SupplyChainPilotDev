@@ -240,6 +240,7 @@ body {
     font-family: arial;
     font-size: 18pt;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #main_panel h2 {
@@ -353,7 +354,7 @@ body {
     font-size: 1.6em;
 }
 
-input.hasDatepicker {
+input.field2 {
     padding: 3px;
     font-weight: bold;
 }
@@ -917,7 +918,7 @@ input[type='text'], input[type='password'] {
     border: 1px solid #7a8fab;
     color: #7a8fab;
     font-style: italic;
-    /* padding: 3px; */
+    padding-left: 2px;
 }
 
 input[disabled='disabled'] {
@@ -975,7 +976,7 @@ input[type='submit'], button {
 }
 
 .button_grey {
-    color: #b4b4b4;
+    color: #999999; /*#b4b4b4;*/
     font-family: arial;
     background: white url("/images/button_grey_1.png");
     font-family: helvetica, arial, verdana;

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/ie8.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_header_includes.erb" afterPath="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="$PROJECT_DIR$/public/stylesheets/custom.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
@@ -32,16 +32,43 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="12" selection-start="1656" selection-end="1656" vertical-scroll-proportion="-3.875">
+            <state line="47" column="12" selection-start="1656" selection-end="1656" vertical-scroll-proportion="-15.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="35" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+            <state line="61" column="114" selection-start="2217" selection-end="2217" vertical-scroll-proportion="-2.54">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header_includes.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/_header_includes.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="33" selection-start="433" selection-end="433" vertical-scroll-proportion="0.43882978">
               <folding />
             </state>
           </provider>
@@ -50,7 +77,7 @@
       <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="454" column="29" selection-start="6857" selection-end="6857" vertical-scroll-proportion="-5.730769">
+            <state line="1048" column="0" selection-start="15465" selection-end="15575" vertical-scroll-proportion="-6.8846154">
               <folding />
             </state>
           </provider>
@@ -65,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_stylesheets.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_stylesheets.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="28" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3375">
+            <state line="16" column="60" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,34 +104,7 @@
       <file leaf-file-name="_order_summary.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="representative_order_notification.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1006" column="11" selection-start="14785" selection-end="14785" vertical-scroll-proportion="-6.4583335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirmed.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/orders/confirmed.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="7" selection-start="581" selection-end="581" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/order.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="61" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+            <state line="136" column="17" selection-start="6547" selection-end="6547" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -133,12 +133,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/stylesheets/ie6.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/ie7.css" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/devise.en.yml" />
         <option value="$PROJECT_DIR$/public/Privacy-Policy-terms-shipping-agreement.htm" />
-        <option value="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/_solution_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
@@ -148,7 +145,10 @@
         <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie8.css" />
+        <option value="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
+        <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
       </list>
     </option>
   </component>
@@ -299,6 +299,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SupplyChainPilotDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SupplyChainPilotDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -838,42 +864,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/emailer/patient_order_confirmation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Privacy-Policy-terms-shipping-agreement.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="138" selection-start="12644" selection-end="12644" vertical-scroll-proportion="-2.58">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_solution_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="82" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="88" selection-end="98" vertical-scroll-proportion="-1.2916666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="67" selection-start="3438" selection-end="3438" vertical-scroll-proportion="44.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="12" selection-start="1656" selection-end="1656" vertical-scroll-proportion="-3.875">
           <folding />
         </state>
       </provider>
@@ -906,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="61" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
@@ -927,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="454" column="29" selection-start="6857" selection-end="6857" vertical-scroll-proportion="-5.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/ie8.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -943,7 +922,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3375">
+        <state line="16" column="60" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="12" selection-start="1656" selection-end="1656" vertical-scroll-proportion="-15.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="114" selection-start="2217" selection-end="2217" vertical-scroll-proportion="-2.54">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="17" selection-start="6547" selection-end="6547" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1048" column="0" selection-start="15465" selection-end="15575" vertical-scroll-proportion="-6.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_header_includes.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="433" selection-end="433" vertical-scroll-proportion="0.43882978">
           <folding />
         </state>
       </provider>

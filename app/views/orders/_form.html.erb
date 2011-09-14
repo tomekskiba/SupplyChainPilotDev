@@ -57,9 +57,9 @@
   Enter Date the Supplies are Actually Counted<span class="star">*</span>
   <br/>
   <% if @order.supplies_counted_at.nil? %>
-      <%= f.text_field :supplies_counted_at %>
+      <%= f.text_field :supplies_counted_at, :class => "field2" %>
   <% else %>
-      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at) %>
+      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at), :class => "field2" %>
   <% end %>
 </p>
 

@@ -1,14 +1,25 @@
-    <link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
-    <%= stylesheet_link_tag 'calendar', :media => 'screen' %>
+<link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
+<%= stylesheet_link_tag 'calendar', :media => 'screen' %>
 
-    <%= javascript_include_tag "jquery-1.6.2" %>
-    <%= javascript_include_tag "jquery.ui.core.js" %>
-    <%= javascript_include_tag "jquery.ui.widget.js" %>
-    <%= javascript_include_tag "jquery.ui.datepicker.js" %>
+<%= javascript_include_tag "jquery-1.6.2" %>
+<%= javascript_include_tag "jquery.ui.core.js" %>
+<%= javascript_include_tag "jquery.ui.widget.js" %>
+<%= javascript_include_tag "jquery.ui.datepicker.js" %>
 
-    <script>
-        $(function() {
-            $("#user_delivery_date").datepicker({dateFormat: 'yy-mm-dd'});
-            $("#user_JDE_reconciliation_date").datepicker({dateFormat: 'yy-mm-dd'});
-        });
-    </script>
+<style type="text/css">
+
+    .field_with_errors input {
+        border: 1px solid #dc7e74;
+    }
+
+        /*.field_with_errors label {
+          color: #fff;
+       } */
+</style>
+
+<script>
+    $(function() {
+        $("#user_delivery_date").datepicker({dateFormat: 'yy-mm-dd'});
+        $("#user_JDE_reconciliation_date").datepicker({dateFormat: 'yy-mm-dd'});
+    });
+</script>
