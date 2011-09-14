@@ -24,7 +24,7 @@ class ConfirmationsController < Devise::PasswordsController
 
   # GET /resource/confirmation?confirmation_token=abcdef
   def show
-    Devise.sign_out_all_scopes ? sign_out : sign_out(admin)
+    #Devise.sign_out_all_scopes ? sign_out : sign_out(admin)
 
     with_unconfirmed_confirmable do
       if @confirmable.has_no_password?
