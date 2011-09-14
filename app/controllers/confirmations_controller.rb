@@ -45,7 +45,7 @@ class ConfirmationsController < Devise::PasswordsController
   end
 
   def do_show
-    #Devise.sign_out_all_scopes ? sign_out : sign_out(admin)
+    Devise.sign_out_all_scopes ? sign_out : sign_out(admin)
 
     @confirmation_token = params[:confirmation_token]
     @requires_password = true
