@@ -410,6 +410,11 @@ input.field2 {
     padding-right: 20px;
 }
 
+.footer_phone_skype_issue {
+    width: 195px;
+    overflow-x: hidden;
+}
+
 #footer p {
     font-size: 0.9em;
     color: #024285;

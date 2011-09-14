@@ -46,18 +46,12 @@
         <p>
           <%= f.hidden_field :submitted_flag, :value => 'f' %>
           <%= f.check_box :opt_in %>
-          <%#= check_box("order", "opt_in") %>
-          <%#= check_box_tag "order[opt_in]", 1, params.include?(:opt_in) %>
-          <%#= check_box_tag "order[opt_in]", 1, (params[:order][:opt_in] || {}).include?("1") %>
-          <%#= check_box_tag "order[opt_in]", 1, session[:opt_in].include?("1") %>
-          <%#= check_box_tag "order[opt_in]", 1, (checked = true if form.object.opt_in.include?(1)) %> Please click here
           to allow us to get your
           feedback on this online ordering program as well as future service offering programs.
         </p>
 
         <p>
           <%= f.check_box :baxter_terms %>
-          <!--input id="order_baxter_terms" name="agree" type="checkbox" value="0"-->
           Click here to accept
           <a href="/Privacy-Policy-terms-shipping-agreement.htm" target="_blank"> Baxter Privacy Policy and Delivery
             Terms & Conditions</a>
@@ -68,7 +62,6 @@
         <div>
           <div class="left2">
             <%= button("Change Order", edit_order_path(@order), "button_green button_width6") %>
-
             <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
           </div>
           <div class="left2 button_blue_specific">

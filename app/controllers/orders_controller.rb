@@ -30,12 +30,6 @@ class OrdersController < ApplicationController
       order.save
       redirect_to "/orders/"+@order.id.to_s, :alert => "Please accept Baxter Delivery Terms & Conditions."
     end
-
-    #order = Order.find(params[:id])
-    #order.submitted_flag = true
-    #order.save
-
-
   end
 
   def new
