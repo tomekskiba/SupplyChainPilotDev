@@ -73,7 +73,7 @@
       <file leaf-file-name="confirmations_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/confirmations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="4" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.22604422">
+            <state line="27" column="4" selection-start="790" selection-end="790" vertical-scroll-proportion="0.33660933">
               <folding />
             </state>
           </provider>
@@ -949,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/confirmations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="4" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.22604422">
+        <state line="27" column="4" selection-start="790" selection-end="790" vertical-scroll-proportion="0.33660933">
           <folding />
         </state>
       </provider>
