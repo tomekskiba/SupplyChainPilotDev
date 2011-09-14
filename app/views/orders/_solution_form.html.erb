@@ -25,7 +25,7 @@
         <% end %>
 
       </div>
-      <div class="tbl_width1 tbl_height3 tbl_common4 <%= row_style %>">
+      <div class="tbl_width1 tbl_height3 tbl_common4 <%= "tbl_right_border" unless solution.size == 6 %> <%= row_style %>">
 
         <% if @solution_template.include?(solution) %>
             <p class="p3">

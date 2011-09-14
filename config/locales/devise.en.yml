@@ -16,7 +16,7 @@ en:
       already_authenticated: 'You are already signed in.'
       unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
+      locked: 'This account has now been locked because of 5 or more failed attempts to log in.   For security purposes, an email has been sent to your email address with instructions to reactivate your password.'
       invalid: 'This Email Address and password is not associated with an existing customer.'
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'

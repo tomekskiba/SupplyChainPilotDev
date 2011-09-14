@@ -25,6 +25,9 @@ class OrdersController < ApplicationController
       #redirect_to "/orders/confirmed/"+@order.id.to_s
     else
       #render :action => 'show'
+      order = Order.find(params[:id])
+      order.opt_in = params[:order][:opt_in]
+      order.save
       redirect_to "/orders/"+@order.id.to_s, :alert => "Please accept Baxter Delivery Terms & Conditions."
     end
 

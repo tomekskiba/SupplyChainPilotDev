@@ -1,19 +1,21 @@
 <br/>
 <div id="progress_bar">
   <div class="progress_bar_cell active">
-    <p>1) Order</p>
+    <p>Step 1 - Order</p>
   </div>
   <div class="progress_bar_cell">
-    <p>2) Order Summary Header</p>
+    <p>Step 2 - Order Summary</p>
   </div>
   <div class="progress_bar_cell">
-    <p>3) Order Confirmation</p>
+    <p>Step 3 - Order Confirmation</p>
   </div>
 </div>
 
 <div id="order_info">
   <div class="info_both info_left">
-    Your shipping address on our file for online orders is:<br/>
+    <!--Your shipping address on our file for online orders is:<br/-->
+    <span class="font0">Your shipping address</span>
+    <hr/>
     <%= current_user.address1 %>
     <% if !current_user.address2.blank? %>
         <%= ", "+ current_user.address2 %>
@@ -33,15 +35,15 @@
       <li>Orders placed online will default to your primary shipping address. To change the address refer to the contact
         information below.
       </li>
-      <li>Please contact Baxter @ 1-800-284-4060 or email if you wish to:</li>
+      <li>Please contact Baxter @ 1-800-284-4060 or email (US_Renal_MyDialysisSupply@baxter.com) if you wish to:</li>
       <ul>
         <li class="alpha">Change your shipping address</li>
         <li class="alpha">Change anything on this order</li>
         <li class="alpha">Order an item not shown but included in your prescription</li>
       </ul>
     </ul>
-    <p>If you wish to order an item not shown but included in your prescription please send an email request to email or
-      call Baxter @ 1-800-284-4060. </p>
+    <!--p>If you wish to order an item not shown but included in your prescription please send an email request to email or
+      call Baxter @ 1-800-284-4060. </p-->
   </div>
 </div>
 
@@ -71,37 +73,37 @@
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>1L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>1.5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>2L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>2.5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>3L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
       <p>Boxes</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
@@ -112,14 +114,20 @@
     </div>
 
     <div class="tbl_width3 tbl_height3 left2"></div>
-    <% 7.times do %>
+    <% 6.times do %>
+        <div class="tbl_width1 tbl_height3 tbl_common2">
+          <p>On Hand </p>
+        </div>
+        <div class="tbl_width1 tbl_height3 tbl_common2 tbl_right_border">
+          <p>Usage/<br/>Week</p>
+        </div>
+    <% end %>
         <div class="tbl_width1 tbl_height3 tbl_common2">
           <p>On Hand </p>
         </div>
         <div class="tbl_width1 tbl_height3 tbl_common2">
           <p>Usage/<br/>Week</p>
         </div>
-    <% end %>
   </div>
 
   <%= hidden_field_tag "order[solution_ids][]", "" %>
@@ -214,8 +222,8 @@
                   <% pic = capd_supply.picture %>
                   <% unless pic.nil? || pic.blank? %>
                       <div class="button_blue right button_width3 top0">
-                        <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
-                          Photo</a>
+                        <p class="p4"><a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
+                          Photo</a></p>
                       </div>
                   <% end %>
                 </div>
@@ -265,8 +273,8 @@
                   <% pic = ancillary_supply.picture %>
                   <% unless pic.nil? || pic.blank? %>
                       <div class="button_blue right button_width3 top0">
-                        <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= ancillary_supply.name %>">See
-                          Photo</a>
+                        <p class="p4"><a class="lightBox" href="/images/photos/<%= pic %>" title="<%= ancillary_supply.name %>">See
+                          Photo</a></p>
                       </div>
                   <% end %>
                 </div>
@@ -286,4 +294,3 @@
 <% end %>
 
 <br/><br/>
-

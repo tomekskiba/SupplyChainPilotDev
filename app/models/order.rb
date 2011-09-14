@@ -6,7 +6,7 @@ class Order < ActiveRecord::Base
   has_many :solutions, :through => :order_solution_xrefs
   has_many :user_solutions_xrefs, :through => :solutions
 
-  has_many :order_apd_supply_xrefs #, :validate => true
+  has_many :order_apd_supply_xrefs
   has_many :apd_supplies, :through => :order_apd_supply_xrefs
   has_many :user_apd_supply_xrefs, :through => :apd_supplies
 
@@ -38,8 +38,6 @@ class Order < ActiveRecord::Base
 
     #numeric_regex = /[0-9]{5}(?:-[0-9]{4})?/
 
-    #validates_associated :order_apd_supply_xrefs
-
   validates_acceptance_of :baxter_terms
   validates :supplies_counted_at, :presence => true
   validate :solutions_and_supplies
@@ -70,8 +68,14 @@ class Order < ActiveRecord::Base
     )
   end
 
-
+  #before_save :opt_in_check
   after_save :update_xrefs
+
+#  def opt_in_check
+ #   unless params[:order][:opt_in].nil? and params[:order][:opt_in] == "1"
+
+  #  end
+ # end
 
   def update_xrefs
 
@@ -240,10 +244,11 @@ class Order < ActiveRecord::Base
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
 
       #usage_per_day = individual_pieces_per_cycle / number_of_days_in_delivery_cycle
-    additional_units_needed = (individual_pieces_per_cycle.to_f / number_of_days_in_delivery_cycle * number_of_days_till_delivery)
+    additional_units_needed = (individual_pieces_per_cycle.to_f /
+        number_of_days_in_delivery_cycle * number_of_days_till_delivery)
     on_hand = y
       #on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day)).round
-    on_hand_at_delivery = (on_hand - additional_units_needed) #.round
+    on_hand_at_delivery = (on_hand - additional_units_needed)
     on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
 
     projected_order_quantity = (number_of_unites_used_per_cycle_plus_reserved_days - on_hand_at_delivery2).ceil
@@ -271,7 +276,7 @@ class Order < ActiveRecord::Base
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
 
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
-    usage_per_day = (usage_per_week.to_f / 7) # in boxes
+    usage_per_day = (usage_per_week.to_f / 7) # float
     on_hand = order_solution_xrefs.find_by_solution_id(solution_id).on_hand
     on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day.to_f))
     on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery

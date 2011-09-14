@@ -92,6 +92,7 @@ body {
     font-weight: bold;
 }
   */
+/*
 .banner {
     width: 100%;
     margin: 0;
@@ -106,7 +107,7 @@ body {
 
 .banner_cell_right {
     padding-right: 0px;
-}
+}     */
 
 /* login page */
 #main2 {
@@ -222,6 +223,11 @@ body {
     color: #0a4b86;
 }
 
+#content hr {
+    background-color: #184ea6;
+    height: 2px;
+}
+
 #main_panel h3 {
     color: #184ea6;
     font-family: arial;
@@ -246,7 +252,7 @@ body {
 /*.bg2 {
     background-color: #f1f8fb;
 } */
-
+/*
 #sign_in_left {
     float: left;
     width: 76%;
@@ -265,7 +271,7 @@ body {
 #sign_in_right .padding_2 {
     padding: 15px 5px 15px 20px;
 }
-
+  */
 #progress_bar {
     width: 100%;
     display: block;
@@ -303,11 +309,18 @@ body {
     margin-bottom: 30px;
 }
 
+#order_info hr {
+    background-color: #184ea6;
+    margin: 5px 6px 5px 6px;
+    height: 2px;
+    width: 80%;
+}
+
 #order_info .info_both {
     float: left;
     margin: 2px;
     background-color: white;
-    height: 213px;
+    height: 183px;
     padding: 5px;
     color: #000000;
     border: 2px solid #184ea6;
@@ -338,6 +351,11 @@ body {
 .star {
     color: red;
     font-size: 1.6em;
+}
+
+input.hasDatepicker {
+    padding: 3px;
+    font-weight: bold;
 }
 
 /* Order summary  */
@@ -415,37 +433,6 @@ body {
     margin: 0px;
 }
 
-/*
-#footer p {
-    font-size: 0.9em;
-    color: white;
-    padding: 6px 0 0 12px;
-    margin: 0;
-}
-
-#footer a {
-    color: white;
-    text-decoration: underline;
-} */
-/*
-#footer .footer_left {
-    float: left;
-    text-align: left;
-    width: 906px;
-}
-
-#footer .footer_right {
-    float: left;
-    text-align: left;
-    width: 112px;
-}
-
-#footer .footer_right img {
-    float: right;
-    padding: 4px 2px 0 0;
-}
-*/
-
 /* solution and supplies tables */
 #tbl {
     border: 2px solid #999999;
@@ -459,9 +446,10 @@ body {
     border-left: 1px solid #7a8fab;
     border-right: 1px solid #7a8fab;
     color: #7a8fab;
+    font-weight: bold;
     padding: 2px;
     margin: 0;
-    width: 20px;
+    width: 23px;
 }
 
 #tbl p {
@@ -506,6 +494,10 @@ body {
     text-align: center;
 }
 
+.tbl_right_border {
+    border-right: 1px solid #999999;
+}
+
 .row4, .row44, .row444 {
     background-color: #f2f2f2;
 }
@@ -515,7 +507,7 @@ body {
 }
 
 .tbl_width0 {
-    width: 1008px;
+    width: 1014px;
 }
 
 .tbl_width1 {
@@ -566,12 +558,10 @@ body {
     background-color: #a1bcdd;
 }
 
-/*grids styling - admin*/
+/*table styling - admin*/
 .solution_container {
-    /*height: 310px;      */
     width: 1024px;
     border: 0;
-    /*overflow-x: hidden;         */
 }
 
 .solution_header_container {
@@ -867,6 +857,10 @@ a.lightBox {
     font-size: 1.2em;
 }
 
+.font0 {
+    font-weight: normal;
+}
+
 .top0 {
     margin-top: 4px;
 }
@@ -919,7 +913,7 @@ input[type='text'], input[type='password'] {
     border: 1px solid #7a8fab;
     color: #7a8fab;
     font-style: italic;
-   /* padding: 3px; */
+    /* padding: 3px; */
 }
 
 input[disabled='disabled'] {
@@ -952,39 +946,42 @@ input[type='submit'], button {
     color: #ffffff;
     font-family: arial;
     background: #184ea6 url("/images/button_blue_2.png");
+    font-family: helvetica, arial, verdana;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     height: 28px;
     border: 1px solid #a1bcdd;
     padding: 1px 4px 0 4px;
     text-align: center;
-    width: 90px;
+    width: 100px;
 }
 
 .button_green {
-    color: #ffffff;
+    color: #184ea6;
     font-family: arial;
     background: #5ed184 url("/images/button_green_2.png");
+    font-family: helvetica, arial, verdana;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     height: 28px;
     border: 1px solid #38a15a;
     padding: 1px 4px 0 4px;
     text-align: center;
-    width: 90px;
+    width: 100px;
 }
 
 .button_grey {
     color: #b4b4b4;
     font-family: arial;
     background: white url("/images/button_grey_1.png");
+    font-family: helvetica, arial, verdana;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     height: 28px;
     border: 1px solid #b4b4b4;
     padding: 1px 4px 0 4px;
     text-align: center;
-    width: 90px;
+    width: 100px;
 }
 
 .button_width3 {

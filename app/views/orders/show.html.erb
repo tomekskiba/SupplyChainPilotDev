@@ -1,15 +1,16 @@
-<% title "Order Summary" %>
+<br/><br/>
+<h2 class="center">Order Summary</h2>
 
 <br/>
 <div id="progress_bar">
   <div class="progress_bar_cell">
-    <p>1) Order</p>
+    <p>Step 1 - Order</p>
   </div>
   <div class="progress_bar_cell active">
-    <p>2) Order Summary Header</p>
+    <p>Step 2 - Order Summary</p>
   </div>
   <div class="progress_bar_cell">
-    <p>3) Order Confirmation</p>
+    <p>Step 3 - Order Confirmation</p>
   </div>
 </div>
 
@@ -21,18 +22,23 @@
     and that your HomeCare Service Representative will review your information and send you an order confirmation with
     actual order quantities within 1 business day.
   </p>
+  <br/> <br/>
+
+  <hr/>
   <br/>
 
   <p>
-    <strong>Date supplies were counted at:</strong>
+    <strong>Date supplies were counted at: &nbsp;</strong>
     <%= format_date(@order.supplies_counted_at) %>
   </p>
+  <br/>
 
   <%= render :partial => 'order_summary' %>
 
   <div class="clear">
     <br/><br/>
     <%= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s do |f| %>
+        <%#= form_for @person, :url => { :action => "create" }, :builder => LabellingFormBuilder do |f| %>
 <%#=form_for {:controller => "orders", :action => "confirmed"} do |f| %>
 <%#= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s, :html => {:onsubmit => 'return checkTerms(this);'} do |f| %>
         <%= render 'shared/error_messages', :object => f.object %>
@@ -40,7 +46,12 @@
         <p>
           <%= f.hidden_field :submitted_flag, :value => 'f' %>
           <%= f.check_box :opt_in %>
-          <%#= check_box_tag "order[opt_in]", true, @order.opt_in? %>    Please click here to allow us to get your
+          <%#= check_box("order", "opt_in") %>
+          <%#= check_box_tag "order[opt_in]", 1, params.include?(:opt_in) %>
+          <%#= check_box_tag "order[opt_in]", 1, (params[:order][:opt_in] || {}).include?("1") %>
+          <%#= check_box_tag "order[opt_in]", 1, session[:opt_in].include?("1") %>
+          <%#= check_box_tag "order[opt_in]", 1, (checked = true if form.object.opt_in.include?(1)) %> Please click here
+          to allow us to get your
           feedback on this online ordering program as well as future service offering programs.
         </p>
 
@@ -48,10 +59,11 @@
           <%= f.check_box :baxter_terms %>
           <!--input id="order_baxter_terms" name="agree" type="checkbox" value="0"-->
           Click here to accept
-          <a href="/Privacy-Policy-terms-shipping-agreement.htm" target="_blank"> Baxter delivery terms & conditions</a>
+          <a href="/Privacy-Policy-terms-shipping-agreement.htm" target="_blank"> Baxter Privacy Policy and Delivery
+            Terms & Conditions</a>
         </p>
 
-        <br/>
+        <br/><br/>
 
         <div>
           <div class="left2">

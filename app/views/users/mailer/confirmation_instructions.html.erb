@@ -1,5 +1,15 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p>Welcome <%= current_user.first_name %> <%= current_user.last_name %> to Baxter’s patient supply ordering pilot website!</p>
 
-<p>You can confirm your account through the link below:</p>
+<p>This email is to notify you that your user account has been created.  Your log in id is your email address:  <u><%= @resource.email %></u>.  Please click the link below to create your password.</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p><%= link_to 'Create my password.', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p>You will then be able to place your regular supply orders online when it is time to do so.</p>
+
+<br/>
+
+<p>Thanks,</p>
+
+<p>Your Baxter HomeCare Service team</p>
+
+<p>1-800-284-4060</p>
