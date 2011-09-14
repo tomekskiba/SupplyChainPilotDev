@@ -233,7 +233,7 @@ class Order < ActiveRecord::Base
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
-    logger.info("suppliesXXXXXXXXXXXXXXXXXXXXXXXXXXX--"+number_of_days_till_delivery.to_s)
+    logger.info("suppliesXXXXXXXXXXXXXXXXXXXXXXXXXXX--/"+number_of_days_till_delivery.to_s)
 
       #usage_per_day = individual_pieces_per_cycle / number_of_days_in_delivery_cycle
     additional_units_needed = (individual_pieces_per_cycle.to_f /
@@ -242,6 +242,7 @@ class Order < ActiveRecord::Base
       #on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day)).round
     on_hand_at_delivery = (on_hand - additional_units_needed)
     on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
+    logger.info("supplies-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
     projected_order_quantity = (number_of_unites_used_per_cycle_plus_reserved_days - on_hand_at_delivery2).ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
@@ -266,13 +267,14 @@ class Order < ActiveRecord::Base
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
-    logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--"+number_of_days_till_delivery.to_s)
+    logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
 
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
     usage_per_day = (usage_per_week.to_f / 7) # float
     on_hand = order_solution_xrefs.find_by_solution_id(solution_id).on_hand
     on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day.to_f))
     on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
+    logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
     projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery2).ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
