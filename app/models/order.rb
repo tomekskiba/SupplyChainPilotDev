@@ -233,6 +233,7 @@ class Order < ActiveRecord::Base
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
+    logger.info("suppliesXXXXXXXXXXXXXXXXXXXXXXXXXXX--"+number_of_days_till_delivery)
 
       #usage_per_day = individual_pieces_per_cycle / number_of_days_in_delivery_cycle
     additional_units_needed = (individual_pieces_per_cycle.to_f /
@@ -265,6 +266,7 @@ class Order < ActiveRecord::Base
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
     number_of_days_till_delivery = (number_of_days_till_delivery).ceil
+    logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--"+number_of_days_till_delivery)
 
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
     usage_per_day = (usage_per_week.to_f / 7) # float
