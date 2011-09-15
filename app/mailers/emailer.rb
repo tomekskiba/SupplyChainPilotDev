@@ -3,9 +3,7 @@ class Emailer < ActionMailer::Base
 
   def forgotten_psw_confirmation(user)
     @user = user
-    #@url  = "http://example.com/login"
-    mail(#:to => "tomekskiba@yahoo.com",
-         :to => user.email,
+    mail(:to => user.email,
          :subject => "Password change confirmation")
   end
 
@@ -18,8 +16,8 @@ class Emailer < ActionMailer::Base
   def representative_order_notification(user, order)
     @user = user
     @order = order
-    mail(:to => "tomekskiba@yahoo.com",
-    #mail(:to => "terry_morabito@baxter.com",
+    #mail(:to => "tomekskiba@yahoo.com",
+    mail(:to => "terry_morabito@baxter.com",
          :subject => "New Order Notification")
   end
 end
