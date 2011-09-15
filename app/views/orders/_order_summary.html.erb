@@ -30,7 +30,7 @@
                       (Line Max - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)
                     </div>
                   </div>
-                  <% if on_hand_at_delivery < 0 %>
+                  <% if on_hand_at_delivery <= 0 %>
                       <div class="order_summary">
                         <p class="alert">
                           <%= $OUT_OF_SUPPLIES_ALERT %>
@@ -73,7 +73,7 @@
                         (Line Max - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)
                       </div>
                     </div>
-                    <% if on_hand_at_delivery < 0 %>
+                    <% if on_hand_at_delivery <= 0 %>
                         <div class="order_summary">
                           <p class="alert">
                             <%= $OUT_OF_SUPPLIES_ALERT %>
@@ -116,7 +116,7 @@
                         (Line Max - <%= @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max %>)
                       </div>
                     </div>
-                    <% if on_hand_at_delivery < 0 %>
+                    <% if on_hand_at_delivery <= 0 %>
                         <div class="order_summary">
                           <p class="alert">
                             <%= $OUT_OF_SUPPLIES_ALERT %>
