@@ -38,8 +38,6 @@ class User < ActiveRecord::Base
   attr_accessor :ancillary_supply_ids_all
 
   after_save :update_xrefs
-    #before_save :update_solution_ids
-
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     #date_regex = /\d{2}\/\d{2}\/\d{4}/
@@ -49,8 +47,8 @@ class User < ActiveRecord::Base
     #^[0-9]{5}(-[0-9]{4})?$
   phone_regex = /^\d{3}-\d{3}-\d{4}$/ #/^[0-9]{3}+\-[0-9]{7}$/             /^\d{3}-\d{7}$/
 
-  validates :password,
-                       :allow_nil => true, :allow_blank => true,
+  validates :password, :allow_nil => true,
+                       :allow_blank => true,
                        :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
 
   validates :first_name,
@@ -86,12 +84,10 @@ class User < ActiveRecord::Base
   validates :postal_code,
             :presence => true,
             :format => {:with => zip_code_regex}
-  validates :delivery_date,
-            :presence => true,
-            :format => {:with => date_regex}
-  validates :JDE_reconciliation_date,
-            :presence => true,
-            :format => {:with => date_regex}
+  validates :delivery_date, :presence => true,
+                            :format => {:with => date_regex}
+  validates :JDE_reconciliation_date, :presence => true,
+                                      :format => {:with => date_regex}
 
   validate :solutions_and_supplies
 

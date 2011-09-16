@@ -93,10 +93,25 @@
     </div>
     <div class="form_right">
       <% if @user.delivery_date %>
-          <%= f.text_field :delivery_date, :value => format_date(@user.delivery_date) %>
+          <%= f.text_field :delivery_date, :value => format_date(@user.delivery_date),
+                                           :readonly => "readonly",
+                                           :autocomplete => "off",
+                                           :class => "width20" %>
       <% else %>
-          <%= f.text_field :delivery_date %>
+          <%= f.text_field :delivery_date, :readonly => "readonly",
+                                           :autocomplete => "off",
+                                           :class => "width20" %>
       <% end %>
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+    			$("#user_delivery_date").datepicker({dateFormat: 'yy-mm-dd',
+                                                     showOn: 'button',
+                                                     buttonText: "select" });
+        });
+	</script>
+
+
     </div>
   </div>
   <div class="form_column">
@@ -146,7 +161,7 @@
       <%= f.label "Postal Code" %><span class="star">*</span>
     </div>
     <div class="form_right">
-      <%= f.text_field :postal_code, :style => "width: 100px;" %>
+      <%= f.text_field :postal_code, :class => "width20" %>
     </div>
   </div>
 </div>
@@ -209,10 +224,25 @@
     </div>
     <div class="form_right">
       <% if @user.JDE_reconciliation_date %>
-          <%= f.text_field :JDE_reconciliation_date, :value => format_date(@user.JDE_reconciliation_date) %>
+          <%= f.text_field :JDE_reconciliation_date, :value => format_date(@user.JDE_reconciliation_date),
+                                                     :readonly => "readonly",
+                                                     :autocomplete => "off",
+                                                     :class => "width20" %>
       <% else %>
-          <%= f.text_field :JDE_reconciliation_date %>
+          <%= f.text_field :JDE_reconciliation_date,
+                                                     :readonly => "readonly",
+                                                     :autocomplete => "off",
+                                                     :class => "width20" %>
       <% end %>
+
+      <script type="text/javascript">
+		$(document).ready(function(){
+    			$("#user_JDE_reconciliation_date").datepicker({dateFormat: 'yy-mm-dd',
+                                                     showOn: 'button',
+                                                     buttonText: "select" });
+        });
+	  </script>
+
     </div>
   </div>
 </div>

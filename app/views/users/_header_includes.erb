@@ -18,8 +18,22 @@
 </style>
 
 <script>
-    $(function() {
-        $("#user_delivery_date").datepicker({dateFormat: 'yy-mm-dd'});
-        $("#user_JDE_reconciliation_date").datepicker({dateFormat: 'yy-mm-dd'});
-    });
+
+        $(document).keydown(function(e) {
+            var element = e.target.nodeName.toLowerCase();
+            if ((element != 'input' && element != 'textarea') || $(e.target).attr("readonly"))  {
+                if (e.keyCode === 8) {
+                    return false;
+                }
+            }
+
+
+
+
+                if (e.keyCode == 13) {
+                     $(':submit').attr('disabled', 'disbled');
+                }
+            });
+
+
 </script>
