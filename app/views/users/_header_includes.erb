@@ -27,7 +27,8 @@
             }
 
             if (e.keyCode == 13) {
-                $(':submit').attr('disabled', 'disabled');
+                return false;
+                //$(':submit').attr('disabled', 'disabled');
             }
         });
 </script>

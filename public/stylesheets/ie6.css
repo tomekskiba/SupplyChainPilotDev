@@ -6,3 +6,6 @@
     margin-top: 4px;
 }
 
+input.login_submit {
+    border: 1px solid #003C9C;
+}
