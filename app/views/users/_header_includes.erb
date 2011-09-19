@@ -18,17 +18,28 @@
 </style>
 
 <script>
-        $(document).keydown(function(e) {
-            var element = e.target.nodeName.toLowerCase();
-            if ((element != 'input' && element != 'textarea') || $(e.target).attr("readonly")) {
-                if (e.keyCode === 8) {
-                    return false;
-                }
-            }
-
-            if (e.keyCode == 13) {
+    $(document).keydown(function(e) {
+        var element = e.target.nodeName.toLowerCase();
+        if ((element != 'input' && element != 'textarea') || $(e.target).attr("readonly")) {
+            if (e.keyCode === 8) {
                 return false;
-                //$(':submit').attr('disabled', 'disabled');
             }
+        }
+
+        //if (e.keyCode == 13) {
+        //  return false;
+        //$(':submit').attr('disabled', 'disabled');
+        //  }
+    });
+
+
+$(function () {
+        $('input').keypress(function (e) {
+            var code = null;
+            code = (e.keyCode ? e.keyCode : e.which);
+            return (code == 13) ? false : true;
         });
+    });
+
+
 </script>

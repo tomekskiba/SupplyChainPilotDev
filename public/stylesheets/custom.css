@@ -395,11 +395,38 @@ input.field2 {
 #footer {
     width: 100%;
     padding: 0;
-    margin: 0;
-    /*background-color: #00529a;    */
-    /* float: left;                      */
+    margin: 35px 0 20px 0;
+    height: 37px;
 }
 
+#footer div {
+    margin-left: 155px;
+    width: 715px;
+    height: 37px;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+}
+
+#footer p {
+    font-size: 11px;
+    color: #024285;
+    font-weight: normal;
+}
+
+#footer a {
+    color: #024285;
+    text-decoration: underline;
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 25px;
+}
+
+#footer img {
+    float: left;
+    margin: 7px 0 0 15px;
+}
+/*
 .footer_helper {
     padding: 35px 0 21px 15px;
     height: 30px;
@@ -437,7 +464,7 @@ input.field2 {
 #footer img {
     float: left;
     margin: 0px;
-}
+} */
 
 /* solution and supplies tables */
 #tbl {
