@@ -13,9 +13,9 @@
         <%= render :partial => 'users/form', :locals => {:f => f} %>
 
         <p>
-          <%= f.submit "Create Patient" %>
+          <%= f.submit "Create Patient", :class => "button_grey button_blue_specific" %>
           &nbsp;&nbsp;&nbsp;
-          <%= button("Cancel", users_path) %>
+          <%= button("Cancel", users_path, "button_grey") %>
         </p>
     <% end %>
 
