@@ -10,3 +10,7 @@
 .login_input_box {
     margin-top: 4px;
 } */
+
+input.login_submit {
+    border: none;
+}
