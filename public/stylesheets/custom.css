@@ -970,6 +970,10 @@ input[type='submit'], button {
     width: 100px;
 }
 
+.button_blue:hover {
+    border: 2px solid #a1bcdd;
+}
+
 .button_green {
     color: #184ea6;
     font-family: arial;
@@ -984,6 +988,10 @@ input[type='submit'], button {
     width: 100px;
 }
 
+.button_green:hover {
+    border: 2px solid #38a15a;
+}
+
 .button_grey {
     color: #999999; /*#b4b4b4;*/
     font-family: arial;
@@ -996,6 +1004,10 @@ input[type='submit'], button {
     padding: 1px 4px 0 4px;
     text-align: center;
     width: 100px;
+}
+
+.button_grey:hover {
+    border: 2px solid #b4b4b4;
 }
 
 .button_width3 {

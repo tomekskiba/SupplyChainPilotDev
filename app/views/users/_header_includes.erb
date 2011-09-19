@@ -18,22 +18,16 @@
 </style>
 
 <script>
-
         $(document).keydown(function(e) {
             var element = e.target.nodeName.toLowerCase();
-            if ((element != 'input' && element != 'textarea') || $(e.target).attr("readonly"))  {
+            if ((element != 'input' && element != 'textarea') || $(e.target).attr("readonly")) {
                 if (e.keyCode === 8) {
                     return false;
                 }
             }
 
-
-
-
-                if (e.keyCode == 13) {
-                     $(':submit').attr('disabled', 'disbled');
-                }
-            });
-
-
+            if (e.keyCode == 13) {
+                $(':submit').attr('disabled', 'disabled');
+            }
+        });
 </script>

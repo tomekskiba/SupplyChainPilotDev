@@ -47,47 +47,40 @@ class User < ActiveRecord::Base
     #^[0-9]{5}(-[0-9]{4})?$
   phone_regex = /^\d{3}-\d{3}-\d{4}$/ #/^[0-9]{3}+\-[0-9]{7}$/             /^\d{3}-\d{7}$/
 
-  validates :password, :allow_nil => true,
-                       :allow_blank => true,
-                       :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
-
-  validates :first_name,
-            :presence => true
-  validates :last_name,
-            :presence => true
-  validates :patient_email,
-            :presence => true,
-            :format => {:with => email_regex}
-  validates :account_no,
-            :presence => true,
-            :length => {:minimum => 8, :maximum => 8},
-            :numericality => {:integer_only => true, :message => " must be numeric."}
-  validates :primary_phone,
-            :presence => true,
-            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
-  validates :mobile_phone,
-            :allow_nil => true,
-            :allow_blank => true,
-            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
-  validates :no_reserved_days,
-            :presence => true,
-            :numericality => {:greater_than => 0, :message => " must be a number."}
-  validates :no_delivery_cycle_days,
-            :presence => true,
-            :numericality => {:greater_than => 0, :message => " must be a number."}
-  validates :address1,
-            :presence => true
-  validates :city,
-            :presence => true
-  validates :state,
-            :presence => true
-  validates :postal_code,
-            :presence => true,
-            :format => {:with => zip_code_regex}
-  validates :delivery_date, :presence => true,
-                            :format => {:with => date_regex}
+  validates :password,                :allow_nil => true,
+                                      :allow_blank => true,
+                                      :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
+  validates :first_name,              :presence => true
+  validates :last_name,               :presence => true
+  validates :patient_email,           :presence => true,
+                                      :format => {:with => email_regex}
+  validates :account_no,              :presence => true,
+                                      :length => {:minimum => 8, :maximum => 8},
+                                      :numericality => {:integer_only => true, :message => " must be numeric."}
+  validates :primary_phone,           :presence => true,
+                                      :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
+  validates :mobile_phone,            :allow_nil => true,
+                                      :allow_blank => true,
+                                      :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
+  validates :no_reserved_days,        :presence => true,
+                                      :numericality => {:greater_than => 0, :message => " must be a number."}
+  validates :no_delivery_cycle_days,  :presence => true,
+                                      :numericality => {:greater_than => 0, :message => " must be a number."}
+  validates :address1,                :presence => true
+  validates :city,                    :presence => true
+  validates :state,                   :presence => true
+  validates :postal_code,             :presence => true,
+                                      :format => {:with => zip_code_regex}
+  validates :delivery_date,           :presence => true,
+                                      :format => {:with => date_regex}
   validates :JDE_reconciliation_date, :presence => true,
                                       :format => {:with => date_regex}
+  validates :caregiver_email,         :allow_nil => true,
+                                      :allow_blank => true,
+                                      :format => {:with => email_regex}
+  validates :clinic_email,            :allow_nil => true,
+                                      :allow_blank => true,
+                                      :format => {:with => email_regex}
 
   validate :solutions_and_supplies
 
