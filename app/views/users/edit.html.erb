@@ -15,21 +15,13 @@
     <% @edit_status = "on" %>
     <%= render :partial => 'users/form', :locals => {:f => f} %>
 
-
-    <!--p>
-      <%#= f.submit "Update", :class => "button_grey button_blue_specific" %>
-      &nbsp;&nbsp;&nbsp;
-      <%#= button("Cancel", users_path, "button_grey") %>
-    </p-->
-
-
-        <div>
-          <div class="left2 button_blue_specific">
-            <%= f.submit "Update", :class => "button_grey" %>
-            <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
-          </div>
-          <div class="left2 margin_left4">
-            <%= button("Cancel", users_path, "button_grey") %>
-          </div>
-        </div>
+    <div>
+      <div class="left2 button_blue_specific">
+        <%= f.submit "Update", :class => "button_grey" %>
+        <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
+      </div>
+      <div class="left2 margin_left4">
+        <%= button("Cancel", users_path, "button_grey") %>
+      </div>
+    </div>
 <% end %>

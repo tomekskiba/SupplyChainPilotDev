@@ -12,11 +12,14 @@
         <% @edit_status = "off" %>
         <%= render :partial => 'users/form', :locals => {:f => f} %>
 
-        <p>
-          <%= f.submit "Create Patient", :class => "button_grey button_blue_specific" %>
-          &nbsp;&nbsp;&nbsp;
-          <%= button("Cancel", users_path, "button_grey") %>
-        </p>
+        <div>
+          <div class="left2 button_blue_specific">
+            <%= f.submit "Create Patient", :class => "button_grey" %>
+          </div>
+          <div class="left2 margin_left4">
+            <%= button("Cancel", users_path, "button_grey") %>
+          </div>
+        </div>
     <% end %>
 
 <% else %>
