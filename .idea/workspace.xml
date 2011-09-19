@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/ie7.css" afterPath="$PROJECT_DIR$/public/stylesheets/ie7.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ie7.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ie7.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/ie7.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+            <state line="14" column="30" selection-start="203" selection-end="203" vertical-scroll-proportion="0.525">
               <folding />
             </state>
           </provider>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/registrations/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="79" selection-start="542" selection-end="542" vertical-scroll-proportion="0.46280992">
+            <state line="16" column="79" selection-start="542" selection-end="542" vertical-scroll-proportion="-7.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +100,7 @@
       <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="919" column="13" selection-start="13074" selection-end="13086" vertical-scroll-proportion="-5.6538463">
+            <state line="167" column="32" selection-start="2592" selection-end="2623" vertical-scroll-proportion="-5.3461537">
               <folding />
             </state>
           </provider>
@@ -141,10 +141,10 @@
         <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie6.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/ie7.css" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/ie7.css" />
       </list>
     </option>
   </component>
@@ -919,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="919" column="13" selection-start="13074" selection-end="13086" vertical-scroll-proportion="-5.6538463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="90" selection-start="2454" selection-end="2466" vertical-scroll-proportion="-8.25">
@@ -940,16 +933,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/ie7.css">
+    <entry file="file://$PROJECT_DIR$/app/views/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+        <state line="16" column="79" selection-start="542" selection-end="542" vertical-scroll-proportion="-7.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/registrations/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="79" selection-start="542" selection-end="542" vertical-scroll-proportion="0.46280992">
+        <state line="167" column="32" selection-start="2592" selection-end="2623" vertical-scroll-proportion="-5.3461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/ie7.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="203" selection-end="203" vertical-scroll-proportion="0.525">
           <folding />
         </state>
       </provider>
