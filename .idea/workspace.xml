@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/emailer.rb" afterPath="$PROJECT_DIR$/app/mailers/emailer.rb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
@@ -82,7 +83,7 @@
       <file leaf-file-name="emailer.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="526" selection-end="526" vertical-scroll-proportion="0.53488374">
+            <state line="25" column="93" selection-start="775" selection-end="775" vertical-scroll-proportion="0.7751938">
               <folding />
             </state>
           </provider>
@@ -965,7 +966,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="526" selection-end="526" vertical-scroll-proportion="0.53488374">
+        <state line="25" column="93" selection-start="775" selection-end="775" vertical-scroll-proportion="0.7751938">
           <folding />
         </state>
       </provider>
