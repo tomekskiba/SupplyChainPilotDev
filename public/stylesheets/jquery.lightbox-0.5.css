@@ -88,7 +88,10 @@
 	float: left; 
 	text-align: left; 
 }	
-#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-caption {
+    font-weight: bold;
+    font-size: 15px;
+}
 #lightbox-image-details-currentNumber {
 	display: block; 
 	clear: left; 
