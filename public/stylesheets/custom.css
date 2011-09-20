@@ -1079,7 +1079,7 @@ input[type='submit'], button {
 }
 
 #error_explanation {
-    width: 500px;
+    width: 600px;
     border: 2px solid red;
     padding: 7px;
     padding-bottom: 12px;
@@ -1095,6 +1095,7 @@ input[type='submit'], button {
     margin: -7px;
     background-color: #c00;
     color: #fff;
+    font-size: 14px;
 }
 
 #error_explanation p {
@@ -1102,6 +1103,7 @@ input[type='submit'], button {
     margin-bottom: 0;
     padding: 5px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 #error_explanation ul {
@@ -1113,6 +1115,7 @@ input[type='submit'], button {
 #error_explanation li {
     font-size: 12px;
     list-style: square;
+    font-size: 14px;
 }
 
 p.p4 {

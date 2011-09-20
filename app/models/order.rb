@@ -36,8 +36,8 @@ class Order < ActiveRecord::Base
     #numeric_regex = /[0-9]{5}(?:-[0-9]{4})?/
   date_regex = /\d{4}\-\d{2}\-\d{2}/
 
-  validates_acceptance_of :baxter_terms
-  validates :supplies_counted_at, :presence => {:message => "may not be blank"},
+  validates_acceptance_of :baxter_terms, :message => " "
+  validates :supplies_counted_at, :presence => { :message => "may not be blank" },
                                   :format => {:with => date_regex}
   validate :solutions_and_supplies
 

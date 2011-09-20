@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_filter :authenticate_admin!, :only => [:destroy, :index]
-  before_filter :authenticate_user! #, :except => [:about]
+  before_filter :authenticate_user!
 
   def index
     @orders = Order.all
@@ -12,23 +12,17 @@ class OrdersController < ApplicationController
   end
 
   def confirmed
-    #if !@order.valid?
-    # render :action => 'show'
-    #else
-    #   redirect_to "/orders/confirmed/"+@order.id
-    #end
     @user = current_user
     @order = Order.find(params[:id])
     if @order.update_attributes(params[:order])
       Emailer.patient_order_confirmation(current_user).deliver
       Emailer.representative_order_notification(current_user, @order).deliver
-      #redirect_to "/orders/confirmed/"+@order.id.to_s
     else
-      #render :action => 'show'
       order = Order.find(params[:id])
       order.opt_in = params[:order][:opt_in]
       order.save
-      redirect_to "/orders/"+@order.id.to_s, :alert => "Please accept Baxter Privacy Policy and Delivery Terms & Conditions."
+      render :action => 'show'
+      #redirect_to "/orders/"+@order.id.to_s, :alert => "Please accept Baxter Privacy Policy and Delivery Terms & Conditions."
     end
   end
 

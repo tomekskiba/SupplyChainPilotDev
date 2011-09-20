@@ -1,6 +1,9 @@
 <br/><br/>
 <h2 class="center">Order Summary</h2>
 
+<%= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s do |f| %>
+       <%= render 'shared/error_messages', :object => f.object %>
+
 <br/>
 <div id="progress_bar">
   <div class="progress_bar_cell">
@@ -37,11 +40,7 @@
 
   <div class="clear">
     <br/><br/>
-    <%= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s do |f| %>
-        <%#= form_for @person, :url => { :action => "create" }, :builder => LabellingFormBuilder do |f| %>
-<%#=form_for {:controller => "orders", :action => "confirmed"} do |f| %>
-<%#= form_for @order, :url => "/orders/confirmed/"+@order.id.to_s, :html => {:onsubmit => 'return checkTerms(this);'} do |f| %>
-        <%= render 'shared/error_messages', :object => f.object %>
+
 
         <p>
           <%= f.hidden_field :submitted_flag, :value => 'f' %>
@@ -50,10 +49,10 @@
         </p>
 
         <p>
-          <%= f.check_box :baxter_terms %>
-          Click here to accept
-          <a href="/Privacy-Policy-terms-shipping-agreement.htm" target="_blank"> Baxter Privacy Policy and Delivery
-            Terms & Conditions</a>
+          <div class="left2"><%= f.check_box :baxter_terms %> </div>
+
+          <div class="left2">&nbsp;Click here to accept <a href="/Privacy-Policy-terms-shipping-agreement.htm" target="_blank"> Baxter Privacy Policy and Delivery
+            Terms & Conditions</a></div>
         </p>
 
         <br/><br/>
