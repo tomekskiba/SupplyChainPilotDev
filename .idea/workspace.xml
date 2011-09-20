@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/images/photos/4prongAPDcassette sep 19th.jpg" afterPath="$PROJECT_DIR$/public/images/photos/4prongAPDcassette.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/emailer.rb" afterPath="$PROJECT_DIR$/app/mailers/emailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="$PROJECT_DIR$/public/stylesheets/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/jquery.lightbox-0.5.css" afterPath="$PROJECT_DIR$/public/stylesheets/jquery.lightbox-0.5.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +82,7 @@
       <file leaf-file-name="emailer.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="21" selection-start="721" selection-end="721" vertical-scroll-proportion="0.7364341">
+            <state line="19" column="81" selection-start="594" selection-end="594" vertical-scroll-proportion="0.62015504">
               <folding />
             </state>
           </provider>
@@ -149,8 +143,8 @@
         <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery.lightbox-0.5.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/jquery.lightbox-0.5.css" />
-        <option value="$PROJECT_DIR$/app/mailers/emailer.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
+        <option value="$PROJECT_DIR$/app/mailers/emailer.rb" />
       </list>
     </option>
   </component>
@@ -874,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="125" selection-start="737" selection-end="805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="20" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
@@ -937,9 +924,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="125" selection-start="737" selection-end="805" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="21" selection-start="721" selection-end="721" vertical-scroll-proportion="0.7364341">
+        <state line="19" column="81" selection-start="594" selection-end="594" vertical-scroll-proportion="0.62015504">
           <folding />
         </state>
       </provider>

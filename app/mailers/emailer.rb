@@ -17,7 +17,7 @@ class Emailer < ActionMailer::Base
     @user = user
     @order = order
     sendto = "US_Renal_MyDialysisSupply@baxter.com"
-    sendto += (";" + user.clinic_email) unless (user.clinic_email.nil? or user.clinic_email.blank?)
+    sendto += (";" + @user.clinic_email) unless (@user.clinic_email.nil? or @user.clinic_email.blank?)
     #mail(:to => "tomekskiba@yahoo.com",
     mail(#:to => "terry_morabito@baxter.com",
         :to => sendto,
