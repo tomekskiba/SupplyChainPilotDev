@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="" />
+    <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+    </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="orders_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="125" selection-start="737" selection-end="805" vertical-scroll-proportion="0.0">
+            <state line="16" column="69" selection-start="398" selection-end="398" vertical-scroll-proportion="0.3488372">
               <folding />
             </state>
           </provider>
@@ -77,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emailer.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="emailer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.503876">
+            <state line="18" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +137,6 @@
         <option value="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
@@ -143,6 +144,7 @@
         <option value="$PROJECT_DIR$/public/stylesheets/jquery.lightbox-0.5.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/mailers/emailer.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
       </list>
     </option>
   </component>
@@ -954,16 +956,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="125" selection-start="737" selection-end="805" vertical-scroll-proportion="0.0">
+        <state line="18" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.503876">
+        <state line="16" column="69" selection-start="398" selection-end="398" vertical-scroll-proportion="0.3488372">
           <folding />
         </state>
       </provider>

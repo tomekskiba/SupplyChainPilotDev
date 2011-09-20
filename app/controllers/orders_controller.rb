@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     if @order.update_attributes(params[:order])
       Emailer.patient_order_confirmation(current_user).deliver
-      Emailer.representative_order_notification(current_user, @order).deliver
+      Emailer.representative_order_notification(@user, @order).deliver
     else
       order = Order.find(params[:id])
       order.opt_in = params[:order][:opt_in]
