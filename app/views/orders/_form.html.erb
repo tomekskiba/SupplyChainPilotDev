@@ -54,16 +54,31 @@
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
 <p>
-  Enter Date the Supplies are Actually Counted<span class="star">*</span>
+  <span class="fontstyle0 color3">Home Patient Product Inventory Date (Required)</span>
   <br/>
   <% if @order.supplies_counted_at.nil? %>
-      <%= f.text_field :supplies_counted_at, :class => "field2" %>
+      <%= f.text_field :supplies_counted_at, :class => "field2",
+                                             :readonly => "readonly",
+                                             :autocomplete => "off" %>
   <% else %>
-      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at), :class => "field2" %>
+      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at),
+                                             :class => "field2",
+                                             :readonly => "readonly",
+                                             :autocomplete => "off" %>
   <% end %>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $("#order_supplies_counted_at").datepicker({dateFormat: 'yy-mm-dd',
+              showOn: 'button',
+              buttonText: "select" });
+      });
+  </script>
+     <br/>
+  Enter Date the Supplies are Actually Counted
 </p>
 
-<br/>
+<br/><br/>
 
 <!-- solution and supplies  -->
 <h3>Dialysis Solution</h3>
@@ -122,12 +137,12 @@
           <p>Usage/<br/>Week</p>
         </div>
     <% end %>
-        <div class="tbl_width1 tbl_height3 tbl_common2">
-          <p>On Hand </p>
-        </div>
-        <div class="tbl_width1 tbl_height3 tbl_common2">
-          <p>Usage/<br/>Week</p>
-        </div>
+    <div class="tbl_width1 tbl_height3 tbl_common2">
+      <p>On Hand </p>
+    </div>
+    <div class="tbl_width1 tbl_height3 tbl_common2">
+      <p>Usage/<br/>Week</p>
+    </div>
   </div>
 
   <%= hidden_field_tag "order[solution_ids][]", "" %>
@@ -171,8 +186,9 @@
                   <% pic = apd_supply.picture %>
                   <% unless pic.nil? || pic.blank? %>
                       <div class="button_blue right button_width3 top0">
-                        <p class="p4"><a class="lightBox" href="/images/photos/<%= pic %>" title="<%= apd_supply.name %>">See
-                          Photo</a></p>
+                        <p class="p4">
+                          <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= apd_supply.name %>">See
+                            Photo</a></p>
                       </div>
                   <% end %>
                 </div>
@@ -222,8 +238,9 @@
                   <% pic = capd_supply.picture %>
                   <% unless pic.nil? || pic.blank? %>
                       <div class="button_blue right button_width3 top0">
-                        <p class="p4"><a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
-                          Photo</a></p>
+                        <p class="p4">
+                          <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
+                            Photo</a></p>
                       </div>
                   <% end %>
                 </div>
@@ -273,8 +290,9 @@
                   <% pic = ancillary_supply.picture %>
                   <% unless pic.nil? || pic.blank? %>
                       <div class="button_blue right button_width3 top0">
-                        <p class="p4"><a class="lightBox" href="/images/photos/<%= pic %>" title="<%= ancillary_supply.name %>">See
-                          Photo</a></p>
+                        <p class="p4">
+                          <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= ancillary_supply.name %>">See
+                            Photo</a></p>
                       </div>
                   <% end %>
                 </div>

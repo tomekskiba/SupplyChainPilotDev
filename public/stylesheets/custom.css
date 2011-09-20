@@ -359,6 +359,21 @@ input.field2 {
     font-weight: bold;
 }
 
+.ui-datepicker-trigger {
+    color: #184ea6;
+    font-family: arial;
+    background: #5ed184 url("/images/button_green_2.png");
+    font-family: helvetica, arial, verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 22px;
+    border: 1px solid #38a15a;
+    padding: 0px 4px 0 4px;
+    margin: 0px 0 2px 2px;
+    text-align: center;
+    width: 60px;
+}
+
 /* Order summary  */
 #summary li {
     list-style-type: none;
@@ -896,6 +911,12 @@ a.lightBox {
 
 .fontsize4 {
     font-size: 1.2em;
+}
+
+.fontstyle0 {
+    font-family: helvetica, arial, verdana;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .font0 {

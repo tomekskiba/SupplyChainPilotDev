@@ -9,3 +9,5 @@ en:
         no_reserved_days: "Number of reserved days"
         no_delivery_cycle_days: "Number of delivery cycle days"
         address1: "Patient Primary Shipping Address"
+      order:
+        supplies_counted_at: "Home Patient Product Inventory Date"
