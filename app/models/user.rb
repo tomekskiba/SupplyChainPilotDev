@@ -43,62 +43,74 @@ class User < ActiveRecord::Base
     #date_regex = /\d{2}\/\d{2}\/\d{4}/
   date_regex = /\d{4}\-\d{2}\-\d{2}/
   alphanumeric_regex = /^(?=.*\d)(?=.*[A-Za-z])[A-Za-z0-9]/
-  zip_code_regex = /\A\d{5}\z|\A\d{5}\-\d{4}\z/#/[0-9]{5}(?:-[0-9]{4})?/
+  zip_code_regex = /\A\d{5}\z|\A\d{5}\-\d{4}\z/ #/[0-9]{5}(?:-[0-9]{4})?/
     #^[0-9]{5}(-[0-9]{4})?$
   phone_regex = /^\d{3}-\d{3}-\d{4}$/ #/^[0-9]{3}+\-[0-9]{7}$/             /^\d{3}-\d{7}$/
 
-  validates :password,                :allow_nil => true,
-                                      :allow_blank => true,
-                                      :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
-  validates :first_name,              :presence => true
-  validates :last_name,               :presence => true
-  validates :patient_email,           :presence => true,
-                                      :format => {:with => email_regex}
-  validates :account_no,              :presence => true,
-                                      :length => {:minimum => 8, :maximum => 8},
-                                      :numericality => {:integer_only => true, :message => " must be numeric."}
-  validates :primary_phone,           :presence => true,
-                                      :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
-  validates :mobile_phone,            :allow_nil => true,
-                                      :allow_blank => true,
-                                      :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
-  validates :no_reserved_days,        :presence => true,
-                                      :numericality => {:greater_than => 0, :message => " must be a number."}
-  validates :no_delivery_cycle_days,  :presence => true,
-                                      :numericality => {:greater_than => 0, :message => " must be a number."}
-  validates :address1,                :presence => true
-  validates :city,                    :presence => true
-  validates :state,                   :presence => true
-  validates :postal_code,             :presence => true,
-                                      :format => {:with => zip_code_regex}
-  validates :delivery_date,           :presence => true,
-                                      :format => {:with => date_regex}
+  validates :password, :allow_nil => true,
+            :allow_blank => true,
+            :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :patient_email, :presence => true,
+            :format => {:with => email_regex}
+  validates :account_no, :presence => true,
+            :length => {:minimum => 8, :maximum => 8},
+            :numericality => {:integer_only => true, :message => " must be numeric."}
+  validates :primary_phone, :presence => true,
+            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
+  validates :mobile_phone, :allow_nil => true,
+            :allow_blank => true,
+            :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
+  validates :no_reserved_days, :presence => true,
+            :numericality => {:greater_than => 0, :message => " must be a number."}
+  validates :no_delivery_cycle_days, :presence => true,
+            :numericality => {:greater_than => 0, :message => " must be a number."}
+  validates :address1, :presence => true
+  validates :city, :presence => true
+  validates :state, :presence => true
+  validates :postal_code, :presence => true,
+            :format => {:with => zip_code_regex}
+  validates :delivery_date, :presence => true,
+            :format => {:with => date_regex}
   validates :JDE_reconciliation_date, :presence => true,
-                                      :format => {:with => date_regex}
-  validates :caregiver_email,         :allow_nil => true,
-                                      :allow_blank => true,
-                                      :format => {:with => email_regex}
-  validates :clinic_email,            :allow_nil => true,
-                                      :allow_blank => true,
-                                      :format => {:with => email_regex}
+            :format => {:with => date_regex}
+  validates :caregiver_email, :allow_nil => true,
+            :allow_blank => true,
+            :format => {:with => email_regex}
+  validates :clinic_email, :allow_nil => true,
+            :allow_blank => true,
+            :format => {:with => email_regex}
 
   validate :solutions_and_supplies
 
   def solutions_and_supplies
     #validate solutions
-    unless solution_ids.nil?
-      solution_ids.each do |x|
-        unless x.nil? or x.blank?
-          index = solution_ids_all.index(x)
-          if index >= 0
-            y = user_solution_xrefs_line_max[index]
-            if y.blank? or !is_numeric?(y)
-              errors.add("Dialysis Solution - ", "Line Max cannot be blank and must be numeric")
-              break
-            end
-          end
+    unless are_they_all_blank?(solution_ids) and are_they_all_blank?(user_solution_xrefs_line_max)
+      solution_ids_all.each do |id|
+        index = solution_ids_all.index(id)
+        check = 0
+        line_max = user_solution_xrefs_line_max[index]
+          # make sure that both "included?" and line max are specified
+        if (solution_ids.include?(id)) then
+          check+=1
+        end
+        if (!line_max.blank?) then
+          check+=1
+        end
+
+        if check == 1
+          errors.add("Dialysis Solution - ", 'For chosen solutions all fields are required')
+          break
+        end
+
+        if !line_max.blank? and !is_numeric?(line_max)
+          errors.add("Dialysis Solution - ", "Line Max cannot be blank and must be numeric")
+          break
         end
       end
+    else
+      errors.add("Dialysis Solution - ", "at least one Solution is required")
     end
 
     validate_supplies(
@@ -119,28 +131,38 @@ class User < ActiveRecord::Base
   end
 
   def validate_supplies(ids, ids_all, name, line_max_array, usage_array)
-    unless ids.nil? or ids_all.nil?
-      ids.each do |x|
-        unless x.nil? or x.blank?
-          index = ids_all.index(x)
-          if index >= 0
-            y = line_max_array[index]
-            if y.blank? or !is_numeric?(y)
-              errors.add(name, "Line Max cannot be blank and must be numeric")
-              break
-            end
+    ids_all.each do |id|
+      index = ids_all.index(id)
+      check = 0
+      line_max = line_max_array[index]
+      usage = usage_array[index]
+        # make sure that all of the fields are specified including checkbox
+      if (ids.include?(id)) then
+        check+=1
+      end
+      if (!line_max.blank?) then
+        check+=1
+      end
+      if (!usage.blank?) then
+        check+=1
+      end
 
-            z = usage_array[index]
-            if z.blank? or !is_numeric?(z)
-              errors.add(name, "Individual Pieces per Cycle cannot be blank and must be numeric")
-              break
-            end
-          end
-        end
+      if check == 1 or check == 2
+        errors.add(name, 'For chosen supplies all fields are required')
+        break
+      end
+
+      if !line_max.blank? and !is_numeric?(line_max)
+        errors.add(name, "Line Max cannot be blank and must be numeric")
+        break
+      end
+
+      if !usage.blank? and !is_numeric?(usage)
+        errors.add(name, "Individual Pieces per Cycle cannot be blank and must be numeric")
+        break
       end
     end
   end
-
 
     #after_save callback to handle saving to xref tables
   def update_xrefs
@@ -381,8 +403,21 @@ class User < ActiveRecord::Base
 #   end
 #end
 
+  def are_they_all_blank?(arr)
+    result = true
+    arr.each do |x|
+      if x != ""
+        result = false
+        break
+      end
+    end
+
+    return result
+  end
+
   def is_numeric?(val)
-    val.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+    #val.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+    val.to_s.match(/^(0|[1-9][0-9]*)$/) == nil ? false : true
   end
 
     #print errors for supplies and solutions

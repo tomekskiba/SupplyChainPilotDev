@@ -2,7 +2,7 @@
     <p class="clear"></p>
     <p>&nbsp;</p>
     <h3 class="h3_style">Dialysis Solutions</h3>
-    <% for solution in Solution.all %>
+    <% for solution in Solution.find(:all, :order => 'id ASC') %>
         <% if @user.solutions.include?(solution) %>
             <% if @order.solutions.include?(solution) %>
                 <div class="margin_left4 left2">
@@ -49,7 +49,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h3 class="h3_style">APD Supplies</h3>
-    <% for apd_supply in ApdSupply.all %>
+    <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
         <% if @user.apd_supplies.include?(apd_supply) %>
             <% if @order.apd_supplies.include?(apd_supply) %>
                 <div class="margin_left4 left2">
@@ -92,7 +92,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h3 class="h3_style">CAPD Supplies</h3>
-    <% for capd_supply in CapdSupply.all %>
+    <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
         <% if @user.capd_supplies.include?(capd_supply) %>
             <% if @order.capd_supplies.include?(capd_supply) %>
                 <div class="margin_left4 left2">
@@ -136,7 +136,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h3 class="h3_style">Ancillary Supplies</h3>
-    <% for ancillary_supply in AncillarySupply.all %>
+    <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
         <% if @user.ancillary_supplies.include?(ancillary_supply) %>
             <% if @order.ancillary_supplies.include?(ancillary_supply) %>
                 <div class="order_summary margin_left4">

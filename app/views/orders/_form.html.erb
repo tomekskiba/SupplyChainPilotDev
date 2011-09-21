@@ -176,7 +176,7 @@
       </div>
       <%= hidden_field_tag "order[apd_supply_ids][]", "" %>
 
-      <% for apd_supply in ApdSupply.find(:all) %>
+      <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
 
           <% if @user.apd_supplies.include?(apd_supply) %>
               <div class="tbl_width5">
@@ -228,7 +228,7 @@
         </div>
       </div>
       <%= hidden_field_tag "order[capd_supply_ids][]", "" %>
-      <% for capd_supply in CapdSupply.find(:all) %>
+      <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
 
           <% if @user.capd_supplies.include?(capd_supply) %>
               <div class="tbl_width5">
@@ -280,7 +280,7 @@
         </div>
       </div>
       <%= hidden_field_tag "order[ancillary_supply_ids][]", "" %>
-      <% for ancillary_supply in AncillarySupply.find(:all) %>
+      <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
           <% if @user.ancillary_supplies.include?(ancillary_supply) %>
 
               <div class="tbl_width7">

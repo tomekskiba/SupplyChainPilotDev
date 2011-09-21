@@ -297,7 +297,6 @@ class Order < ActiveRecord::Base
     val.to_s.match(/^(0|[1-9][0-9]*)$/) == nil ? false : true
   end
 
-    #print errors for supplies and solutions
   def validate_tables_input(var, name, err_desc)
     unless (var).nil?
       var.each do |x|

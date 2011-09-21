@@ -328,7 +328,7 @@
   </div>
 </div>
 <%= hidden_field_tag "user[apd_supply_ids][]", "" %>
-<% for apd_supply in ApdSupply.find(:all) %>
+<% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
     <div class=solution_row>
       <% alternate = cycle("row2", "row3") %>
       <div class="solution_row_name  <%= alternate -%>">
@@ -388,7 +388,7 @@
   </div>
 </div>
 <%= hidden_field_tag "user[capd_supply_ids][]", "" %>
-<% for capd_supply in CapdSupply.find(:all) %>
+<% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
     <div class=solution_row>
       <% alternate = cycle("row2", "row3") %>
       <div class="solution_row_name <%= alternate -%>">
@@ -442,7 +442,7 @@
   </div>
 </div>
 <%= hidden_field_tag "user[ancillary_supply_ids][]", "" %>
-<% for ancillary_supply in AncillarySupply.find(:all) %>
+<% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
     <div class=solution_row>
       <% alternate = cycle("row2", "row3") %>
       <div class="solution_row_name cell_width_1 <%= alternate %>">
