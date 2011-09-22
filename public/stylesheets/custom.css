@@ -134,6 +134,10 @@ body {
     text-shadow: 0.1em 0.1em 0.2em black;
 }
 
+#login_window h2 {
+    font-size: 30px;
+}
+
 #login_window a {
     color: white;
     text-decoration: underline;

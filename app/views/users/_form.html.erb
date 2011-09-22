@@ -1,7 +1,7 @@
 <div id="form_panel">
   <div class="form_column">
     <div class="form_left">
-      <%= f.label "Email" %><span class="star">*</span>
+      <%= f.label "email" %><span class="star">*</span>
     </div>
     <div class="form_right">
       <% if @edit_status == "on" %>
@@ -17,12 +17,6 @@
 
 <div id="form_panel">
   <div class="form_column">
-    <div class="form_left">
-      <%= f.label "Patient Email" %><span class="star">*</span>
-    </div>
-    <div class="form_right">
-      <%= f.text_field :patient_email %>
-    </div>
 
     <div class="form_left">
       <%= f.label "First Name" %><span class="star">*</span>
@@ -35,15 +29,20 @@
       <% end %>
     </div>
 
-    <div class="form_left" style="height: 42px;">
-      <%= f.label "Primary Phone" %><span class="star">*</span><br/>
-      <span class="fontsize00">(XXX-XXX-XXXX)</span>
+    <div class="form_left">
+      <%= f.label "Last Name" %><span class="star">*</span>
     </div>
-    <div class="form_right">
-      <%= f.text_field :primary_phone %>
+    <div class="form_right" style="padding-top: 3px;">
+      <% if @edit_status == "on" %>
+          <%= f.text_field :last_name, :disabled => 'disabled' %>
+      <% else %>
+          <%= f.text_field :last_name %>
+      <% end %>
     </div>
+
   </div>
   <div class="form_column">
+
     <div class="form_left">
       <%= f.label "Account Number" %><span class="star">*</span>
     </div>
@@ -55,15 +54,12 @@
       <% end %>
     </div>
 
-    <div class="form_left">
-      <%= f.label "Last Name" %><span class="star">*</span>
+    <div class="form_left" style="height: 42px;">
+      <%= f.label "Primary Phone" %><span class="star">*</span><br/>
+      <span class="fontsize00">(XXX-XXX-XXXX)</span>
     </div>
-    <div class="form_right">
-      <% if @edit_status == "on" %>
-          <%= f.text_field :last_name, :disabled => 'disabled' %>
-      <% else %>
-          <%= f.text_field :last_name %>
-      <% end %>
+    <div class="form_right" style="padding-top: 3px;">
+      <%= f.text_field :primary_phone %>
     </div>
 
     <div class="form_left" style="height: 42px;">
@@ -73,6 +69,7 @@
     <div class="form_right">
       <%= f.text_field :mobile_phone %>
     </div>
+
   </div>
 </div>
 
@@ -158,7 +155,7 @@
     </div>
 
     <div class="form_left">
-      <%= f.label "Postal Code" %><span class="star">*</span>
+      <%= f.label "Zip/Postal Code" %><span class="star">*</span>
     </div>
     <div class="form_right">
       <%= f.text_field :postal_code, :class => "width20" %>
@@ -192,12 +189,6 @@
       <%= f.text_field :caregiver_last_name %>
     </div>
 
-    <div class="form_left">
-      <%= f.label :caregiver_email %>
-    </div>
-    <div class="form_right">
-      <%= f.text_field :caregiver_email %>
-    </div>
   </div>
 </div>
 
@@ -460,4 +451,3 @@
 </p>
 
 <br/><br/>
-

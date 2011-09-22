@@ -2,7 +2,7 @@
     <p class="clear"></p>
     <p>&nbsp;</p>
     <h3 class="h3_style">Dialysis Solutions</h3>
-    <% for solution in Solution.find(:all, :order => 'id ASC') %>
+    <% for solution in Solution.find(:all, :order => 'seq_no ASC') %>
         <% if @user.solutions.include?(solution) %>
             <% if @order.solutions.include?(solution) %>
                 <div class="margin_left4 left2">

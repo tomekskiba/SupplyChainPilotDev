@@ -5,6 +5,7 @@ en:
   activerecord:
     attributes:
       user:
+        email: "User ID / Email"
         account_no: "Account Number"
         no_reserved_days: "Number of reserved days"
         no_delivery_cycle_days: "Number of delivery cycle days"

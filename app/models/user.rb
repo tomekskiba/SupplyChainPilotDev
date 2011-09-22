@@ -1,12 +1,10 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :lockable,and :omniauthable
+
   devise :database_authenticatable,
          :registerable,
          :confirmable,
          :lockable,
          :recoverable,
-         #:rememberable,
          :trackable,
          :validatable,
          :timeoutable
@@ -40,20 +38,17 @@ class User < ActiveRecord::Base
   after_save :update_xrefs
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-    #date_regex = /\d{2}\/\d{2}\/\d{4}/
   date_regex = /\d{4}\-\d{2}\-\d{2}/
   alphanumeric_regex = /^(?=.*\d)(?=.*[A-Za-z])[A-Za-z0-9]/
-  zip_code_regex = /\A\d{5}\z|\A\d{5}\-\d{4}\z/ #/[0-9]{5}(?:-[0-9]{4})?/
-    #^[0-9]{5}(-[0-9]{4})?$
-  phone_regex = /^\d{3}-\d{3}-\d{4}$/ #/^[0-9]{3}+\-[0-9]{7}$/             /^\d{3}-\d{7}$/
+  only_alpha = /^([A-Za-z])[A-Za-z]/
+  zip_code_regex = /\A\d{5}\z|\A\d{5}\-\d{4}\z/
+  phone_regex = /^\d{3}-\d{3}-\d{4}$/
 
   validates :password, :allow_nil => true,
             :allow_blank => true,
             :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
   validates :first_name, :presence => true
   validates :last_name, :presence => true
-  validates :patient_email, :presence => true,
-            :format => {:with => email_regex}
   validates :account_no, :presence => true,
             :length => {:minimum => 8, :maximum => 8},
             :numericality => {:integer_only => true, :message => " must be numeric."}
@@ -68,16 +63,18 @@ class User < ActiveRecord::Base
             :numericality => {:greater_than => 0, :message => " must be a number."}
   validates :address1, :presence => true
   validates :city, :presence => true
-  validates :state, :presence => true
+  validates :state, :presence => true,
+            :length => {:minimum => 2, :maximum => 2, :message => "is invalid (only 2 characters are allowed)"},
+            :format => {:with => only_alpha, :message => "is invalid (only alphabetical letters are allowed)"}
   validates :postal_code, :presence => true,
             :format => {:with => zip_code_regex}
   validates :delivery_date, :presence => true,
             :format => {:with => date_regex}
   validates :JDE_reconciliation_date, :presence => true,
             :format => {:with => date_regex}
-  validates :caregiver_email, :allow_nil => true,
-            :allow_blank => true,
-            :format => {:with => email_regex}
+    #validates :caregiver_email, :allow_nil => true,
+    #         :allow_blank => true,
+    #        :format => {:with => email_regex}
   validates :clinic_email, :allow_nil => true,
             :allow_blank => true,
             :format => {:with => email_regex}
@@ -86,31 +83,33 @@ class User < ActiveRecord::Base
 
   def solutions_and_supplies
     #validate solutions
-    unless are_they_all_blank?(solution_ids) and are_they_all_blank?(user_solution_xrefs_line_max)
-      solution_ids_all.each do |id|
-        index = solution_ids_all.index(id)
-        check = 0
-        line_max = user_solution_xrefs_line_max[index]
-          # make sure that both "included?" and line max are specified
-        if (solution_ids.include?(id)) then
-          check+=1
-        end
-        if (!line_max.blank?) then
-          check+=1
-        end
+    unless solution_ids.nil?
+      unless are_they_all_blank?(solution_ids) and are_they_all_blank?(user_solution_xrefs_line_max)
+        solution_ids_all.each do |id|
+          index = solution_ids_all.index(id)
+          check = 0
+          line_max = user_solution_xrefs_line_max[index]
+            # make sure that both "included?" and line max are specified
+          if (solution_ids.include?(id)) then
+            check+=1
+          end
+          if (!line_max.blank?) then
+            check+=1
+          end
 
-        if check == 1
-          errors.add("Dialysis Solution - ", 'For chosen solutions all fields are required')
-          break
-        end
+          if check == 1
+            errors.add("Dialysis Solution - ", 'For chosen solutions all fields are required')
+            break
+          end
 
-        if !line_max.blank? and !is_numeric?(line_max)
-          errors.add("Dialysis Solution - ", "Line Max cannot be blank and must be numeric")
-          break
+          if !line_max.blank? and !is_numeric?(line_max)
+            errors.add("Dialysis Solution - ", "Line Max cannot be blank and must be numeric")
+            break
+          end
         end
+      else
+        errors.add("Dialysis Solution - ", "at least one Solution is required")
       end
-    else
-      errors.add("Dialysis Solution - ", "at least one Solution is required")
     end
 
     validate_supplies(
@@ -131,35 +130,37 @@ class User < ActiveRecord::Base
   end
 
   def validate_supplies(ids, ids_all, name, line_max_array, usage_array)
-    ids_all.each do |id|
-      index = ids_all.index(id)
-      check = 0
-      line_max = line_max_array[index]
-      usage = usage_array[index]
-        # make sure that all of the fields are specified including checkbox
-      if (ids.include?(id)) then
-        check+=1
-      end
-      if (!line_max.blank?) then
-        check+=1
-      end
-      if (!usage.blank?) then
-        check+=1
-      end
+    unless ids.nil? and ids_all.nil?
+      ids_all.each do |id|
+        index = ids_all.index(id)
+        check = 0
+        line_max = line_max_array[index]
+        usage = usage_array[index]
+          # make sure that all of the fields are specified including checkbox
+        if (ids.include?(id)) then
+          check+=1
+        end
+        if (!line_max.blank?) then
+          check+=1
+        end
+        if (!usage.blank?) then
+          check+=1
+        end
 
-      if check == 1 or check == 2
-        errors.add(name, 'For chosen supplies all fields are required')
-        break
-      end
+        if check == 1 or check == 2
+          errors.add(name, 'For chosen supplies all fields are required')
+          break
+        end
 
-      if !line_max.blank? and !is_numeric?(line_max)
-        errors.add(name, "Line Max cannot be blank and must be numeric")
-        break
-      end
+        if !line_max.blank? and !is_numeric?(line_max)
+          errors.add(name, "Line Max cannot be blank and must be numeric")
+          break
+        end
 
-      if !usage.blank? and !is_numeric?(usage)
-        errors.add(name, "Individual Pieces per Cycle cannot be blank and must be numeric")
-        break
+        if !usage.blank? and !is_numeric?(usage)
+          errors.add(name, "Individual Pieces per Cycle cannot be blank and must be numeric")
+          break
+        end
       end
     end
   end
@@ -368,40 +369,8 @@ class User < ActiveRecord::Base
     end
   end
 
+
   private
-
-#  def update_solution_ids
-#   solution_ids_all.each do |x|
-#    found_it = "no"
-#   solution_ids.each do |y|
-#    if x == y
-#     found_it = "yes"
-#    break
-# end
-#      end
-#
-#    if found_it != "yes"
-#     solution_ids_all[Integer(solution_ids_all.index(x))] = ""
-#    #logger.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXinserted blank")
-# end
-#logger.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-"+x.to_s)
-#    end
-# end
-
-#  def should_be_added(s, solution_ids)
-#   status = "dont_add"
-#  solution_ids.each do |ss|
-#   if s == ss
-#    status = "add"
-# end
-#    end
-
-#   if status == "add"
-#    return true
-# else
-#  return false
-#   end
-#end
 
   def are_they_all_blank?(arr)
     result = true
