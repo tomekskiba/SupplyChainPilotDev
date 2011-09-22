@@ -44,70 +44,6 @@ body {
     color: white;
 }
 
-/* old header*/
-/*
-.logo {
-    width: 100%;
-    margin: 0;
-} */
-
-/*.logo2 {
-    width: 155px;
-    height: 39px;
-    margin: 0 0 2px 0;
-    background: blue url(/images/logo.png) no-repeat 6px 6px;
-    float: left;
-} */
-/*
-.logo2 {
-    width: 100%;
-    height: 30px;
-    background-color: #1b4e9c;
-    text-align: right;
-}
-
-.logo2 p {
-    color: white;
-    padding: 5px;
-    font-size: 1.2em;
-}
-
-.logo2 a {
-    color: white;
-    text-decoration: underline;
-}
-
-.logo3 {
-    width: 100%;
-    height: 60px;
-    padding: 0;
-    margin: 0;
-}
-
-.logo3 h1 {
-    color: #1b4e9c;
-    padding: 17px 0 0 30px;
-    font-size: 2.1em;
-    font-weight: bold;
-}
-  */
-/*
-.banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.banner_cell {
-    float: left;
-    width: 254px;
-    padding: 3px 2px 2px 0px;
-}
-
-.banner_cell_right {
-    padding-right: 0px;
-}     */
-
 /* login page */
 #main2 {
     width: 100%;
@@ -324,7 +260,7 @@ body {
     float: left;
     margin: 2px;
     background-color: white;
-    height: 229px;
+    height: 239px;
     color: #000000;
     border: 2px solid #184ea6;
     width: 1000px;

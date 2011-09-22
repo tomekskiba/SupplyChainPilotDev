@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="" />
+    <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="$PROJECT_DIR$/public/stylesheets/custom.css" />
+    </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +55,7 @@
       <file leaf-file-name="custom.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="336" column="40" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.5812183">
+            <state line="262" column="14" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.6751269">
               <folding />
             </state>
           </provider>
@@ -1027,7 +1029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="336" column="40" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.5812183">
+        <state line="262" column="14" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.6751269">
           <folding />
         </state>
       </provider>
