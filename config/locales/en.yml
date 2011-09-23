@@ -6,9 +6,6 @@ en:
     attributes:
       user:
         email: "User ID / Email"
-        password: "Type new password"
-        password_confirmation: "Re-type new password"
-        current_password: "Type current password"
         account_no: "Account Number"
         no_reserved_days: "Number of reserved days"
         no_delivery_cycle_days: "Number of delivery cycle days"
