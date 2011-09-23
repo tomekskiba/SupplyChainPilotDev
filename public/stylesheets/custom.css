@@ -1,7 +1,7 @@
 body {
     background: #ffffff;
     font: helvetica, verdana, arial, Helvetica;
-    font-size: 12px;
+    font-size: 14px;
     color: #666666;
     font-weight: bold;
 }
@@ -260,7 +260,7 @@ body {
     float: left;
     margin: 2px;
     background-color: white;
-    height: 239px;
+    height: 245px;
     color: #000000;
     border: 2px solid #184ea6;
     width: 1000px;
