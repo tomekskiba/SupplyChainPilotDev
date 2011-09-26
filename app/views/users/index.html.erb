@@ -1,4 +1,6 @@
-<%# title "Users" %>
+<% content_for :javascript do %>
+    <%= javascript_include_tag "prototype" %>
+<% end %>
 
 <p><%= link_to "Create New Patient", new_user_registration_path %></p>
 
