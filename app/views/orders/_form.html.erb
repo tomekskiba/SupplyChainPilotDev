@@ -81,7 +81,7 @@
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
 <p>
-  <span class="fontstyle0 color3">Date Home Patient Product Inventory Counted (Required)</span><span class="star">*</span>
+  <span class="fontstyle0 color3">Date Home Patient Product Inventory Counted (Required)</span>
   <br/>
   <% if @order.supplies_counted_at.nil? %>
       <%= f.text_field :supplies_counted_at, :class => "field2",
