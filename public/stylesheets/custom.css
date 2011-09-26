@@ -175,6 +175,10 @@ body {
     font-weight: bold;
 }
 
+#main_panel h3.m_bottom_0 {
+    margin-bottom: 0px;
+}
+
 .h3_style {
     color: #184ea6;
     font-family: arial;
