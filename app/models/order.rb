@@ -37,8 +37,8 @@ class Order < ActiveRecord::Base
   date_regex = /\d{4}\-\d{2}\-\d{2}/
 
   validates_acceptance_of :baxter_terms, :message => " "
-  validates :supplies_counted_at, :presence => { :message => "may not be blank" },
-                                  :format => {:with => date_regex}
+  validates :supplies_counted_at, :presence => { :message => "may not be blank" }#,
+                                  #:format => {:with => date_regex}
   validate :solutions_and_supplies
 
   def solutions_and_supplies

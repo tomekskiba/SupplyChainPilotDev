@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_filter :authenticate_admin!
 
   def index
-    #@users = User.all
     @users = User.order("last_name").order("first_name").paginate(:page => params[:page], :per_page => 40)
   end
 

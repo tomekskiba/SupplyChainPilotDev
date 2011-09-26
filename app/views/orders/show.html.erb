@@ -17,8 +17,8 @@
   </div>
 </div>
 
-<div id="content" class="left2 top5">
-  <p style="font-size: 1.2em">Your order information is summarized below for your final review. If the information is
+<div id="content" class="left2 top5 fontsize14">
+  <p>Your order information is summarized below for your final review. If the information is
     accurate you may submit your order using the “Submit Order” button below.
     <br/><br/>
     Note that the Estimated Order Quantities shown are for information purposes only during this pilot website program
@@ -31,7 +31,7 @@
   <br/>
 
   <p>
-    <strong>Date supplies were counted at: &nbsp;</strong>
+    <span class="color3">Date supplies were counted at: &nbsp;</span>
     <%= format_date(@order.supplies_counted_at) %>
   </p>
   <br/>
@@ -40,7 +40,6 @@
 
   <div class="clear">
     <br/><br/>
-
 
         <p>
           <%= f.hidden_field :submitted_flag, :value => 'f' %>
@@ -60,7 +59,6 @@
         <div>
           <div class="left2">
             <%= button("Change Order", edit_order_path(@order), "button_green button_width6") %>
-            <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
           </div>
           <div class="left2 button_blue_specific">
             <%= f.submit "Submit Order", :class => "button_blue button_width6 margin_left4" %>

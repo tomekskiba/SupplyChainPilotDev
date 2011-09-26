@@ -8,20 +8,17 @@
 <h2 class="center">Edit Patient Profile</h2>
 
 <%= form_for @user do |f| %>
-    <%#= f.error_messages %>
     <%= render 'shared/error_messages', :object => f.object %>
-    <%#= devise_error_messages! %>
 
     <% @edit_status = "on" %>
     <%= render :partial => 'users/form', :locals => {:f => f} %>
 
     <div>
       <div class="left2 button_blue_specific">
-        <%= f.submit "Update", :class => "button_grey" %>
-        <%#= button("Submit Order", "/orders/confirmed/"+@order.id.to_s) %>
+        <%= f.submit "Update", :class => "button_blue" %>
       </div>
       <div class="left2 margin_left4">
-        <%= button("Cancel", users_path, "button_grey") %>
+        <%= button("Cancel", users_path, "button_green") %>
       </div>
     </div>
 <% end %>

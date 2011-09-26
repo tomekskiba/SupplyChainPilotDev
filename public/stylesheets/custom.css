@@ -305,7 +305,14 @@ input.field2 {
 }
 
 .ui-datepicker-trigger {
-    color: #184ea6;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-top: 5px;
+    background-image: url("/images/calendar_icon2.png");
+    border: none;
+    height: 31px;
+    width: 34px;
+   /* color: #184ea6;
     font-family: arial;
     background: #5ed184 url("/images/button_green_2.png");
     font-family: helvetica, arial, verdana;
@@ -316,7 +323,7 @@ input.field2 {
     padding: 0px 4px 0 4px;
     margin: 0px 0 2px 2px;
     text-align: center;
-    width: 60px;
+    width: 60px;*/
 }
 
 /* Order summary  */
@@ -333,7 +340,7 @@ input.field2 {
 .order_summary2 {
     padding-left: 20px;
     float: left;
-    width: 200px;
+    width: 250px;
 }
 
 .order_summary3 {
@@ -451,7 +458,7 @@ input.field2 {
 }
 
 #tbl p {
-    padding: 3px 2px 3px 2px;
+    padding: 3px 2px 0px 2px;
     line-height: 15px;
 }
 
@@ -472,19 +479,20 @@ input.field2 {
     color: #184ea6;
     background-color: #a1bcdd;
     text-align: center;
+    font-size: 14px;
 }
 
 .tbl_common2 {
     float: left;
     background-color: white;
-    font-size: 0.9em;
+    font-size: 13px;
     text-align: center;
 }
 
 .tbl_common3 {
     float: left;
     color: #184ea6;
-    font-size: 1.2em;
+    font-size: 15px;
 }
 
 .tbl_common4 {
@@ -496,6 +504,10 @@ input.field2 {
     border-right: 1px solid #999999;
 }
 
+.tbl_left_border {
+    border-left: 1px solid #999999;
+}
+
 .row4, .row44, .row444 {
     background-color: #f2f2f2;
 }
@@ -505,7 +517,7 @@ input.field2 {
 }
 
 .tbl_width0 {
-    width: 1014px;
+    width: 1015px;
 }
 
 .tbl_width1 {
@@ -859,6 +871,18 @@ a.lightBox {
     font-size: 1.2em;
 }
 
+.fontsize12 {
+    font-size: 12px;
+}
+
+.fontsize14 {
+    font-size: 14px;
+}
+
+.fontsize14 p {
+    font-size: 14px;
+}
+
 .fontstyle0 {
     font-family: helvetica, arial, verdana;
     font-size: 14px;
@@ -966,6 +990,7 @@ input[type='submit'], button {
 
 .button_blue:hover {
     border: 2px solid #a1bcdd;
+    padding: 0px 3px 0 3px;
 }
 
 .button_green {

@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
 
   validates :password, :allow_nil => true,
             :allow_blank => true,
-            :format => {:with => alphanumeric_regex, :message => " must be alphanumeric"}
+            :format => {:with => alphanumeric_regex, :message => " must be alphanumeric and is case sensitive"}
   validates :first_name, :presence => true
   validates :last_name, :presence => true
   validates :account_no, :presence => true,

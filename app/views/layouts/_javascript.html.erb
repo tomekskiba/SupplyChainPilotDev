@@ -1,2 +1,3 @@
-<%= javascript_include_tag :defaults %>
+<%#= javascript_include_tag :defaults %>
+<%= javascript_include_tag "prototype.js", "rails.js", "application.js", :cache => "all" %>
 <%= yield :javascript %>

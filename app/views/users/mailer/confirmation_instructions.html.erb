@@ -1,6 +1,6 @@
 <p>Welcome <%= @resource.first_name %> <%= @resource.last_name %> to Baxter’s patient supply ordering pilot website!</p>
 
-<p>This email is to notify you that your user account has been created.  Your log in id is your email address:  <u><%= @resource.email %></u>.  Please click the link below to create your password.</p>
+<p>This email is to notify you that your user account has been created.  Your log in id is your email address:  <u><%= @resource.email %></u>.  Please click the link below to create your password. Passwords must be at least 6 alphanumeric characters and are case sensitive.</p>
 
 <p><%= link_to 'Create my password.', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 

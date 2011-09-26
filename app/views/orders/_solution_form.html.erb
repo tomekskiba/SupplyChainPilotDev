@@ -6,7 +6,7 @@
 
   <% for solution in object_solutions %>
 
-      <div class="tbl_width1 tbl_height3 tbl_common4 <%= row_style %>">
+      <div class="tbl_width1 tbl_height3 tbl_common4 tbl_left_border <%= row_style %>">
         <%#= @order.form_val_solutions_on_hand(2)  %>
         <% if @solution_template.include?(solution) %>
             <p class="p3">
@@ -25,7 +25,7 @@
         <% end %>
 
       </div>
-      <div class="tbl_width1 tbl_height3 tbl_common4 <%= "tbl_right_border" unless solution.size == 6 %> <%= row_style %>">
+      <div class="tbl_width1 tbl_height3 tbl_common4 <%= row_style %>">
 
         <% if @solution_template.include?(solution) %>
             <p class="p3">

@@ -18,8 +18,8 @@
 
       <ul>
         <li>Orders placed online will default to your primary shipping address which is shown as:
-        <span class="color3"><%= current_user.address1 %>
-          <% if !current_user.address2.blank? %><%= ", "+ current_user.address2 %><% end %><%= ", "+ current_user.city %><%= ", "+ current_user.state %><%= ", "+ current_user.postal_code %></span>.
+          <span class="color3"><%= current_user.address1 %>
+            <% if !current_user.address2.blank? %><%= ", "+ current_user.address2 %><% end %><%= ", "+ current_user.city %><%= ", "+ current_user.state %><%= ", "+ current_user.postal_code %></span>.
           If you wish to ship to another address please refer to the contact
           information
           below.
@@ -81,25 +81,25 @@
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
 <p>
-  <h3 class="m_bottom_0">Date Home Patient Product Inventory Counted (Required)</h3>
-  <% if @order.supplies_counted_at.nil? %>
-      <%= f.text_field :supplies_counted_at, :class => "field2",
-                       :readonly => "readonly",
-                       :autocomplete => "off" %>
-  <% else %>
-      <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at),
-                       :class => "field2",
-                       :readonly => "readonly",
-                       :autocomplete => "off" %>
-  <% end %>
+<h3 class="m_bottom_0">Date Home Patient Product Inventory Counted (Required)</h3>
 
-  <script type="text/javascript">
-      $(document).ready(function() {
-          $("#order_supplies_counted_at").datepicker({dateFormat: 'yy-mm-dd',
-              showOn: 'button',
-              buttonText: "select" });
-      });
-  </script>
+<% if @order.supplies_counted_at.nil? %>
+    <%= f.text_field :supplies_counted_at, :class => "field2",
+                     :readonly => "readonly",
+                     :autocomplete => "off" %>
+<% else %>
+    <%= f.text_field :supplies_counted_at, :value => format_date(@order.supplies_counted_at),
+                     :class => "field2",
+                     :readonly => "readonly",
+                     :autocomplete => "off" %>
+<% end %>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#order_supplies_counted_at").datepicker({dateFormat: 'yy-mm-dd',
+            showOn: 'button'
+        });
+    });
+</script>
 </p>
 
 <br/><br/>
@@ -110,43 +110,43 @@
 <div id="tbl" class="tbl_width0">
   <div class="tbl_width0">
     <div class="tbl_width3 tbl_height1 tbl_bg1 left2"></div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>1L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>1.5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>2L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>2.5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>3L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>5L</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_right_border">
+    <div class="tbl_width1 tbl_height1 tbl_common1">
       <p>Boxes</p>
     </div>
-    <div class="tbl_width1 tbl_height1 tbl_common1">
+    <div class="tbl_width1 tbl_height1 tbl_common1 tbl_left_border">
       <p>6L</p>
     </div>
     <div class="tbl_width1 tbl_height1 tbl_common1">
@@ -154,20 +154,14 @@
     </div>
 
     <div class="tbl_width3 tbl_height3 left2"></div>
-    <% 6.times do %>
-        <div class="tbl_width1 tbl_height3 tbl_common2">
+    <% 7.times do %>
+        <div class="tbl_width1 tbl_height3 tbl_common2 tbl_left_border">
           <p>On Hand </p>
         </div>
-        <div class="tbl_width1 tbl_height3 tbl_common2 tbl_right_border">
+        <div class="tbl_width1 tbl_height3 tbl_common2">
           <p>Usage/<br/>Week</p>
         </div>
     <% end %>
-    <div class="tbl_width1 tbl_height3 tbl_common2">
-      <p>On Hand </p>
-    </div>
-    <div class="tbl_width1 tbl_height3 tbl_common2">
-      <p>Usage/<br/>Week</p>
-    </div>
   </div>
 
   <%= hidden_field_tag "order[solution_ids][]", "" %>
@@ -186,18 +180,18 @@
 </div>
 
 
-<% if @user.apd_supplies.count > 0 %>
+<% if @user.apd_supplies.count > 0 or @user.capd_supplies.count > 0 %>
     <p class="clear"></p>
-    <br/><br/><br/>
+    <br/><br/>
 
-    <h3>APD Supplies (Required)</h3>
+    <h3>PD Supplies (Required)</h3>
 
     <div id="tbl" class="tbl_width5">
       <div class="tbl_width5">
         <div class="tbl_width4 tbl_height3 tbl_common1">
-          <p>Product Name</p>
+          <p class="top1">Product Name</p>
         </div>
-        <div class="tbl_width2 tbl_height3 tbl_common1">
+        <div class="tbl_width2 tbl_height3 tbl_common1 fontsize12">
           <p>Individual Pieces<br/>on Hand</p>
         </div>
       </div>
@@ -237,31 +231,13 @@
           <% end %>
 
       <% end %>
-    </div>
-<% end %>
 
-
-<% if @user.capd_supplies.count > 0 %>
-    <p class="clear"></p>
-    <br/><br/><br/>
-
-    <h3>CAPD Supplies (Required)</h3>
-
-    <div id="tbl" class="tbl_width5">
-      <div class="tbl_width5">
-        <div class="tbl_width4 tbl_height3 tbl_common1">
-          <p>Product Name</p>
-        </div>
-        <div class="tbl_width2 tbl_height3 tbl_common1">
-          <p>Individual Pieces<br/>on Hand</p>
-        </div>
-      </div>
       <%= hidden_field_tag "order[capd_supply_ids][]", "" %>
       <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
 
           <% if @user.capd_supplies.include?(capd_supply) %>
               <div class="tbl_width5">
-                <% alternate = cycle("row44", "row55") %>
+                <% alternate = cycle("row4", "row5") %>
                 <div class="tbl_width4 tbl_height3 tbl_common3  <%= alternate -%>">
                   <p class="p2 left2"><%= capd_supply.name %></p>
                   <% pic = capd_supply.picture %>
@@ -297,17 +273,17 @@
 
 <% if @user.ancillary_supplies.count > 0 %>
     <p class="clear"></p>
-    <br/><br/><br/>
+    <br/><br/>
 
     <h3>Ancillary Supplies (Optional)</h3>
 
     <div id="tbl" class="tbl_width7">
       <div class="tbl_width7">
         <div class="tbl_width6 tbl_height3 tbl_common1">
-          <p>Product Name</p>
+          <p class="top1">Product Name</p>
         </div>
         <div class="tbl_width2 tbl_height3 tbl_common1">
-          <p>Reorder Supply</p>
+          <p class="top1">Reorder Supply</p>
         </div>
       </div>
       <%= hidden_field_tag "order[ancillary_supply_ids][]", "" %>

@@ -1,3 +1,6 @@
+<p class="center"><span class="star">*</span> indicates required field</p>
+<hr class="spliter"/>
+
 <div id="form_panel">
   <div class="form_column">
     <div class="form_left">
@@ -103,8 +106,8 @@
     <script type="text/javascript">
 		$(document).ready(function(){
     			$("#user_delivery_date").datepicker({dateFormat: 'yy-mm-dd',
-                                                     showOn: 'button',
-                                                     buttonText: "select" });
+                                                     showOn: 'button'
+                });
         });
 	</script>
 
@@ -175,18 +178,18 @@
     </div>
 
     <div class="form_left">
-      <%= f.label :caregiver_phone %>
-    </div>
-    <div class="form_right">
-      <%= f.text_field :caregiver_phone %>
-    </div>
-  </div>
-  <div class="form_column">
-    <div class="form_left">
       <%= f.label :caregiver_last_name %>
     </div>
     <div class="form_right">
       <%= f.text_field :caregiver_last_name %>
+    </div>
+  </div>
+  <div class="form_column">
+    <div class="form_left">
+      <%= f.label :caregiver_phone %>
+    </div>
+    <div class="form_right">
+      <%= f.text_field :caregiver_phone %>
     </div>
 
   </div>
@@ -229,8 +232,8 @@
       <script type="text/javascript">
 		$(document).ready(function(){
     			$("#user_JDE_reconciliation_date").datepicker({dateFormat: 'yy-mm-dd',
-                                                     showOn: 'button',
-                                                     buttonText: "select" });
+                                                     showOn: 'button'
+                });
         });
 	  </script>
 

@@ -44,11 +44,10 @@
     <% end %>
 <% end %>
 
-<% if @order.order_apd_supply_xrefs.count > 0 %>
+<% if @order.order_apd_supply_xrefs.count > 0 or @order.order_capd_supply_xrefs.count > 0 %>
     <p class="clear"></p>
     <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h3 class="h3_style">APD Supplies</h3>
+    <h3 class="h3_style">PD Supplies</h3>
     <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
         <% if @user.apd_supplies.include?(apd_supply) %>
             <% if @order.apd_supplies.include?(apd_supply) %>
@@ -85,13 +84,7 @@
             <% end %>
         <% end %>
     <% end %>
-<% end %>
 
-<% if @order.order_capd_supply_xrefs.count > 0 %>
-    <p class="clear"></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h3 class="h3_style">CAPD Supplies</h3>
     <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
         <% if @user.capd_supplies.include?(capd_supply) %>
             <% if @order.capd_supplies.include?(capd_supply) %>
@@ -133,7 +126,6 @@
 
 <% if @order.order_ancillary_supply_xrefs.count > 0 %>
     <p class="clear"></p>
-    <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h3 class="h3_style">Ancillary Supplies</h3>
     <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
