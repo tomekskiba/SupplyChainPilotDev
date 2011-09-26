@@ -14,5 +14,5 @@ en:
         no_delivery_cycle_days: "Number of delivery cycle days"
         address1: "Patient Primary Shipping Address"
       order:
-        supplies_counted_at: "Home Patient Product Inventory Date"
+        supplies_counted_at: "Date Home Patient Product Inventory Counted"
         baxter_terms: "Please accept Baxter Privacy Policy and Delivery Terms & Conditions."

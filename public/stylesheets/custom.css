@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-    width: 1024px;
+    width: 1020px;
+    overflow-x: hidden;
 }
 
 /* header */

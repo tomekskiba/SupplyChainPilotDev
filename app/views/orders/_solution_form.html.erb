@@ -18,7 +18,7 @@
                                      @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand, :size => 1 %>
               <% else %>
                   <%= text_field_tag "order[order_solution_xrefs_on_hand][]", "", :size => 1 %>
-              <% end %><span class="star">*</span>
+              <% end %>
 
               <%= hidden_field_tag "order[solution_ids][]", solution.id %>
             </p>
