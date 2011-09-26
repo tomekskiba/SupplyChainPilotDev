@@ -164,77 +164,79 @@
           <p>Individual Pieces<br/>on Hand</p>
         </div>
       </div>
-      <%= hidden_field_tag "order[apd_supply_ids][]", "" %>
 
-      <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
+      <% if @user.apd_supplies.count > 0 %>
+          <%= hidden_field_tag "order[apd_supply_ids][]", "" %>
+          <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
 
-          <% if @user.apd_supplies.include?(apd_supply) %>
-              <div class="tbl_width5">
-                <%- alternate = cycle("row4", "row5") -%>
-                <div class="tbl_width4 tbl_height3 tbl_common3 <%= alternate -%>">
-                  <p class="p2 left2"><%= apd_supply.name %></p>
-                  <% pic = apd_supply.picture %>
-                  <% unless pic.nil? || pic.blank? %>
-                      <div class="button_blue right button_width3 top0">
-                        <p class="p4">
-                          <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= apd_supply.name %>">See
-                            Photo</a></p>
-                      </div>
-                  <% end %>
-                </div>
-                <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
-                  <p class="p3">
-                    <% restore_val = @order.restore_apd_supplies_on_hand(@order.get_apd_supply_ids_array_index(apd_supply.id)) %>
-                    <% if restore_val %>
-                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
-                    <% elsif @order.apd_supplies.include?(apd_supply) %>
-                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]",
-                                           @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand, :size => 1 %>
-                    <% else %>
-                        <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", "", :size => 1 %>
-                    <% end %>
-                    <%= hidden_field_tag "order[apd_supply_ids][]", apd_supply.id %>
-                  </p>
-                </div>
-              </div>
+              <% if @user.apd_supplies.include?(apd_supply) %>
+                  <div class="tbl_width5">
+                    <%- alternate = cycle("row4", "row5") -%>
+                    <div class="tbl_width4 tbl_height3 tbl_common3 <%= alternate -%>">
+                      <p class="p2 left2"><%= apd_supply.name %></p>
+                      <% pic = apd_supply.picture %>
+                      <% unless pic.nil? || pic.blank? %>
+                          <div class="button_blue right button_width3 top0">
+                            <p class="p4">
+                              <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= apd_supply.name %>">See
+                                Photo</a></p>
+                          </div>
+                      <% end %>
+                    </div>
+                    <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
+                      <p class="p3">
+                        <% restore_val = @order.restore_apd_supplies_on_hand(@order.get_apd_supply_ids_array_index(apd_supply.id)) %>
+                        <% if restore_val %>
+                            <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
+                        <% elsif @order.apd_supplies.include?(apd_supply) %>
+                            <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]",
+                                               @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand, :size => 1 %>
+                        <% else %>
+                            <%= text_field_tag "order[order_apd_supply_xrefs_on_hand][]", "", :size => 1 %>
+                        <% end %>
+                        <%= hidden_field_tag "order[apd_supply_ids][]", apd_supply.id %>
+                      </p>
+                    </div>
+                  </div>
+              <% end %>
           <% end %>
-
       <% end %>
 
-      <%= hidden_field_tag "order[capd_supply_ids][]", "" %>
-      <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
+      <% if @user.capd_supplies.count > 0 %>
+          <%= hidden_field_tag "order[capd_supply_ids][]", "" %>
+          <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
 
-          <% if @user.capd_supplies.include?(capd_supply) %>
-              <div class="tbl_width5">
-                <% alternate = cycle("row4", "row5") %>
-                <div class="tbl_width4 tbl_height3 tbl_common3  <%= alternate -%>">
-                  <p class="p2 left2"><%= capd_supply.name %></p>
-                  <% pic = capd_supply.picture %>
-                  <% unless pic.nil? || pic.blank? %>
-                      <div class="button_blue right button_width3 top0">
-                        <p class="p4">
-                          <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
-                            Photo</a></p>
-                      </div>
-                  <% end %>
-                </div>
-                <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
-                  <p class="p3">
-                    <% restore_val = @order.restore_capd_supplies_on_hand(@order.get_capd_supply_ids_array_index(capd_supply.id)) %>
-                    <% if restore_val %>
-                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
-                    <% elsif @order.capd_supplies.include?(capd_supply) %>
-                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]",
-                                           @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand, :size => 1 %>
-                    <% else %>
-                        <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", "", :size => 1 %>
-                    <% end %>
-                    <%= hidden_field_tag "order[capd_supply_ids][]", capd_supply.id %>
-                  </p>
-                </div>
-              </div>
+              <% if @user.capd_supplies.include?(capd_supply) %>
+                  <div class="tbl_width5">
+                    <% alternate = cycle("row4", "row5") %>
+                    <div class="tbl_width4 tbl_height3 tbl_common3  <%= alternate -%>">
+                      <p class="p2 left2"><%= capd_supply.name %></p>
+                      <% pic = capd_supply.picture %>
+                      <% unless pic.nil? || pic.blank? %>
+                          <div class="button_blue right button_width3 top0">
+                            <p class="p4">
+                              <a class="lightBox" href="/images/photos/<%= pic %>" title="<%= capd_supply.name %>">See
+                                Photo</a></p>
+                          </div>
+                      <% end %>
+                    </div>
+                    <div class="tbl_width2 tbl_height3 tbl_common4 <%= alternate -%>">
+                      <p class="p3">
+                        <% restore_val = @order.restore_capd_supplies_on_hand(@order.get_capd_supply_ids_array_index(capd_supply.id)) %>
+                        <% if restore_val %>
+                            <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", restore_val, :size => 1 %>
+                        <% elsif @order.capd_supplies.include?(capd_supply) %>
+                            <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]",
+                                               @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand, :size => 1 %>
+                        <% else %>
+                            <%= text_field_tag "order[order_capd_supply_xrefs_on_hand][]", "", :size => 1 %>
+                        <% end %>
+                        <%= hidden_field_tag "order[capd_supply_ids][]", capd_supply.id %>
+                      </p>
+                    </div>
+                  </div>
+              <% end %>
           <% end %>
-
       <% end %>
     </div>
 <% end %>
