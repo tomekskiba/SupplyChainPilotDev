@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" afterPath="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +47,7 @@
       <file leaf-file-name="_order_summary.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="66" selection-start="261" selection-end="261" vertical-scroll-proportion="25.083334">
+            <state line="103" column="89" selection-start="5588" selection-end="5588" vertical-scroll-proportion="1.6666666">
               <folding />
             </state>
           </provider>
@@ -55,7 +56,7 @@
       <file leaf-file-name="representative_order_notification.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="360" column="117" selection-start="10944" selection-end="10944" vertical-scroll-proportion="0.7567568">
+            <state line="160" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.9189189">
               <folding />
             </state>
           </provider>
@@ -129,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/confirmations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
@@ -144,6 +144,7 @@
         <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
         <option value="$PROJECT_DIR$/app/mailers/emailer.rb" />
+        <option value="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
         <option value="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" />
       </list>
     </option>
@@ -989,13 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="66" selection-start="261" selection-end="261" vertical-scroll-proportion="25.083334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="334" column="9" selection-start="5351" selection-end="5359" vertical-scroll-proportion="0.07692308">
@@ -1010,9 +1004,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="89" selection-start="5588" selection-end="5588" vertical-scroll-proportion="1.6666666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="117" selection-start="10944" selection-end="10944" vertical-scroll-proportion="0.7567568">
+        <state line="160" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.9189189">
           <folding />
         </state>
       </provider>

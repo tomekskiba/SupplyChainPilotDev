@@ -11,18 +11,18 @@
                 </div>
                 <div>
                   <div class="order_summary">
-                    <div class="order_summary2 color2">on Hand (boxes)</div>
+                    <div class="order_summary2 color2">on Hand (Boxes)</div>
                     <div class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand %></div>
                   </div>
                   <div class="order_summary">
-                    <div class="order_summary2 color2">Usage per Week (boxes)</div>
+                    <div class="order_summary2 color2">Usage per Week (Boxes)</div>
                     <div class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week %></div>
                   </div>
                   <div class="order_summary">
                     <% on_hand_at_delivery = @order.calculate_solutions(solution.id)["on_hand_at_delivery"] %>
                     <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
 
-                    <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                    <div class="order_summary2 color2">Estimated Order Quantity (Boxes)</div>
                     <div class="order_summary3 color2">
                       <strong>: <%= projected_order_quantity %>   <%#= on_hand_at_delivery %></strong>
                     </div>
@@ -57,14 +57,14 @@
                   </div>
                   <div>
                     <div class="order_summary">
-                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary2 color2">on Hand (Pieces)</div>
                       <div class="order_summary3 color2">: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand %></div>
                     </div>
                     <div class="order_summary">
                       <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(apd_supply.id)["on_hand_at_delivery"] %>
                       <% projected_order_quantity = @order.order_quantity_for_apd_supplies(apd_supply.id)["projected_order_quantity"] %>
 
-                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary2 color2">Estimated Order Quantity (Pieces)</div>
                       <div class="order_summary3 color2">
                         <strong>: <%= projected_order_quantity %>  <%#= on_hand_at_delivery %></strong>
                       </div>
@@ -94,14 +94,14 @@
                   </div>
                   <div>
                     <div class="order_summary">
-                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary2 color2">on Hand (Pieces)</div>
                       <div class="order_summary3 color2">: <%= @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand %></div>
                     </div>
                     <div class="order_summary">
                       <% on_hand_at_delivery = @order.order_quantity_for_capd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
                       <% projected_order_quantity = @order.order_quantity_for_capd_supplies(capd_supply.id)["projected_order_quantity"] %>
 
-                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary2 color2">Estimated Order Quantity (Pieces)</div>
                       <div class="order_summary3 color2">
                         <strong>: <%= projected_order_quantity %></strong>
                       </div>

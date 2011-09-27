@@ -16,35 +16,6 @@
           font: helvetica, verdana, arial, Helvetica;
       }
 
-          /* content */
-      #main_panel {
-          padding: 0px;
-          width: 100%;
-          float: left;
-          min-height: 400px;
-      }
-
-      #content {
-          width: 100%
-      }
-
-      #content h2 {
-          font-size: 1.4em;
-          color: #0a4b86;
-      }
-
-      #content hr {
-          background-color: #184ea6;
-          height: 2px;
-      }
-
-      #main_panel h3 {
-          color: #184ea6;
-          font-family: arial;
-          font-size: 18pt;
-          font-weight: bold;
-      }
-
       .h3_style {
           color: #184ea6;
           font-family: arial;
@@ -120,10 +91,6 @@
 
       .fontsize00 {
           font-size: smaller;
-      }
-
-      .fontsize4 {
-          font-size: 1.2em;
       }
 
       .font0 {
@@ -237,7 +204,7 @@
                       <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
                       <tr>
                         <td class="order_summary1">&nbsp;</td>
-                        <td class="order_summary2 color2"><p>Estimated Order Quantity (boxes)</p></td>
+                        <td class="order_summary2 color2"><p>Estimated Order Quantity (Boxes)</p></td>
                         <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
                         <td class="order_summary4 color2"><p>(Line Max
                           - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)</p>
