@@ -204,19 +204,19 @@
                           - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)</p>
                         </td>
                       </tr>
+                      <% if on_hand_at_delivery <= 0 %>
+                          <tr>
+                            <td colspan="4">
+                              <div class="order_summary">
+                                <p class="alert">
+                                  <%= $OUT_OF_SUPPLIES_ALERT %>
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                      <% end %>
                       </tbody>
                     </table>
-                    <% if on_hand_at_delivery <= 0 %>
-                        <tr>
-                          <td colspan="4">
-                            <div class="order_summary">
-                              <p class="alert">
-                                <%= $OUT_OF_SUPPLIES_ALERT %>
-                              </p>
-                            </div>
-                          </td>
-                        </tr>
-                    <% end %>
                 <% end %>
             <% end %>
         <% end %>
@@ -290,25 +290,23 @@
                           - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).line_max %>)</p>
                         </td>
                       </tr>
+                      <% if on_hand_at_delivery <= 0 %>
+                          <tr>
+                            <td colspan="4">
+                              <div class="order_summary">
+                                <p class="alert">
+                                  <%= $OUT_OF_SUPPLIES_ALERT %>
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                      <% end %>
                       </tbody>
                     </table>
-                    <% if on_hand_at_delivery <= 0 %>
-                        <tr>
-                          <td colspan="4">
-                            <div class="order_summary">
-                              <p class="alert">
-                                <%= $OUT_OF_SUPPLIES_ALERT %>
-                              </p>
-                            </div>
-                          </td>
-                        </tr>
-                    <% end %>
-                    </div>
-                    </div>
                 <% end %>
             <% end %>
         <% end %>
-        </div>
+      </div>
   <% end %>
 
 
@@ -326,7 +324,7 @@
       </div>
   <% end %>
 
-  </div>
+</div>
 
-  </body>
+</body>
 </html>
