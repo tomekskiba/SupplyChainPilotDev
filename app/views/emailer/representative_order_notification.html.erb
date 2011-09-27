@@ -282,17 +282,17 @@
                         <td class="order_summary1">&nbsp;</td>
                         <td class="order_summary2 color2"><p>On Hand (Pieces)</p></td>
                         <td class="order_summary3 color2">
-                          <p>: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).on_hand %></p>
+                          <p>: <%= @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand %></p>
                         </td>
                       </tr>
-                      <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
-                      <% projected_order_quantity = @order.order_quantity_for_apd_supplies(capd_supply.id)["projected_order_quantity"] %>
+                      <% on_hand_at_delivery = @order.order_quantity_for_capd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_capd_supplies(capd_supply.id)["projected_order_quantity"] %>
                       <tr>
                         <td class="order_summary1">&nbsp;</td>
                         <td class="order_summary2 color2"><p>Estimated Order Quantity (Pieces)</p></td>
                         <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
                         <td class="order_summary4 color2"><p>(Line Max
-                          - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).line_max %>)</p>
+                          - <%= @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max %>)</p>
                         </td>
                       </tr>
                       <% if on_hand_at_delivery <= 0 %>
