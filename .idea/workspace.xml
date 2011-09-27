@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" afterPath="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
       <file leaf-file-name="representative_order_notification.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.9189189">
+            <state line="265" column="31" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.5405405">
               <folding />
             </state>
           </provider>
@@ -1013,7 +1012,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.9189189">
+        <state line="265" column="31" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.5405405">
           <folding />
         </state>
       </provider>

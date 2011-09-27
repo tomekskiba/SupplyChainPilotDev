@@ -228,6 +228,7 @@
 
   <% if @order.order_apd_supply_xrefs.count > 0 or @order.order_capd_supply_xrefs.count > 0 %>
       <h3 class="h3_style">PD Supplies</h3>
+
       <div class="margin_left4">
         <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
             <% if @user.apd_supplies.include?(apd_supply) %>
@@ -252,16 +253,19 @@
                           - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)</p>
                         </td>
                       </tr>
+                      <% if on_hand_at_delivery <= 0 %>
+                          <tr>
+                            <td colspan="4">
+                              <div class="order_summary">
+                                <p class="alert">
+                                  <%= $OUT_OF_SUPPLIES_ALERT %>
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                      <% end %>
                       </tbody>
                     </table>
-
-                    <% if on_hand_at_delivery <= 0 %>
-                        <div class="order_summary">
-                          <p class="alert">
-                            <%= $OUT_OF_SUPPLIES_ALERT %>
-                          </p>
-                        </div>
-                    <% end %>
                 <% end %>
             <% end %>
         <% end %>
