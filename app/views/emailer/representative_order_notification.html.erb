@@ -211,143 +211,148 @@
 
   <% if @order.order_solution_xrefs.count > 0 %>
       <h3 class="h3_style">Dialysis Solutions</h3>
-      <% for solution in Solution.find(:all, :order => 'seq_no ASC') %>
-          <% if @user.solutions.include?(solution) %>
-              <% if @order.solutions.include?(solution) %>
-                  <p><strong class="fontsize0"><%= solution.name %> - <%= solution.size %> L</strong></p>
-                  <table border=0 cellpadding=5>
-                    <tbody>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>On Hand (Boxes)</p></td>
-                      <td class="order_summary3 color2">
-                        <p>: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand %></p></td>
-                    </tr>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>Usage per Week (Boxes)</p></td>
-                      <td class="order_summary3 color2">
-                        <p>: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week %></p></td>
-                    </tr>
 
-                    <% on_hand_at_delivery = @order.calculate_solutions(solution.id)["on_hand_at_delivery"] %>
-                    <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>Estimated Order Quantity (boxes)</p></td>
-                      <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
-                      <td class="order_summary4 color2"><p>(Line Max
-                        - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)</p>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+      <div class="margin_left4">
+        <% for solution in Solution.find(:all, :order => 'seq_no ASC') %>
+            <% if @user.solutions.include?(solution) %>
+                <% if @order.solutions.include?(solution) %>
+                    <p><strong class="fontsize0"><%= solution.name %> - <%= solution.size %> L</strong></p>
+                    <table border=0 cellpadding=5>
+                      <tbody>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>On Hand (Boxes)</p></td>
+                        <td class="order_summary3 color2">
+                          <p>: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand %></p></td>
+                      </tr>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>Usage per Week (Boxes)</p></td>
+                        <td class="order_summary3 color2">
+                          <p>: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week %></p>
+                        </td>
+                      </tr>
 
-                  <% if on_hand_at_delivery <= 0 %>
-                      <div class="order_summary">
-                        <p class="alert">
-                          <%= $OUT_OF_SUPPLIES_ALERT %>
-                        </p>
-                      </div>
-                  <% end %>
-              <% end %>
-          <% end %>
-      <% end %>
+                      <% on_hand_at_delivery = @order.calculate_solutions(solution.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>Estimated Order Quantity (boxes)</p></td>
+                        <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
+                        <td class="order_summary4 color2"><p>(Line Max
+                          - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)</p>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+
+                    <% if on_hand_at_delivery <= 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                <% end %>
+            <% end %>
+        <% end %>
+      </div>
   <% end %>
 
   <% if @order.order_apd_supply_xrefs.count > 0 or @order.order_capd_supply_xrefs.count > 0 %>
       <h3 class="h3_style">PD Supplies</h3>
-      <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
-          <% if @user.apd_supplies.include?(apd_supply) %>
-              <% if @order.apd_supplies.include?(apd_supply) %>
-                  <p><strong class="fontsize0"><%= apd_supply.name %></strong></p>
-                  <table border=0 cellpadding=5>
-                    <tbody>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>On Hand (Pieces)</p></td>
-                      <td class="order_summary3 color2">
-                        <p>: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand %></p></td>
-                    </tr>
-                    <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(apd_supply.id)["on_hand_at_delivery"] %>
-                    <% projected_order_quantity = @order.order_quantity_for_apd_supplies(apd_supply.id)["projected_order_quantity"] %>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>Estimated Order Quantity (Pieces)</p></td>
-                      <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
-                      <td class="order_summary4 color2"><p>(Line Max
-                        - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)</p>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+      <div class="margin_left4">
+        <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
+            <% if @user.apd_supplies.include?(apd_supply) %>
+                <% if @order.apd_supplies.include?(apd_supply) %>
+                    <p><strong class="fontsize0"><%= apd_supply.name %></strong></p>
+                    <table border=0 cellpadding=5>
+                      <tbody>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>On Hand (Pieces)</p></td>
+                        <td class="order_summary3 color2">
+                          <p>: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand %></p>
+                        </td>
+                      </tr>
+                      <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(apd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_apd_supplies(apd_supply.id)["projected_order_quantity"] %>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>Estimated Order Quantity (Pieces)</p></td>
+                        <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
+                        <td class="order_summary4 color2"><p>(Line Max
+                          - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)</p>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
 
-                  <% if on_hand_at_delivery <= 0 %>
-                      <div class="order_summary">
-                        <p class="alert">
-                          <%= $OUT_OF_SUPPLIES_ALERT %>
-                        </p>
-                      </div>
-                  <% end %>
-              <% end %>
-          <% end %>
-      <% end %>
+                    <% if on_hand_at_delivery <= 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                <% end %>
+            <% end %>
+        <% end %>
 
-      <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
-          <% if @user.capd_supplies.include?(capd_supply) %>
-              <% if @order.capd_supplies.include?(capd_supply) %>
-                  <p><strong class="fontsize0"><%= capd_supply.name %></strong></p>
-                  <table border=0 cellpadding=5>
-                    <tbody>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>On Hand (Pieces)</p></td>
-                      <td class="order_summary3 color2">
-                        <p>: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).on_hand %></p></td>
-                    </tr>
-                    <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
-                    <% projected_order_quantity = @order.order_quantity_for_apd_supplies(capd_supply.id)["projected_order_quantity"] %>
-                    <tr>
-                      <td class="order_summary2">&nbsp;</td>
-                      <td class="order_summary2 color2"><p>Estimated Order Quantity (Pieces)</p></td>
-                      <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
-                      <td class="order_summary4 color2"><p>(Line Max
-                        - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).line_max %>)</p>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+        <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
+            <% if @user.capd_supplies.include?(capd_supply) %>
+                <% if @order.capd_supplies.include?(capd_supply) %>
+                    <p><strong class="fontsize0"><%= capd_supply.name %></strong></p>
+                    <table border=0 cellpadding=5>
+                      <tbody>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>On Hand (Pieces)</p></td>
+                        <td class="order_summary3 color2">
+                          <p>: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).on_hand %></p>
+                        </td>
+                      </tr>
+                      <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_apd_supplies(capd_supply.id)["projected_order_quantity"] %>
+                      <tr>
+                        <td class="order_summary1">&nbsp;</td>
+                        <td class="order_summary2 color2"><p>Estimated Order Quantity (Pieces)</p></td>
+                        <td class="order_summary3 color2"><p>: <strong><%= projected_order_quantity %></strong></p></td>
+                        <td class="order_summary4 color2"><p>(Line Max
+                          - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(capd_supply.id).line_max %>)</p>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
 
-                  <% if on_hand_at_delivery <= 0 %>
-                      <div class="order_summary">
-                        <p class="alert">
-                          <%= $OUT_OF_SUPPLIES_ALERT %>
-                        </p>
-                      </div>
-                  <% end %>
-                  </div>
-                  </div>
-              <% end %>
-          <% end %>
-      <% end %>
+                    <% if on_hand_at_delivery <= 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                    </div>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+        </div>
   <% end %>
 
 
   <% if @order.order_ancillary_supply_xrefs.count > 0 %>
-      <p class="clear"></p>
-
-      <p>&nbsp;</p>
-
       <h3 class="h3_style">Ancillary Supplies</h3>
-      <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
-          <% if @user.ancillary_supplies.include?(ancillary_supply) %>
-              <% if @order.ancillary_supplies.include?(ancillary_supply) %>
-                  <div class="margin_left4">
-                  <p><strong class="fontsize0"><%= ancillary_supply.name %></strong></p>
-                  </div>
-              <% end %>
-          <% end %>
-      <% end %>
+
+      <div class="margin_left4">
+        <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
+            <% if @user.ancillary_supplies.include?(ancillary_supply) %>
+                <% if @order.ancillary_supplies.include?(ancillary_supply) %>
+                    <p><strong class="fontsize0"><%= ancillary_supply.name %></strong></p>
+                <% end %>
+            <% end %>
+        <% end %>
+      </div>
   <% end %>
 
   </div>
