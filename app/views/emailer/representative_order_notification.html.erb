@@ -5,7 +5,7 @@
   <style type="text/css">
       body {
           background: #ffffff;
-          font: helvetica, verdana, arial, Helvetica;
+          font-family: helvetica, verdana, arial, Helvetica;
           font-size: 14px;
           color: #666666;
           font-weight: bold;
@@ -13,7 +13,7 @@
       }
 
       p, h3 {
-          font: helvetica, verdana, arial, Helvetica;
+          font-family: helvetica, verdana, arial, Helvetica;
       }
 
       .h3_style {
@@ -64,10 +64,6 @@
       }
 
           /* miscellaneous */
-      .left2 {
-          float: left;
-      }
-
       .color1 {
           color: white;
       }
@@ -174,8 +170,6 @@
 
   <h3>Order Summary</h3>
 
-
-
   <% if @order.order_solution_xrefs.count > 0 %>
       <h3 class="h3_style">Dialysis Solutions</h3>
 
@@ -212,13 +206,16 @@
                       </tr>
                       </tbody>
                     </table>
-
                     <% if on_hand_at_delivery <= 0 %>
-                        <div class="order_summary">
-                          <p class="alert">
-                            <%= $OUT_OF_SUPPLIES_ALERT %>
-                          </p>
-                        </div>
+                        <tr>
+                          <td colspan="4">
+                            <div class="order_summary">
+                              <p class="alert">
+                                <%= $OUT_OF_SUPPLIES_ALERT %>
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
                     <% end %>
                 <% end %>
             <% end %>
@@ -295,13 +292,16 @@
                       </tr>
                       </tbody>
                     </table>
-
                     <% if on_hand_at_delivery <= 0 %>
-                        <div class="order_summary">
-                          <p class="alert">
-                            <%= $OUT_OF_SUPPLIES_ALERT %>
-                          </p>
-                        </div>
+                        <tr>
+                          <td colspan="4">
+                            <div class="order_summary">
+                              <p class="alert">
+                                <%= $OUT_OF_SUPPLIES_ALERT %>
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
                     <% end %>
                     </div>
                     </div>
