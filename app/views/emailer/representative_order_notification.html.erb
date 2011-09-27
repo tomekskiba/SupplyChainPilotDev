@@ -3,1071 +3,214 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 <style type="text/css">
-body {
-    background: #ffffff;
-    font: helvetica, verdana, arial, Helvetica;
-    font-size: 12px;
-    color: #666666;
-    font-weight: bold;
-
-}
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.container {
-    width: 1024px;
-}
-
-/* header */
-#header {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 47px;
-    background: white url("/images/header_order_bg.jpg") no-repeat;
-}
-
-#header h2 {
-    margin: 2px 0px 0 12px;
-    color: white;
-    font-style: italic;
-    float: left;
-    text-shadow: 0.1em 0.1em 0.2em #999999;
-}
-
-#header p {
-    margin: 10px 32px 0 100px;
-    color: white;
-    font-size: 1.2em;
-    float: right;
-    font-weight: normal;
-}
-
-#header a {
-    color: white;
-}
-
-/* old header*/
-/*
-.logo {
-    width: 100%;
-    margin: 0;
-} */
-
-/*.logo2 {
-    width: 155px;
-    height: 39px;
-    margin: 0 0 2px 0;
-    background: blue url(/images/logo.png) no-repeat 6px 6px;
-    float: left;
-} */
-/*
-.logo2 {
-    width: 100%;
-    height: 30px;
-    background-color: #1b4e9c;
-    text-align: right;
-}
-
-.logo2 p {
-    color: white;
-    padding: 5px;
-    font-size: 1.2em;
-}
-
-.logo2 a {
-    color: white;
-    text-decoration: underline;
-}
-
-.logo3 {
-    width: 100%;
-    height: 60px;
-    padding: 0;
-    margin: 0;
-}
-
-.logo3 h1 {
-    color: #1b4e9c;
-    padding: 17px 0 0 30px;
-    font-size: 2.1em;
-    font-weight: bold;
-}
-  */
-/*
-.banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.banner_cell {
-    float: left;
-    width: 254px;
-    padding: 3px 2px 2px 0px;
-}
-
-.banner_cell_right {
-    padding-right: 0px;
-}     */
-
-/* login page */
-#main2 {
-    width: 100%;
-    height: 767px;
-    background: white url(/images/log_in_bg.jpg) no-repeat;
-}
-
-.baxter_logo {
-    padding: 30px 0 0 168px;
-}
-
-#login_window {
-    width: 705px;
-    padding: 80px 0 0 168px;
-}
-
-#login_window h1 {
-    font-family: Serpentine, Helvetica, verdana;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    text-shadow: 0.1em 0.1em 0.2em black;
-}
-
-#login_window a {
-    color: white;
-    text-decoration: underline;
-    font-weight: normal;
-}
-
-.login_input {
-    border: 1px solid #003C9C;
-    background: #dddddd url("/images/log_in_input_box.png") no-repeat;
-    width: 283px;
-    height: 33px;
-}
-
-.login_input2 {
-    margin-right: 21px;
-    float: left;
-}
-
-/*, input[type='password'].login_input_box*/
-.login_input_box {
-    padding: 0 0 0 6px;
-    width: 260px;
-    color: #013d9d;
-    background-color: transparent;
-    border: none;
-    font-style: italic;
-    font-weight: normal;
-}
-
-.login_submit {
-    margin-top: 1px;
-    border: 1px solid #003C9C;
-    background: url("/images/log_in_button.png") no-repeat;
-    width: 82px;
-    height: 33px;
-}
-
-.login_submit2 {
-    border: 1px solid #003C9C;
-    background: url("/images/log_in_button_bg.png") no-repeat;
-    width: 285px;
-    height: 33px;
-    font-family: arial;
-    font-size: 16px;
-    color: black;
-    font-weight: normal;
-}
-
-.login_window2_1 {
-    height: 57px;
-    width: 100%;
-}
-
-.login_window2_2 {
-    margin-top: 10px;
-    height: 35px;
-}
-
-.login_window2_3 {
-    margin-top: 0px;
-    vertical-align: top;
-    padding: 0;
-    margin: 0;
-}
-
-.login_window2_4 {
-    margin-top: 30px;
-    color: white;
-    font-weight: normal;
-}
-
-/* content */
-#main_panel {
-    padding: 0px;
-    width: 100%;
-    float: left;
-    min-height: 400px;
-}
-
-#content {
-    width: 100%
-}
-
-#content h2 {
-    font-size: 1.4em;
-    color: #0a4b86;
-}
-
-#content hr {
-    background-color: #184ea6;
-    height: 2px;
-}
-
-#main_panel h3 {
-    color: #184ea6;
-    font-family: arial;
-    font-size: 18pt;
-    font-weight: bold;
-}
-
-.h3_style {
-    color: #184ea6;
-    font-family: arial;
-    font-size: 18pt;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#main_panel h2 {
-    color: #184ea6;
-    font-family: arial;
-    font-size: 18pt;
-    font-weight: bold;
-}
-
-/*.bg2 {
-    background-color: #f1f8fb;
-} */
-/*
-#sign_in_left {
-    float: left;
-    width: 76%;
-    height: 250px;
-}
-
-#sign_in_right {
-    float: left;
-    width: 23%;
-}
-
-#sign_in_left .padding_1 {
-    padding: 15px 20px 15px 20px;
-}
-
-#sign_in_right .padding_2 {
-    padding: 15px 5px 15px 20px;
-}
-  */
-#progress_bar {
-    width: 100%;
-    display: block;
-    height: 35px;
-    float: left;
-}
-
-.progress_bar_cell {
-    width: 200px;
-    height: 30px;
-    background-color: #f2f2f2;
-    border: 2px solid #cccccc;
-    float: left;
-    color: white;
-    margin-right: 2px;
-}
-
-.progress_bar_cell p {
-    padding: 5px;
-    font-size: 1.2em;
-    color: black;
-    font-weight: normal;
-}
-
-.active {
-    background-color: #5ed184;
-    border: 2px solid #38a15a;
-}
-
-#order_info {
-    width: 100%;
-    display: block;
-    float: left;
-    margin-top: 12px;
-    margin-bottom: 30px;
-}
-
-#order_info hr {
-    background-color: #184ea6;
-    margin: 5px 6px 5px 6px;
-    height: 2px;
-    width: 80%;
-}
-
-#order_info .info_both {
-    float: left;
-    margin: 2px;
-    background-color: white;
-    height: 183px;
-    padding: 5px;
-    color: #000000;
-    border: 2px solid #184ea6;
-}
-
-#order_info .info_left {
-    width: 20%;
-    margin-right: 4px;
-}
-
-#order_info .info_right {
-    width: 73%;
-    margin-left: 4px;
-}
-
-#order_info a {
-    color: #184ea6;
-}
-
-#order_info li {
-    list-style-type: decimal;
-}
-
-#order_info li.alpha {
-    list-style-type: lower-alpha;
-}
-
-.star {
-    color: red;
-    font-size: 1.6em;
-}
-
-input.field2 {
-    padding: 3px;
-    font-weight: bold;
-}
-
-/* Order summary  */
-#summary li {
-    list-style-type: none;
-    margin: 2px 0 2px 0px;
-}
-
-.order_summary {
-    width: 100%;
-    float: left;
-}
-
-.order_summary2 {
-    padding-left: 20px;
-    float: left;
-    width: 200px;
-}
-
-.order_summary3 {
-    float: left;
-    width: 50px;
-}
-
-.order_summary4 {
-    float: left;
-    width: 150px;
-}
-
-.order_summary p.alert {
-    font-weight: bold;
-    color: red;
-}
-
-/* footer */
-#footer {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    /*background-color: #00529a;    */
-    /* float: left;                      */
-}
-
-.footer_helper {
-    padding: 35px 0 21px 15px;
-    height: 30px;
-    float: left;
-}
-
-.footer_padding {
-    padding-right: 20px;
-}
-
-.footer_phone_skype_issue {
-    width: 195px;
-    overflow-x: hidden;
-}
-
-#footer p {
-    font-size: 0.9em;
-    color: #024285;
-    margin: 0;
-    float: left;
-    font-weight: normal;
-    padding-top: 8px;
-}
-
-#footer a {
-    color: #024285;
-    text-decoration: underline;
-    float: left;
-    font-size: 0.9em;
-    margin: 0;
-    font-weight: normal;
-    padding-top: 8px;
-}
-
-#footer img {
-    float: left;
-    margin: 0px;
-}
-
-/* solution and supplies tables */
-#tbl {
-    border: 2px solid #999999;
-    float: left;
-}
-
-#tbl input {
-    font-size: 14px;
-    border-top: 3px solid #7a8fab;
-    border-bottom: 1px solid #7a8fab;
-    border-left: 1px solid #7a8fab;
-    border-right: 1px solid #7a8fab;
-    color: #7a8fab;
-    font-weight: bold;
-    padding: 2px;
-    margin: 0;
-    width: 23px;
-}
-
-#tbl input[type='checkbox'] {
-    border: none;
-}
-
-#tbl p {
-    padding: 3px 2px 3px 2px;
-    line-height: 15px;
-}
-
-#tbl p.p2 {
-    padding: 8px 7px 3px 8px;
-}
-
-#tbl p.p3 {
-    padding: 6px 0 0 0;
-}
-
-#tbl p.p4 {
-    padding-top: 5px;
-}
-
-.tbl_common1 {
-    float: left;
-    color: #184ea6;
-    background-color: #a1bcdd;
-    text-align: center;
-}
-
-.tbl_common2 {
-    float: left;
-    background-color: white;
-    font-size: 0.9em;
-    text-align: center;
-}
-
-.tbl_common3 {
-    float: left;
-    color: #184ea6;
-    font-size: 1.2em;
-}
-
-.tbl_common4 {
-    float: left;
-    text-align: center;
-}
-
-.tbl_right_border {
-    border-right: 1px solid #999999;
-}
-
-.row4, .row44, .row444 {
-    background-color: #f2f2f2;
-}
-
-.row5, .row55, .row555 {
-    background-color: #cccccc;
-}
-
-.tbl_width0 {
-    width: 1014px;
-}
-
-.tbl_width1 {
-    width: 56px;
-}
-
-.tbl_width2 {
-    width: 112px;
-}
-
-.tbl_width3 {
-    width: 224px;
-}
-
-.tbl_width4 {
-    width: 336px;
-}
-
-.tbl_width5 {
-    width: 448px;
-}
-
-.tbl_width6 {
-    width: 560px;
-}
-
-.tbl_width7 {
-    width: 672px;
-}
-
-.tbl_height1 {
-    height: 25px;
-}
-
-.tbl_height3 {
-    height: 38px;
-}
-
-.tbl_border1 {
-    border-bottom: 1px solid #999999;
-}
-
-.tbl_border2 {
-    border-bottom: 2px solid #999999;
-}
-
-.tbl_bg1 {
-    background-color: #a1bcdd;
-}
-
-/*table styling - admin*/
-.solution_container {
-    width: 1024px;
-    border: 0;
-}
-
-.solution_header_container {
-    height: 76px;
-    width: 1020px;
-}
-
-.solution_left_header {
-    height: 74px;
-    width: 186px;
-    border: 1px solid white;
-    float: left;
-}
-
-.solution_left_header2 {
-    height: 31px;
-    width: 186px;
-    border: 1px solid white;
-    float: left;
-}
-
-.solution_right_header {
-    height: 76px;
-    width: 830px;
-    border: 0;
-    float: left;
-    font-size: 1.2em;
-    /*border: 1px solid red;  */
-}
-
-.solution_header_top {
-    height: 31px;
-    width: 116px;
-    border: 1px solid white;
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    background-color: #3873d4;
-    padding-top: 5px;
-    line-height: 15px;
-}
-
-.solution_header_bottom {
-    height: 31px;
-    width: 57px;
-    border: 1px solid white;
-    font-size: smaller;
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    background-color: #3873d4;
-    padding-top: 5px;
-    line-height: 15px;
-}
-
-.solution_row {
-    height: 38px;
-    width: 1020px;
-    border: 0;
-    font-size: 1.1em;
-}
-
-.solution_row_title {
-    height: 28px;
-    width: 172px;
-    border: 1px solid white;
-    float: left;
-    padding: 8px 7px 0px 7px;
-}
-
-.solution_row_element {
-    height: 36px;
-    width: 57px;
-    border: 1px solid white;
-    font-size: smaller;
-    float: left;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.solution_row_element input, .solution_row_element2 input {
-    padding: 3px 0 0 0;
-}
-
-.solution_row_element input[type='checkbox'], .solution_row_element2 input[type='checkbox'] {
-    margin: 3px 0 0 0;
-}
-
-.checkbox_padding {
-    margin: 5px 0 0 0;
-}
-
-.checkbox_padding2 {
-    margin: 12px 0 0 0;
-}
-
-.solution_left_rail {
-    height: 308px;
-    width: 195px;
-    border: 1px solid brown;
-    float: left;
-}
-
-.solution_left_rail_header {
-    height: 60px;
-    width: 193px;
-    border: 1px solid black;
-}
-
-.solution_left_rail_element {
-    height: 28px;
-    width: 193px;
-    border: 1px solid black;
-}
-
-.solution_body {
-    height: 308px;
-    width: 800px;
-    border: 1px solid orange;
-    float: left;
-}
-
-.solution_column {
-    height: 306px;
-    width: 110px;
-    border: 1px solid green;
-    float: left;
-}
-
-.solution_column_element {
-    height: 28px;
-    width: 50px;
-    border: 1px solid red;
-    float: left;
-    font-size: smaller;
-}
-
-.row1 {
-    background-color: #3873d4;
-}
-
-.row2 {
-    background-color: #d9d9d9;
-}
-
-.row3 {
-    background-color: #bfbfbf;
-}
-
-.solution_row_name {
-    height: 33px;
-    width: 291px;
-    border: 1px solid white;
-    float: left;
-    padding: 3px 7px 0px 7px;
-}
-
-.solution_row_name p {
-    padding-top: 6px;
-}
-
-.solution_header_name {
-    height: 31px;
-    width: 305px;
-    border: 1px solid white;
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    background-color: #3873d4;
-    padding-top: 5px;
-}
-
-.cell_width_1 {
-    width: 409px;
-}
-
-.cell_width_2 {
-    width: 423px;
-}
-
-.cell_width_4 {
-    width: 540px;
-}
-
-.cell_width_3 {
-    width: 526px;
-}
-
-.solution_row_element2 {
-    height: 36px;
-    width: 116px;
-    border: 1px solid white;
-    font-size: smaller;
-    float: left;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.lightBox_button {
-    background-color: #bc5142;
-    padding: 3px;
-    text-align: center;
-    border: 1px solid #000000;
-    width: 90px;
-    height: 18px;
-}
-
-a.lightBox {
-    color: white;
-    text-decoration: none;
-}
-
-#form_panel {
-    width: 970px;
-}
-
-#form_panel label {
-    font-size: 1.2em;
-}
-
-#form_panel input {
-    font-size: 1.2em;
-}
-
-.spliter {
-    width: 700px;
-    height: 2px;
-    background: orange;
-    margin: 15px 0px 15px 155px;
-}
-
-.form_column {
-    width: 485px;
-    padding: 0;
-    margin: 0;
-    float: left;
-    margin-bottom: 15px;
-}
-
-.form_left {
-    float: left;
-    width: 250px;
-    height: 26px;
-    text-align: right;
-    padding-top: 6px;
-}
-
-.form_left label {
-    padding-top: 6px;
-
-}
-
-.form_right {
-    padding-left: 15px;
-    float: left;
-    width: 215px;
-    height: 32px;
-    text-align: left;
-}
-
-/* miscellaneous */
-.left2 {
-    float: left;
-}
-
-.color1 {
-    color: white;
-}
-
-.color2 {
-    color: #999999;
-}
-
-.color3 {
-    color: #184ea6;
-}
-
-.clear2 {
-    margin: 0;
-    padding: 0;
-}
-
-.fontsize0 {
-    font-size: larger;
-}
-
-.fontsize00 {
-    font-size: smaller;
-}
-
-.fontsize4 {
-    font-size: 1.2em;
-}
-
-.font0 {
-    font-weight: normal;
-}
-
-.top0 {
-    margin-top: 4px;
-}
-
-.top1 {
-    margin-top: 7px;
-}
-
-.top2 {
-    margin-top: 12px;
-}
-
-.top4 {
-    margin-top: 35px;
-}
-
-.top5 {
-    margin-top: 40px;
-}
-
-.center {
-    text-align: center;
-}
-
-.right {
-    float: right;
-}
-
-.clear {
-    width: 100%;
-    clear: both;
-}
-
-.clear3 {
-    width: 100%;
-    clear: both;
-    margin: 0;
-    padding: 0;
-    height: 0px;
-    display: inline;
-}
-
-.margin_left4 {
-    margin-left: 20px;
-}
-
-/* generic */
-input[type='text'], input[type='password'] {
-    font-size: 13px;
-    border: 1px solid #7a8fab;
-    color: #7a8fab;
-    font-style: italic;
-    padding-left: 2px;
-}
-
-input[disabled='disabled'] {
-    color: #bccbd2;
-}
-
-/*
-input[type='submit'], button {
-   color: #ffffff;
-   background-color: #7d7e81;
-   font-size: 0.9em;
-   height: 22px;
-   border: 0;
-   padding: 0 15px 0 15px;
-} */
-
-.button4 {
-    color: #ffffff;
-    font-family: arial;
-    background: #184ea6 url("/images/button_blue_2.png");
-    font-size: 14px;
-    font-weight: normal;
-    height: 25px;
-    border: 1px solid #a1bcdd;
-    padding: 4px 4px 0 4px;
-    text-align: center;
-}
-
-.button_blue {
-    color: #ffffff;
-    font-family: arial;
-    background: #184ea6 url("/images/button_blue_2.png");
-    font-family: helvetica, arial, verdana;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    border: 1px solid #a1bcdd;
-    padding: 1px 4px 0 4px;
-    text-align: center;
-    width: 100px;
-}
-
-.button_green {
-    color: #184ea6;
-    font-family: arial;
-    background: #5ed184 url("/images/button_green_2.png");
-    font-family: helvetica, arial, verdana;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    border: 1px solid #38a15a;
-    padding: 1px 4px 0 4px;
-    text-align: center;
-    width: 100px;
-}
-
-.button_grey {
-    color: #999999; /*#b4b4b4;*/
-    font-family: arial;
-    background: white url("/images/button_grey_1.png");
-    font-family: helvetica, arial, verdana;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    border: 1px solid #b4b4b4;
-    padding: 1px 4px 0 4px;
-    text-align: center;
-    width: 100px;
-}
-
-.button_width3 {
-    width: 80px;
-}
-
-.button_width6 {
-    width: 120px;
-}
-
-.width3 {
-    width: 25px;
-}
-
-.width28 {
-    width: 283px;
-}
-
-#error_explanation {
-    width: 500px;
-    border: 2px solid red;
-    padding: 7px;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
-}
-
-#error_explanation h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    background-color: #c00;
-    color: #fff;
-}
-
-#error_explanation p {
-    color: #333;
-    margin-bottom: 0;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-#error_explanation ul {
-    font-size: 12px;
-    list-style: square;
-    margin-top: 10px;
-}
-
-#error_explanation li {
-    font-size: 12px;
-    list-style: square;
-}
-
-p.p4 {
-    padding: 4px 0 0 0;
-}
-
-/*
-.field_with_errors input {
-border: 1px solid red;
-}   */
-
-/*.field_with_errors label {
-   color: #fff;
-} */
+    body {
+        background: #ffffff;
+        font: helvetica, verdana, arial, Helvetica;
+        font-size: 14px;
+        color: #666666;
+        font-weight: bold;
+
+    }
+        /* content */
+    #main_panel {
+        padding: 0px;
+        width: 100%;
+        float: left;
+        min-height: 400px;
+    }
+
+    #content {
+        width: 100%
+    }
+
+    #content h2 {
+        font-size: 1.4em;
+        color: #0a4b86;
+    }
+
+    #content hr {
+        background-color: #184ea6;
+        height: 2px;
+    }
+
+    #main_panel h3 {
+        color: #184ea6;
+        font-family: arial;
+        font-size: 18pt;
+        font-weight: bold;
+    }
+
+    .h3_style {
+        color: #184ea6;
+        font-family: arial;
+        font-size: 18pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #main_panel h2 {
+        color: #184ea6;
+        font-family: arial;
+        font-size: 18pt;
+        font-weight: bold;
+    }
+
+        /* Order summary  */
+    #summary li {
+        list-style-type: none;
+        margin: 2px 0 2px 0px;
+    }
+
+    .order_summary2 {
+        width: 250px;
+    }
+
+    .order_summary3 {
+        width: 50px;
+    }
+
+    .order_summary4 {
+        width: 150px;
+    }
+
+    .order_summary p.alert {
+        font-weight: bold;
+        color: red;
+    }
+
+        /* footer */
+    #footer {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        /*background-color: #00529a;    */
+        /* float: left;                      */
+    }
+
+    .footer_helper {
+        padding: 35px 0 21px 15px;
+        height: 30px;
+        float: left;
+    }
+
+    .footer_padding {
+        padding-right: 20px;
+    }
+
+    .footer_phone_skype_issue {
+        width: 195px;
+        overflow-x: hidden;
+    }
+
+    #footer p {
+        font-size: 0.9em;
+        color: #024285;
+        margin: 0;
+        float: left;
+        font-weight: normal;
+        padding-top: 8px;
+    }
+
+    #footer a {
+        color: #024285;
+        text-decoration: underline;
+        float: left;
+        font-size: 0.9em;
+        margin: 0;
+        font-weight: normal;
+        padding-top: 8px;
+    }
+
+    #footer img {
+        float: left;
+        margin: 0px;
+    }
+
+        /* miscellaneous */
+    .left2 {
+        float: left;
+    }
+
+    .color1 {
+        color: white;
+    }
+
+    .color2 {
+        color: #999999;
+    }
+
+    .color3 {
+        color: #184ea6;
+    }
+
+    .clear2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .fontsize0 {
+        font-size: larger;
+    }
+
+    .fontsize00 {
+        font-size: smaller;
+    }
+
+    .fontsize4 {
+        font-size: 1.2em;
+    }
+
+    .font0 {
+        font-weight: normal;
+    }
+
+    .top0 {
+        margin-top: 4px;
+    }
+
+    .top1 {
+        margin-top: 7px;
+    }
+
+    .top2 {
+        margin-top: 12px;
+    }
+
+    .top4 {
+        margin-top: 35px;
+    }
+
+    .top5 {
+        margin-top: 40px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .clear {
+        width: 100%;
+        clear: both;
+    }
+
+    .clear3 {
+        width: 100%;
+        clear: both;
+        margin: 0;
+        padding: 0;
+        height: 0px;
+        display: inline;
+    }
+
+    .margin_left4 {
+        margin-left: 20px;
+    }
+
+
 </style>
 </head>
 <body>
@@ -1086,19 +229,164 @@ border: 1px solid red;
 </p>
 
 <p>
-  <strong>Date supplies were counted at:</strong>
+  <strong>Date Home Patient Product Inventory Counted:</strong>
   <span class="color3"><%= (@order.supplies_counted_at).strftime('%Y-%m-%d') %></span>
 </p>
 
 <p>
   <strong>User opted in for follow up:</strong>
-  <span class="color3"><%= (@order.opt_in==true ? "Yes" : "No" )  %></span>
+  <span class="color3"><%= (@order.opt_in==true ? "Yes" : "No") %></span>
 </p>
 
 <br/>
 <br/>
+
 <h3>Order Summary</h3>
-<%= render :partial => '/orders/order_summary' %>
+
+
+
+<% if @order.order_solution_xrefs.count > 0 %>
+    <h3 class="h3_style">Dialysis Solutions</h3>
+    <% for solution in Solution.find(:all, :order => 'seq_no ASC') %>
+        <% if @user.solutions.include?(solution) %>
+            <% if @order.solutions.include?(solution) %>
+                <p><strong class="fontsize0"><%= solution.name %> - <%= solution.size %> L</strong></p>
+                <table border=0 cellpadding=5>
+                  <tbody>
+                  <tr>
+                    <td width="20">&nbsp;</td>
+                    <td class="order_summary2 color2">On Hand (boxes)</td>
+                    <td class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand %></td>
+                  </tr>
+                  <tr>
+                    <td width="20">&nbsp;</td>
+                    <td class="order_summary2 color2">Usage per Week (boxes)</td>
+                    <td class="order_summary3 color2">: <%= @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week %></td>
+                  </tr>
+
+                  <% on_hand_at_delivery = @order.calculate_solutions(solution.id)["on_hand_at_delivery"] %>
+                  <% projected_order_quantity = @order.calculate_solutions(solution.id)["projected_order_quantity"] %>
+                  <tr>
+                    <td width="20">&nbsp;</td>
+                    <td class="order_summary2 color2">Estimated Order Quantity (boxes)</td>
+                    <td class="order_summary3 color2">: <strong><%= projected_order_quantity %></strong></td>
+                    <td class="order_summary4 color2">(Line Max
+                      - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <% if on_hand_at_delivery <= 0 %>
+                    <div class="order_summary">
+                      <p class="alert">
+                        <%= $OUT_OF_SUPPLIES_ALERT %>
+                      </p>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+<% if @order.order_apd_supply_xrefs.count > 0 or @order.order_capd_supply_xrefs.count > 0 %>
+    <p class="clear"></p>
+
+    <p>&nbsp;</p>
+
+    <h3 class="h3_style">PD Supplies</h3>
+    <% for apd_supply in ApdSupply.find(:all, :order => 'id ASC') %>
+        <% if @user.apd_supplies.include?(apd_supply) %>
+            <% if @order.apd_supplies.include?(apd_supply) %>
+                <div class="margin_left4 left2">
+                  <div class="order_summary top1">
+                    <strong class="fontsize0"><%= apd_supply.name %></strong>
+                  </div>
+                  <div>
+                    <div class="order_summary">
+                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary3 color2">: <%= @order.order_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).on_hand %></div>
+                    </div>
+                    <div class="order_summary">
+                      <% on_hand_at_delivery = @order.order_quantity_for_apd_supplies(apd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_apd_supplies(apd_supply.id)["projected_order_quantity"] %>
+
+                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary3 color2">
+                        <strong>: <%= projected_order_quantity %>  <%#= on_hand_at_delivery %></strong>
+                      </div>
+                      <div class="order_summary4 color2">
+                        (Line Max - <%= @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max %>)
+                      </div>
+                    </div>
+                    <% if on_hand_at_delivery <= 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+
+    <% for capd_supply in CapdSupply.find(:all, :order => 'id ASC') %>
+        <% if @user.capd_supplies.include?(capd_supply) %>
+            <% if @order.capd_supplies.include?(capd_supply) %>
+                <div class="margin_left4 left2">
+                  <div class="order_summary top1">
+                    <strong class="fontsize0"><%= capd_supply.name %></strong>
+                  </div>
+                  <div>
+                    <div class="order_summary">
+                      <div class="order_summary2 color2">on Hand (boxes)</div>
+                      <div class="order_summary3 color2">: <%= @order.order_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).on_hand %></div>
+                    </div>
+                    <div class="order_summary">
+                      <% on_hand_at_delivery = @order.order_quantity_for_capd_supplies(capd_supply.id)["on_hand_at_delivery"] %>
+                      <% projected_order_quantity = @order.order_quantity_for_capd_supplies(capd_supply.id)["projected_order_quantity"] %>
+
+                      <div class="order_summary2 color2">Estimated Order Quantity (boxes)</div>
+                      <div class="order_summary3 color2">
+                        <strong>: <%= projected_order_quantity %></strong>
+                      </div>
+                      <div class="order_summary4 color2">
+                        (Line Max - <%= @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max %>)
+                      </div>
+                    </div>
+                    <% if on_hand_at_delivery <= 0 %>
+                        <div class="order_summary">
+                          <p class="alert">
+                            <%= $OUT_OF_SUPPLIES_ALERT %>
+                          </p>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+
+<% if @order.order_ancillary_supply_xrefs.count > 0 %>
+    <p class="clear"></p>
+
+    <p>&nbsp;</p>
+
+    <h3 class="h3_style">Ancillary Supplies</h3>
+    <% for ancillary_supply in AncillarySupply.find(:all, :order => 'id ASC') %>
+        <% if @user.ancillary_supplies.include?(ancillary_supply) %>
+            <% if @order.ancillary_supplies.include?(ancillary_supply) %>
+                <div class="order_summary margin_left4">
+                  <strong class="fontsize0"><%= ancillary_supply.name %></strong>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
 
 
 </body>
