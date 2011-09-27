@@ -56,13 +56,13 @@ class Order < ActiveRecord::Base
 
     validate_tables_input(
         order_apd_supply_xrefs_on_hand,
-        "APD Supplies - ",
+        "PD Supplies - ",
         "on Hand cannot be blank and must be numeric"
     )
 
     validate_tables_input(
         order_capd_supply_xrefs_on_hand,
-        "CAPD Supplies - ",
+        "PD Supplies - ",
         "on Hand cannot be blank and must be numeric"
     )
   end
