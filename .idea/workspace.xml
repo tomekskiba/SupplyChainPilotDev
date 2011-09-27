@@ -55,7 +55,7 @@
       <file leaf-file-name="representative_order_notification.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="61" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.2027027">
+            <state line="317" column="56" selection-start="10371" selection-end="10371" vertical-scroll-proportion="0.9189189">
               <folding />
             </state>
           </provider>
@@ -1012,7 +1012,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="61" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.2027027">
+        <state line="317" column="56" selection-start="10371" selection-end="10371" vertical-scroll-proportion="0.9189189">
           <folding />
         </state>
       </provider>
