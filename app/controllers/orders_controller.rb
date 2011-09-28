@@ -22,7 +22,6 @@ class OrdersController < ApplicationController
       order.opt_in = params[:order][:opt_in]
       order.save
       render :action => 'show'
-      #redirect_to "/orders/"+@order.id.to_s, :alert => "Please accept Baxter Privacy Policy and Delivery Terms & Conditions."
     end
   end
 
@@ -42,6 +41,13 @@ class OrdersController < ApplicationController
   end
 
   def edit
+
+#    unless params[:order][:opt_in].nil?
+ #     order = Order.find(params[:id])
+  #    order.opt_in = true
+   #   order.save
+    #end
+
     @order = Order.find(params[:id])
     @user = current_user
   end
