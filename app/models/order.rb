@@ -44,25 +44,25 @@ class Order < ActiveRecord::Base
   def solutions_and_supplies
     validate_tables_input(
         order_solution_xrefs_on_hand,
-        "Dialysis Solution - ",
+        "Dialysis Solution -",
         "on Hand cannot be blank and must be numeric"
     )
 
     validate_tables_input(
         order_solution_xrefs_usage_per_week,
-        "Dialysis Solution - ",
+        "Dialysis Solution -",
         "Usage / Week cannot be blank and must be numeric"
     )
 
     validate_tables_input(
         order_apd_supply_xrefs_on_hand,
-        "PD Supplies - ",
+        "Pd supplies -",
         "on Hand cannot be blank and must be numeric"
     )
 
     validate_tables_input(
         order_capd_supply_xrefs_on_hand,
-        "PD Supplies - ",
+        "Pd supplies -",
         "on Hand cannot be blank and must be numeric"
     )
   end
@@ -200,11 +200,11 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def include_opt_in?
-    if opt_in == "1"
-      true
-    end
-  end
+  #def include_opt_in?
+   # if opt_in == "1"
+    #  true
+ #   end
+ # end
 
     #calculations
   def order_quantity_for_apd_supplies(apd_supply_id)
@@ -298,9 +298,19 @@ class Order < ActiveRecord::Base
   end
 
   def validate_tables_input(var, name, err_desc)
-    unless (var).nil?
+    # eliminate double errors msg - used for PD supplies that is combined APD and CAPD supplies
+    repeatStatus = false
+
+    errors.full_messages.each do |msg|
+      if msg == (name +" "+ err_desc)
+        repeatStatus = true
+        break
+      end
+    end
+
+    unless (var).nil? or repeatStatus == true
       var.each do |x|
-        if x.blank? or !is_numeric?(x)
+        if x.blank? or !is_numeric?(x.strip)
           errors.add(name, err_desc)
           break
         end

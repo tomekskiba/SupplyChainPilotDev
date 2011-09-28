@@ -5,14 +5,14 @@
     <%= f.hidden_field :reset_password_token %>
 
     <br/>
-    <div class="clear2 color1 fontsize4"><p><%= f.label :password %></p></div>
+    <div class="clear2 color1 fontsize4"><p><%= f.label "Type new password" %></p></div>
     <div class="login_input">
       <p class="p4">
         <%= f.password_field :password, :class => "login_input_box", :style => "border:none;" %>
       </p>
     </div>
 
-    <div class="clear2 color1 fontsize4"><p><%= f.label :password_confirmation %></p></div>
+    <div class="clear2 color1 fontsize4"><p><%= f.label "Re-type new password" %></p></div>
     <div class="login_input">
       <p class="p4">
         <%= f.password_field :password_confirmation, :class => "login_input_box", :style => "border:none;" %>
