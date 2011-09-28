@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" afterPath="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_header_includes.erb" afterPath="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_header_includes.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_header_includes.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_header_includes.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="84" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.0">
+            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -38,16 +37,16 @@
       <file leaf-file-name="jquery.ui.all.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.all.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="9" column="11" selection-start="241" selection-end="259" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.ui.theme.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.ui.theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="276" selection-start="2233" selection-end="2240" vertical-scroll-proportion="0.33333334">
+            <state line="27" column="276" selection-start="2233" selection-end="2240" vertical-scroll-proportion="-4.8846154">
               <folding />
             </state>
           </provider>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/app/views/passwords/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
-        <option value="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
+        <option value="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
       </list>
     </option>
   </component>
@@ -974,23 +973,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_header_includes.erb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="84" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
+        <state line="27" column="276" selection-start="2233" selection-end="2240" vertical-scroll-proportion="-4.8846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.all.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+        <state line="9" column="11" selection-start="241" selection-end="259" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_header_includes.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="276" selection-start="2233" selection-end="2240" vertical-scroll-proportion="0.33333334">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
