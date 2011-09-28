@@ -393,7 +393,7 @@ class User < ActiveRecord::Base
   def validate_tables_input(var, name, err_desc)
     unless (var).nil?
       var.each do |x|
-        if x.blank? or !is_numeric?(x.strip)
+        if x.blank? or !is_numeric?(x)
           errors.add(name, err_desc)
           break
         end
