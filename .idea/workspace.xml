@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/photos/Img17788_4_prong_set.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/photos/Photo_Img17779_3_prong_cassette.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" afterPath="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
@@ -90,19 +91,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.ui.theme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.ui.theme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="64" selection-start="5783" selection-end="5783" vertical-scroll-proportion="-7.230769">
+            <state line="18" column="123" selection-start="790" selection-end="821" vertical-scroll-proportion="0.70866144">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="65" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.9055118">
+            <state line="76" column="88" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-13.5">
               <folding />
             </state>
           </provider>
@@ -145,8 +146,8 @@
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/mailers/emailer.rb" />
         <option value="$PROJECT_DIR$/app/views/emailer/representative_order_notification.html.erb" />
-        <option value="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
       </list>
     </option>
   </component>
@@ -1007,16 +1008,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="64" selection-start="5783" selection-end="5783" vertical-scroll-proportion="-7.230769">
+        <state line="76" column="88" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-13.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="65" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.9055118">
+        <state line="18" column="123" selection-start="790" selection-end="821" vertical-scroll-proportion="0.70866144">
           <folding />
         </state>
       </provider>
