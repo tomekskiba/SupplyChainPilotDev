@@ -386,7 +386,7 @@ class User < ActiveRecord::Base
 
   def is_numeric?(val)
     #val.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
-    val.to_s.match(/^(0|[1-9][0-9]*)$/) == nil ? false : true
+    val.strip.to_s.match(/^(0|[1-9][0-9]*)$/) == nil ? false : true
   end
 
     #print errors for supplies and solutions
