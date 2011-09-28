@@ -200,11 +200,11 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def include_opt_in?
-    if opt_in == "1"
-      true
-    end
-  end
+#  def include_opt_in?
+ #   if opt_in == "1"
+  #    true
+   # end
+  #end
 
     #calculations
   def order_quantity_for_apd_supplies(apd_supply_id)
