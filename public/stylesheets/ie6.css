@@ -9,3 +9,7 @@
 input.login_submit {
     border: none;
 }
+
+input[type='checkbox'] {
+    border: none;
+}
