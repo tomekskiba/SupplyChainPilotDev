@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/calendar.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_header_includes.erb" afterPath="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_header_includes.erb" afterPath="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_header_includes.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_header_includes.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_header_includes.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="148" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ie7.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/ie7.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ie6.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header_includes.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_header_includes.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/_header_includes.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="145" selection-end="211" vertical-scroll-proportion="-1.25">
+            <state line="7" column="52" selection-start="376" selection-end="376" vertical-scroll-proportion="0.2651515">
               <folding />
             </state>
           </provider>
@@ -97,9 +117,9 @@
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/passwords/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/jquery.ui.theme.css" />
         <option value="$PROJECT_DIR$/app/views/orders/_header_includes.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/_header_includes.erb" />
       </list>
     </option>
   </component>
@@ -884,18 +904,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="38" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.035128806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/emailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="144" selection-start="805" selection-end="805" vertical-scroll-proportion="0.7892272">
@@ -959,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_header_includes.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="145" selection-end="211" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/registrations/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="36" selection-start="737" selection-end="737" vertical-scroll-proportion="0.9347258">
@@ -987,9 +988,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/ie7.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/_header_includes.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="148" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_header_includes.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="52" selection-start="376" selection-end="376" vertical-scroll-proportion="0.2651515">
           <folding />
         </state>
       </provider>
