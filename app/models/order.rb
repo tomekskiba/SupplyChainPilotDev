@@ -268,7 +268,7 @@ class Order < ActiveRecord::Base
     else
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
-    number_of_days_till_delivery = (number_of_days_till_delivery).ceil
+    number_of_days_till_delivery = (44).ceil
     logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
 
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
