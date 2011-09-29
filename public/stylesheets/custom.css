@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 1007px;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 /* header2 */

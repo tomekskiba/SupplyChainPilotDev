@@ -1,32 +1,25 @@
 <%# @title = 'Account Activation' %>
+<div class="content padding_1">
 
-<%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f| %>
-    <%= devise_error_messages! %>
-    <fieldset>
-      <legend><span class="color1"> Account Activation
-        <% if resource.email %> for <%= resource.email %><% end %></span></legend>
+  <%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f| %>
+      <%= devise_error_messages! %>
+      <h2>Account Activation
+        <% if resource.email %> for <%= resource.email %>
+        <% end %></h2>
 
       <% if @requires_password %>
-          <div class="clear color1 fontsize4"><p><%= f.label :password, 'Choose a Password:' %></p></div>
+          <p><%= f.label :password, 'Choose a Password:' %>
+            <br/>
+            <%= f.password_field :password, :class => "login_input_box" %></p>
 
-          <div class="login_input">
-            <%= f.password_field :password, :class => "login_input_box", :style => "border:none;" %>
-          </div>
-
-          <br/>
-
-          <div class="clear color1 fontsize4"><p><%= f.label :password_confirmation, 'Password Confirmation:' %></p></div>
-
-          <div class="login_input">
-            <%= f.password_field :password_confirmation, :class => "login_input_box", :style => "border:none;" %>
-          </div>
-
+          <p><%= f.label :password_confirmation, 'Password Confirmation:' %>
+            <br/>
+            <%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
       <% end %>
-
-      <br/>
       <%= hidden_field_tag :confirmation_token, @confirmation_token %>
-      <p><%= f.submit "Activate", :class => 'login_submit2', :style => 'width: 120px;' %></p>
-    </fieldset>
-<% end %>
+      <p><%= f.submit "Activate", :class => "button_sign_in2 top1" %></p>
+  <% end %>
 
-<%= javascript_tag('Form.focusFirstElement("activation-form");') %>
+  <%= javascript_tag('Form.focusFirstElement("activation-form");') %>
+
+</div>
