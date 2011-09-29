@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    width: 1007px;
+    width: 1003px;
     overflow-x: hidden;
 }
 
@@ -1227,6 +1227,10 @@ input[type='submit'], button {
 
 .width28 {
     width: 283px;
+}
+
+.height_landing {
+    height: 305px;
 }
 
 #error_explanation {
