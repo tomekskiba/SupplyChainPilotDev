@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_order_summary.html.erb" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
@@ -35,19 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="287" column="47" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.0">
+            <state line="287" column="47" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.79586565">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_order_summary.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_order_summary.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="174" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.49586776">
+            <state line="26" column="288" selection-start="1866" selection-end="1866" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -1054,16 +1053,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="47" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.0">
+        <state line="26" column="288" selection-start="1866" selection-end="1866" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_order_summary.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="174" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.49586776">
+        <state line="287" column="47" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.79586565">
           <folding />
         </state>
       </provider>
