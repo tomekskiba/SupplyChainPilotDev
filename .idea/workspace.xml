@@ -37,7 +37,7 @@
       <file leaf-file-name="order.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="287" column="7" selection-start="10004" selection-end="10004" vertical-scroll-proportion="0.6795866">
+            <state line="284" column="38" selection-start="9850" selection-end="9850" vertical-scroll-proportion="0.56330746">
               <folding />
             </state>
           </provider>
@@ -1062,7 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="7" selection-start="10004" selection-end="10004" vertical-scroll-proportion="0.6795866">
+        <state line="284" column="38" selection-start="9850" selection-end="9850" vertical-scroll-proportion="0.56330746">
           <folding />
         </state>
       </provider>
