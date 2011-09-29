@@ -1,0 +1,32 @@
+<div class="logo">
+  <div class="logo2">
+    <p>
+      <% if user_signed_in? %>
+          Hello <%= current_user.first_name %>
+      <% end %>
+
+      || Patient -
+      <% unless user_signed_in? -%>
+          <%= link_to "Sign in", new_user_session_path %>
+      <% else -%>
+          <%= link_to "(Logout)", destroy_user_session_path, :method => :delete %>
+      <% end -%>
+
+
+      || Admin -
+      <% unless admin_signed_in? -%>
+          <%= link_to "Sign in", new_admin_session_path %>
+      <% else -%>
+          <%= link_to "(Logout)", destroy_admin_session_path, :method => :delete %>
+      <% end -%>
+
+
+      <% if user_signed_in? %>
+          || <%= link_to "Change Password", "../change_password" %>
+      <% end %>
+    </p>
+  </div>
+  <div class="logo3">
+    <h1>MyDialysisSupply.com</h1>
+  </div>
+</div>

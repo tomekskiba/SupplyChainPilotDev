@@ -8,75 +8,42 @@
 </head>
 <body>
 
-
 <div class="container">
 
   <div style="font-size:9px;">
     Demo credentials: <br>
     admin - L: b@b.com, P: x <br>
-    user - L: u3@u.com, P: x <br>
+    user2 - L: u3@u.com, P: x <br>
   </div>
 
-  <% if admin_signed_in? -%>
+  <% if admin_signed_in? or user_signed_in? -%>
 
       <div id="header">
         <%= render 'layouts/top_header' %>
       </div>
-
-      <div id="main_panel">
-        <%- if !notice.nil? -%>
-            <p class="notice"><%= notice %></p>
-        <%- end -%>
-        <%- if !alert.nil? -%>
-            <p class="alert"><%= alert %></p>
-        <%- end -%>
-
-        <%= yield %>
-      </div>
-
-  <% elsif user_signed_in? -%>
-
-      <div id="header">
-        <%= render 'layouts/top_header' %>
-      </div>
-
-      <div id="main_panel">
-        <%- if !notice.nil? -%>
-            <p class="notice"><%= notice %></p>
-        <%- end -%>
-        <%- if !alert.nil? -%>
-            <p class="alert"><%= alert %></p>
-        <%- end -%>
-
-        <%= yield %>
-      </div>
+      <!--div class="logo2" style="height: 7px;"></div-->
 
   <% else -%>
 
-      <div>
-        || Patient -
-        <% unless user_signed_in? -%>
-            <%= link_to "Sign in", new_user_session_path %>
-        <% else -%>
-            <%= link_to "(Logout)", destroy_user_session_path, :method => :delete %>
-        <% end -%>
+      <div id="header2">
+        <%= render 'layouts/top_header2' %>
 
-        || Admin -
-        <% unless admin_signed_in? -%>
-            <%= link_to "Sign in", new_admin_session_path %>
-        <% else -%>
-            <%= link_to "(Logout)", destroy_admin_session_path, :method => :delete %>
-        <% end -%>
-      </div>
-
-      <div id="main2">
-        <div class="baxter_logo">
-          <img src="/images/baxter-logo.png" width="143" height="25" border="0" />
+        <div class="banner" style="height: 328px;">
+          <img src="/images/banner.jpg" width="1007" height="328" border="0">
         </div>
-        <div id="login_window">
-          <h1>MyDialysisSupply.com</h1>
-
-          <%= yield %>
+        <div class="banner">
+          <div class="banner_cell">
+            <img src="/images/banner_solutions.png" width="250" height="70" border="0">
+          </div>
+          <div class="banner_cell">
+            <img src="/images/banner_cycler_supplies.png" width="250" height="70" border="0">
+          </div>
+          <div class="banner_cell">
+            <img src="/images/banner_ancillary_supplies.png" width="250" height="70" border="0">
+          </div>
+          <div class="banner_cell banner_cell_right">
+            <img src="/images/banner_capd_supplies.png" width="250" height="70" border="0">
+          </div>
         </div>
       </div>
 
@@ -84,13 +51,34 @@
 
 
   <% if admin_signed_in? or user_signed_in? -%>
-      <div class="clear"></div>
-      <div id="footer">
-        <%= render 'layouts/footer' %>
-      </div>
-  <% end -%>
+      <div id="main_panel">
+        <%- if !notice.nil? -%>
+            <p class="notice"><%= notice %></p>
+        <%- end -%>
+        <%- if !alert.nil? -%>
+            <p class="alert"><%= alert %></p>
+        <%- end -%>
 
+        <%= yield %>
+      </div>
+  <% else %>
+      <div id="main_panel" class="font_landing">
+        <%- if !notice.nil? -%>
+            <p class="notice"><%= notice %></p>
+        <%- end -%>
+        <%- if !alert.nil? -%>
+            <p class="alert"><%= alert %></p>
+        <%- end -%>
+
+        <%= yield %>
+      </div>
+  <% end %>
+
+  <% if admin_signed_in? or user_signed_in? -%>
+      <%= render 'layouts/footer' %>
+  <% else %>
+      <%= render 'layouts/footer2' %>
+  <% end %>
 </div>
-<%#= debug(params) if Rails.env.development? %>
 </body>
 </html>

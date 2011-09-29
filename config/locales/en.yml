@@ -4,6 +4,8 @@
 en:
   activerecord:
     attributes:
+      admin:
+        email: "User ID / Email"
       user:
         email: "User ID / Email"
         #password: "Type new password"

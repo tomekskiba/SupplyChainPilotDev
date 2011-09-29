@@ -1,29 +1,20 @@
-<h3 class="color1">Change your password</h3>
+<div class="content padding_1">
+  <h2>Change your password</h2>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :put}) do |f| %>
-    <%= devise_error_messages! %>
-    <%= f.hidden_field :reset_password_token %>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :put}) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
 
-    <br/>
-    <div class="clear2 color1 fontsize4"><p><%= f.label "Type new password" %></p></div>
-    <div class="login_input">
-      <p class="p4">
-        <%= f.password_field :password, :class => "login_input_box", :style => "border:none;" %>
-      </p>
-    </div>
+      <p><%= f.label :password, "Type new password", :class => "label2" %><br/>
+        <%= f.password_field :password, :class => "login_input_box" %></p>
 
-    <div class="clear2 color1 fontsize4"><p><%= f.label "Re-type new password" %></p></div>
-    <div class="login_input">
-      <p class="p4">
-        <%= f.password_field :password_confirmation, :class => "login_input_box", :style => "border:none;" %>
-      </p>
-    </div>
+      <p><%= f.label :password_confirmation, "Re-type new password", :class => "label2" %><br/>
+        <%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
 
-    <br/>
-    <p><%= f.submit "Change my password", :class => "login_submit2" %></p>
-<% end %>
+      <p><%= f.submit "Change my password", :class => "button_sign_in2 top1" %></p>
+  <% end %>
 
-<%#= render :partial => "devise/shared/links" %>
-<%- if controller_name != 'sessions' %>
-    <%= link_to "Sign in", new_session_path(resource_name) %><br />
-<% end -%>
+  <%- if controller_name != 'sessions' %>
+      <p class="top1"><%= link_to "Sign in", new_session_path(resource_name), :class => "link2" %></p>
+  <% end -%>
+</div>

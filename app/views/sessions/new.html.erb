@@ -1,45 +1,33 @@
-<div class="login_window2_1">
+<div id="content">
+  <div id="sign_in_left">
+    <div class="padding_1">
+      <h2>WELCOME TO OUR SITE</h2>
 
-  <%- if !notice.nil? -%>
-      <p class="notice"><%= notice %></p>
-  <%- end -%>
-  <%- if !alert.nil? -%>
-      <p class="alert"><%= alert %></p>
-  <%- end -%>
+      <p>&nbsp;Baxter’s  HomeCare  Services  team  has  over  30  years  of  experience  in  helping  you  with  your   dialysis  orders  and  deliveries.  As  an  extension  of  our  award  winning  customer  service  team   we  are  pleased  to  introduce  www.mydialysissupply.com,  a  unique  online  channel  that  allows   you  to  order  your  monthly  peritoneal  dialysis  supplies  simply  and  efficiently.</p>
+      <!--p>To sign up please contact your clinic.</p-->
+      <br/>
+      <br/>
+      <p><img src="/images/home_care_services.png" width="202" height="52" alt="Home Care Services" /></p>
+    </div>
+  </div>
+  <div id="sign_in_right">
+    <div class="padding_2">
+      <h2>USER LOGIN</h2>
 
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <p><%= f.label :email %><br/>
+            <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off" %>
+               </p>
+          <p><%= f.label :password %><br/>
+            <%= f.password_field :password, :class => "login_input_box", :autocomplete => "off" %>
+            </p>
+
+          <p><%= f.submit "", :class => "button_sign_in top1" %></p>
+      <% end %>
+
+      <%= render :partial => "users/shared/links" %>
+    </div>
+  </div>
 </div>
 
-<div>
-  <p class="clear2 color1 fontsize4 width28 login_input2" style="margin-right: 23px;">User ID / Email</p>
 
-  <p class="clear2 color1 fontsize4 login_input2 width28">Password</p>
-</div>
-<div class="clear3"></div>
-
-<div class="login_window2_2">
-
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-
-      <div class="login_input login_input2">
-        <p class="p4">
-          <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
-        </p>
-      </div>
-
-      <div class="login_input login_input2">
-        <p class="p4">
-          <%= f.password_field :password, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
-        </p>
-      </div>
-
-      <p class="left2"><%= f.submit "", :class => "login_submit" %></p>
-
-  <% end %>
-
-</div>
-
-<div class="login_window2_3" style="clear: both;">
-  <%= render :partial => "users/shared/links" %>
-</div>
-
-<p class="login_window2_4">To sign up please contact your clinic.</p>

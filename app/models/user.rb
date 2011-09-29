@@ -58,9 +58,9 @@ class User < ActiveRecord::Base
             :allow_blank => true,
             :format => {:with => phone_regex, :message => " number must have correct format (xxx-xxx-xxxx)"}
   validates :no_reserved_days, :presence => true,
-            :numericality => {:greater_than => 0, :message => " must be a number."}
+            :numericality => {:greater_than_or_equal_to => 0, :message => " must be a number."}
   validates :no_delivery_cycle_days, :presence => true,
-            :numericality => {:greater_than => 0, :message => " must be a number."}
+            :numericality => {:greater_than_or_equal_to => 0, :message => " must be a number."}
   validates :address1, :presence => true
   validates :city, :presence => true
   validates :state, :presence => true,
@@ -174,7 +174,7 @@ class User < ActiveRecord::Base
       solution_ids.each do |s|
         unless s.blank? or s.nil?
           index = Integer(solution_ids_all.index(s))
-          self.user_solution_xrefs.create(:solution_id => s, :line_max => user_solution_xrefs_line_max[index]) unless user_solution_xrefs_line_max[index].blank?
+          self.user_solution_xrefs.create(:solution_id => s, :line_max => user_solution_xrefs_line_max[index].strip) unless user_solution_xrefs_line_max[index].blank?
         end
       end
       reload
@@ -190,7 +190,7 @@ class User < ActiveRecord::Base
       apd_supply_ids.each do |g|
         unless g.blank? or g.nil?
           index = Integer(apd_supply_ids_all.index(g))
-          self.user_apd_supply_xrefs.create(:apd_supply_id => g, :line_max => user_apd_supply_xrefs_line_max[index], :units_per_cycle => user_apd_supply_xrefs_units_per_cycle[index]) unless user_apd_supply_xrefs_line_max[index].blank? or user_apd_supply_xrefs_units_per_cycle[index].blank?
+          self.user_apd_supply_xrefs.create(:apd_supply_id => g, :line_max => user_apd_supply_xrefs_line_max[index].strip, :units_per_cycle => user_apd_supply_xrefs_units_per_cycle[index]) unless user_apd_supply_xrefs_line_max[index].blank? or user_apd_supply_xrefs_units_per_cycle[index].blank?
         end
       end
       reload
@@ -207,7 +207,7 @@ class User < ActiveRecord::Base
       capd_supply_ids.each do |g|
         unless g.blank? or g.nil?
           index = Integer(capd_supply_ids_all.index(g))
-          self.user_capd_supply_xrefs.create(:capd_supply_id => g, :line_max => user_capd_supply_xrefs_line_max[index], :units_per_cycle => user_capd_supply_xrefs_units_per_cycle[index]) unless user_capd_supply_xrefs_line_max[index].blank? or user_capd_supply_xrefs_units_per_cycle[index].blank?
+          self.user_capd_supply_xrefs.create(:capd_supply_id => g, :line_max => user_capd_supply_xrefs_line_max[index].strip, :units_per_cycle => user_capd_supply_xrefs_units_per_cycle[index]) unless user_capd_supply_xrefs_line_max[index].blank? or user_capd_supply_xrefs_units_per_cycle[index].blank?
         end
       end
       reload

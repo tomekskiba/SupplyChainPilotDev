@@ -1,4 +1,4 @@
-<div class="prepend-1 top4">
+<div class="prepend-1 top4 fontsize14">
 
   <h2>Change Password</h2>
 
@@ -7,15 +7,15 @@
 
       <p><%= f.label "Type new password" %></p>
 
-      <p><%= f.password_field :password %></p>
+      <p><%= f.password_field :password, :class => "field0 field2" %></p>
 
       <p><%= f.label "Re-type new password" %></p>
 
-      <p><%= f.password_field :password_confirmation %></p>
+      <p><%= f.password_field :password_confirmation, :class => "field0 field2" %></p>
 
       <p><%= f.label "Type current password" %> <i>(we need your current password to confirm your changes)</i></p>
 
-      <p><%= f.password_field :current_password %></p>
+      <p><%= f.password_field :current_password, :class => "field0 field2" %></p>
 
       <br/>
 

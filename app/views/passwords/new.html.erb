@@ -1,22 +1,16 @@
-<br/>
+<div class="content padding_1">
+  <h2>Forgot your password?</h2>
 
-<h3 class="color1">Forgot your password?</h3>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f| %>
+      <%#= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f| %>
-    <%#= devise_error_messages! %>
+      <p><%= f.label :email, :class => "label2" %><br/>
+        <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off" %></p>
 
-    <br/>
-    <p class="clear2 color1 fontsize4"><%= f.label :email %></p>
+      <p><%= f.submit "Send me reset password instructions", :class => "button_sign_in2 top1" %></p>
+  <% end %>
 
-    <div class="login_input">
-      <p class="p4">
-        <%= f.email_field :email, :class => "login_input_box", :autocomplete => "off", :style => "border: none;" %>
-      </p>
-    </div>
-    <br/>
-    <p><%= f.submit "Send me reset password instructions", :class => "login_submit2" %></p>
-<% end %>
-
-<%- if controller_name != 'sessions' %>
-    <%= link_to "Sign in", new_session_path(resource_name) %><br />
-<% end -%>
+  <%- if controller_name != 'sessions' %>
+      <p class="top1"><%= link_to "Sign in", new_session_path(resource_name), :class => "link2" %></p>
+  <% end -%>
+</div>

@@ -1,9 +1,9 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Sign in", new_session_path(resource_name) %><br />
-<% end -%>
+<%#- if controller_name != 'sessions' %>
+  <%#= link_to "Sign in", new_session_path(resource_name) %><br />
+<%# end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
-  <%= link_to "Forgot your password? Click here", new_password_path(resource_name) %>
+  <p>Forgot your password? <%= link_to "Click here", new_password_path(resource_name) %></p>
 <% end -%>
 
 <%#- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
