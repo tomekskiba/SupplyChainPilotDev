@@ -64,7 +64,16 @@
       <file leaf-file-name="ie6.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="184" selection-end="184" vertical-scroll-proportion="0.6">
+            <state line="18" column="29" selection-start="246" selection-end="246" vertical-scroll-proportion="0.675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.4583333">
               <folding />
             </state>
           </provider>
@@ -74,15 +83,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_stylesheets.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="25" selection-start="61" selection-end="70" vertical-scroll-proportion="-0.9583333">
               <folding />
             </state>
           </provider>
@@ -955,13 +955,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer2.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="11" selection-start="201" selection-end="201" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.225">
@@ -1060,9 +1053,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.4583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="184" selection-end="184" vertical-scroll-proportion="0.6">
+        <state line="18" column="29" selection-start="246" selection-end="246" vertical-scroll-proportion="0.675">
           <folding />
         </state>
       </provider>
