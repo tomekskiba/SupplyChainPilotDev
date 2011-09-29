@@ -283,6 +283,9 @@ class Order < ActiveRecord::Base
 
     vals = {
         "test" => (on_hand_at_delivery),
+        "test2" => (usage_per_day),
+    "test3" => (number_of_days_till_delivery),
+        "test4" => (total_days_of_supplies.to_s),
         "on_hand_at_delivery" => on_hand_at_delivery,
         "projected_order_quantity" => projected_order_quantity
     }
