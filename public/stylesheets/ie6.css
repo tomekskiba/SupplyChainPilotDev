@@ -1,6 +1,5 @@
 .button_blue_specific {
     margin-top: 4px;
-    height: 32px;
 }
 
 .login_input_box {
@@ -13,4 +12,9 @@ input.login_submit {
 
 input[type='checkbox'] {
     border: none;
+}
+
+input.button_green {
+    height: 28px;
+    padding: 1px 4px 0 4px;
 }

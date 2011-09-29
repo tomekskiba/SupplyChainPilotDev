@@ -268,7 +268,7 @@ class Order < ActiveRecord::Base
     else
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
-    test5 =          number_of_days_till_delivery;
+    #test5 =          number_of_days_till_delivery;
     number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
     #logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
 
@@ -276,7 +276,7 @@ class Order < ActiveRecord::Base
     usage_per_day = (usage_per_week.to_f / 7) # float
     on_hand = order_solution_xrefs.find_by_solution_id(solution_id).on_hand
     on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day.to_f))
-    on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
+    #on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
     #logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
     projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery).ceil
