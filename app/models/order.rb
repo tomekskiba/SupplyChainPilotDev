@@ -283,9 +283,9 @@ class Order < ActiveRecord::Base
 
     vals = {
         "test" => ("on_hand_at_delivery-"+on_hand_at_delivery.to_s
-        +"<br>usage_per_day-"+usage_per_day.to_s
-    +"<br>number_of_days_till_delivery-"+number_of_days_till_delivery.to_s
-    +"<br>total_days_of_supplies-"+total_days_of_supplies.to_s),
+        +"-usage_per_day-"+usage_per_day.to_s
+    +"-number_of_days_till_delivery-"+number_of_days_till_delivery.to_s
+    +"-total_days_of_supplies-"+total_days_of_supplies.to_s),
         "on_hand_at_delivery" => on_hand_at_delivery,
         "projected_order_quantity" => projected_order_quantity
     }
