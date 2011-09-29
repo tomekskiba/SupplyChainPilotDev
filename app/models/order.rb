@@ -268,15 +268,16 @@ class Order < ActiveRecord::Base
     else
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
-    number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle)).ceil
-    logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
+    test5 =          number_of_days_till_delivery;
+    number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
+    #logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
 
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
     usage_per_day = (usage_per_week.to_f / 7) # float
     on_hand = order_solution_xrefs.find_by_solution_id(solution_id).on_hand
     on_hand_at_delivery = (on_hand - (number_of_days_till_delivery * usage_per_day.to_f))
     on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
-    logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
+    #logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
     projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery).ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
@@ -284,7 +285,7 @@ class Order < ActiveRecord::Base
     vals = {
         "test" => (on_hand_at_delivery),
         "test2" => (usage_per_day),
-    "test3" => (number_of_days_till_delivery),
+    "test3" => (test5),
         "test4" => (total_days_of_supplies.to_s),
         "on_hand_at_delivery" => on_hand_at_delivery,
         "projected_order_quantity" => projected_order_quantity
