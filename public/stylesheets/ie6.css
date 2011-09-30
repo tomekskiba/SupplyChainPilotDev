@@ -18,11 +18,11 @@ input[type='checkbox'] {
     border: none;
 }
 
-input.button_blue, input.button_green, input.button_grey {
+.button_blue, .button_green, .button_grey {
     height: 22px;
     padding: 1px 4px 6px 4px;
 }
 
 #footer div {
-    margin-left: 129px;
+    margin-left: 0px;
 }

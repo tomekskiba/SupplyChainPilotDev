@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6ed6608-5d98-4a24-8d37-50df5f9b37d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="$PROJECT_DIR$/public/stylesheets/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/ie6.css" afterPath="$PROJECT_DIR$/public/stylesheets/ie6.css" />
     </list>
     <ignored path="SupplyChainPilotDev.iws" />
@@ -49,19 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="-1.875">
+            <state line="10" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="0.41322315">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ie6.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ie6.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="342" selection-end="342" vertical-scroll-proportion="0.7875">
+            <state line="26" column="18" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,10 +142,10 @@
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/devise_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/ie6.css" />
+        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -1045,13 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="87" selection-start="1842" selection-end="1842" vertical-scroll-proportion="-9.791667">
@@ -1068,7 +1056,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="342" selection-end="342" vertical-scroll-proportion="0.7875">
+        <state line="26" column="18" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="83" selection-start="391" selection-end="391" vertical-scroll-proportion="0.41322315">
           <folding />
         </state>
       </provider>
