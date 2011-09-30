@@ -14,7 +14,15 @@ input[type='checkbox'] {
     border: none;
 }
 
-input.button_blue {
+.no_border input {
+    border: none;
+}
+
+input.button_blue, input.button_green, input.button_grey {
     height: 22px;
     padding: 1px 4px 6px 4px;
+}
+
+#footer div {
+    margin-left: 129px;
 }

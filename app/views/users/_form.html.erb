@@ -8,7 +8,7 @@
     </div>
     <div class="form_right">
       <% if @edit_status == "on" %>
-          <%= f.text_field :email, :disabled => 'disabled' %>
+          <%= f.text_field :email, :disabled => 'disabled', :style => "color: black" %>
       <% else %>
           <%= f.text_field :email %>
       <% end %>

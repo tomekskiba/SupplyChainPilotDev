@@ -1237,7 +1237,6 @@ input[type='submit'], button {
 
 .height_landing {
     height: 305px;
-    min-height: 305px;
 }
 
 #error_explanation {
