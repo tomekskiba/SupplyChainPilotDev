@@ -75,7 +75,7 @@ body {
 
 .banner_cell {
     float: left;
-    width: 250px;
+    width: 249px;
     padding: 3px 2px 2px 0px;
 }
 
@@ -262,6 +262,12 @@ body {
     text-transform:uppercase;
 }
 
+#content .h2_style {
+    font-size: 18pt;
+    color: #0a4b86;
+    text-transform:none;
+}
+
 .font_landing {
     font-family: arial, verdana;
     font-size: 14px;
@@ -286,7 +292,7 @@ body {
 
 #sign_in_right {
     float: left;
-    width: 262px;
+    width: 258px;
 }
 
 #sign_in_right label {
@@ -374,7 +380,7 @@ body {
     height: 246px;
     color: #000000;
     border: 2px solid #184ea6;
-    width: 1000px;
+    width: 995px;
 }
 
 #order_info .margin1 {
@@ -473,7 +479,7 @@ input.field2 {
 }
 
 #footer div {
-    margin-left: 155px;
+    margin-left: 139px;
     width: 715px;
     height: 37px;
     float: left;
@@ -667,7 +673,7 @@ input.field2 {
 }
 
 .tbl_width0 {
-    width: 1015px;
+    width: 999px;/*1015px;*/
 }
 
 .tbl_width1 {
@@ -679,15 +685,15 @@ input.field2 {
 }
 
 .tbl_width3 {
-    width: 224px;
+    width: 208px;/*224px;*/
 }
 
 .tbl_width4 {
-    width: 336px;
+    width: 320px;
 }
 
 .tbl_width5 {
-    width: 448px;
+    width: 432px;
 }
 
 .tbl_width6 {
@@ -1231,6 +1237,7 @@ input[type='submit'], button {
 
 .height_landing {
     height: 305px;
+    min-height: 305px;
 }
 
 #error_explanation {

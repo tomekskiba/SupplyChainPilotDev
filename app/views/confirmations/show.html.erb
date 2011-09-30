@@ -2,7 +2,7 @@
 <div class="content padding_1">
 
   <%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f| %>
-      <%= devise_error_messages! %>
+      <%= devise_error_messages_psw! %>
       <h2>Account Activation
         <% if resource.email %> for <%= resource.email %>
         <% end %></h2>
