@@ -234,9 +234,12 @@ class Order < ActiveRecord::Base
     else
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
-    number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
+    #number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
         #logger.info("suppliesXXXXXXXXXXXXXXXXXXXXXXXXXXX--/"+number_of_days_till_delivery.to_s)
                       # number_of_days_till_delivery=44
+
+
+
       #usage_per_day = individual_pieces_per_cycle / number_of_days_in_delivery_cycle
     additional_units_needed = (individual_pieces_per_cycle.to_f /
         number_of_days_in_delivery_cycle * number_of_days_till_delivery)
@@ -269,7 +272,7 @@ class Order < ActiveRecord::Base
       number_of_days_till_delivery = supplies_counted_at_date - delivery_date
     end
     #test5 =          number_of_days_till_delivery;
-    number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
+    #number_of_days_till_delivery = (how_many_days_till_delivery(number_of_days_till_delivery, number_of_days_in_delivery_cycle))
     #logger.info("solutionsYYYYYYYYYYYYYYYYYYYYY--/"+number_of_days_till_delivery.to_s)
                        #         number_of_days_till_delivery=44
     usage_per_week = order_solution_xrefs.find_by_solution_id(solution_id).usage_per_week
@@ -283,10 +286,10 @@ class Order < ActiveRecord::Base
     projected_order_quantity = 0 if projected_order_quantity < 0
 
     vals = {
-  #      "test" => (on_hand_at_delivery),
-   #     "test2" => (usage_per_day),
-    #"test3" => (number_of_days_till_delivery),
-     #   "test4" => (total_days_of_supplies.to_s),
+   #     "test" => (on_hand_at_delivery),
+    #    "test2" => (usage_per_day),
+     #   "test3" => (number_of_days_till_delivery),
+      #  "test4" => (total_days_of_supplies),
         "on_hand_at_delivery" => on_hand_at_delivery,
         "projected_order_quantity" => projected_order_quantity
     }

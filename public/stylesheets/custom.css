@@ -517,11 +517,12 @@ input.field2 {
 }
 
 #footer2 p {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: normal;
     color: white;
-    padding: 4px 0 4px 12px;
+    padding: 6px 0 4px 12px;
     margin: 0;
+    line-height: 22px;
 }
 
 #footer2 a {
@@ -1113,8 +1114,10 @@ input[type='text'], input.field0/*, input[type='password']*/ {
 }
 
 input[disabled='disabled'] {
-    color: #020100; /*#bccbd2*/
-    background-color: #cccccc;
+    color: #0c0c0c; /*#bccbd2*/
+    /*background-color: #cccccc; */
+    border: none;
+    font-weight: bold;
 }
 
 /*
@@ -1237,6 +1240,10 @@ input[type='submit'], button {
 }
 
 .height_landing {
+    /*height: 250px;*/
+}
+
+.height305 {
     height: 305px;
 }
 

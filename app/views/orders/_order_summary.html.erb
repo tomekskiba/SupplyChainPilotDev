@@ -24,7 +24,8 @@
 
                     <div class="order_summary2 color2">Estimated Order Quantity (Boxes)</div>
                     <div class="order_summary3 color2">
-                      <strong>: <%= projected_order_quantity %></strong>
+                      <strong>: <%= projected_order_quantity %>
+                      </strong>
                     </div>
                     <div class="order_summary4 color2">
                       (Line Max - <%= @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max %>)
