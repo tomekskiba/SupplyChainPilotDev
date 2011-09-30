@@ -1113,7 +1113,8 @@ input[type='text'], input.field0/*, input[type='password']*/ {
 }
 
 input[disabled='disabled'] {
-    color: #000000; /*#bccbd2*/
+    color: #020100; /*#bccbd2*/
+    background-color: #cccccc;
 }
 
 /*
