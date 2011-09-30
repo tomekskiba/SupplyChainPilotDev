@@ -279,7 +279,7 @@ class Order < ActiveRecord::Base
     #on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
     #logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
-    projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery).ceil
+    projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery)#.ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
 
     vals = {
