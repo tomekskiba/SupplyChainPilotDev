@@ -1,5 +1,5 @@
 .button_blue_specific {
-    margin-top: 4px;
+    margin-top: 0px;
 }
 
 .login_input_box {
@@ -14,7 +14,7 @@ input[type='checkbox'] {
     border: none;
 }
 
-input.no_border {
+.no_border {
     border: none;
 }
 
@@ -30,5 +30,5 @@ input.button_blue {
 }
 
 #footer div {
-    margin-left: 0px;
+    margin-left: 20px;
 }

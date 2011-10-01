@@ -73,7 +73,7 @@
       <file leaf-file-name="ie6.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="14" selection-start="342" selection-end="342" vertical-scroll-proportion="0.6785714">
+            <state line="1" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.035714287">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="282" column="59" selection-start="11881" selection-end="11881" vertical-scroll-proportion="-7.8333335">
+            <state line="282" column="59" selection-start="11881" selection-end="11881" vertical-scroll-proportion="-6.5833335">
               <folding />
             </state>
           </provider>
@@ -999,13 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="59" selection-start="11881" selection-end="11881" vertical-scroll-proportion="-7.8333335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1116" column="42" selection-start="16189" selection-end="16189" vertical-scroll-proportion="-11.692307">
@@ -1013,9 +1006,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="59" selection-start="11881" selection-end="11881" vertical-scroll-proportion="-6.5833335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="14" selection-start="342" selection-end="342" vertical-scroll-proportion="0.6785714">
+        <state line="1" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.035714287">
           <folding />
         </state>
       </provider>
