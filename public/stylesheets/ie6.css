@@ -1,5 +1,5 @@
 .button_blue_specific {
-    margin-top: 0px;
+    margin-top: 4px;
 }
 
 .login_input_box {
@@ -24,8 +24,8 @@ button.button_grey {
 }
 
 input.button_blue {
-    height: 30px;
-    padding: 1px 4px 3px 4px;
+    height: 25px;
+    padding: 3px 4px 0px 4px;
     padding-bottom: 5px;
 }
 
