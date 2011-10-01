@@ -14,7 +14,7 @@ input[type='checkbox'] {
     border: none;
 }
 
-input.no_border {
+#tbl input.no_border {
     border: none;
 }
 
