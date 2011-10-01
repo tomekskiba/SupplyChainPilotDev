@@ -1115,7 +1115,7 @@ input[type='text'], input.field0/*, input[type='password']*/ {
 
 input[disabled='disabled'] {
     color: #0c0c0c; /*#bccbd2*/
-    /*background-color: #cccccc; */
+    background-color: #ffffff;
     border: none;
     font-weight: bold;
 }

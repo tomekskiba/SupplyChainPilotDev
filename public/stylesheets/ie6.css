@@ -20,11 +20,11 @@ input[type='checkbox'] {
 
 .button_green button, .button_grey button {
     height: 26px;
-    padding: 1px 4px 6px 4px;
+    padding: 1px 4px 1px 4px;
 }
 
 .button_blue input {
-    height: 30px;
+    height: 33px;
     padding: 6px 4px 6px 4px;
 }
 
