@@ -278,7 +278,9 @@
                   <div class="checkbox_padding2">
 
                     <%= check_box_tag "order[ancillary_supply_ids][]",
-                                      ancillary_supply.id, @order.include_ancillary_supply?(ancillary_supply) %>
+                                      ancillary_supply.id,
+                                      @order.include_ancillary_supply?(ancillary_supply),
+                                      {:class => "no_border"} %>
 
                   </div>
                 </div>
