@@ -18,7 +18,7 @@ input[type='checkbox'] {
     border: none;
 }
 
-.button_green button, .button_grey button {
+.button_green button, button.button_grey button {
     height: 24px;
     padding: 1px 4px 1px 4px;
 }
