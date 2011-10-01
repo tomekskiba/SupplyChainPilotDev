@@ -14,7 +14,7 @@ input[type='checkbox'] {
     border: none;
 }
 
-.no_border {
+input.no_border {
     border: none;
 }
 
