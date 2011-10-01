@@ -73,7 +73,7 @@
       <file leaf-file-name="ie6.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="319" selection-end="319" vertical-scroll-proportion="0.53571427">
+            <state line="21" column="14" selection-start="248" selection-end="248" vertical-scroll-proportion="0.35714287">
               <folding />
             </state>
           </provider>
@@ -1015,7 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/ie6.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="319" selection-end="319" vertical-scroll-proportion="0.53571427">
+        <state line="21" column="14" selection-start="248" selection-end="248" vertical-scroll-proportion="0.35714287">
           <folding />
         </state>
       </provider>
