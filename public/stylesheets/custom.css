@@ -727,32 +727,32 @@ input.field2 {
 
 /*table styling - admin*/
 .solution_container {
-    width: 1024px;
+    width: 1003px;
     border: 0;
 }
 
 .solution_header_container {
     height: 76px;
-    width: 1020px;
+    width: 1003px;
 }
 
 .solution_left_header {
     height: 74px;
-    width: 186px;
+    width: 175px;
     border: 1px solid white;
     float: left;
 }
 
 .solution_left_header2 {
     height: 31px;
-    width: 186px;
+    width: 175px;
     border: 1px solid white;
     float: left;
 }
 
 .solution_right_header {
     height: 76px;
-    width: 830px;
+    width: 826px;
     border: 0;
     float: left;
     font-size: 1.2em;
@@ -788,14 +788,14 @@ input.field2 {
 
 .solution_row {
     height: 38px;
-    width: 1020px;
+    width: 1003px;
     border: 0;
     font-size: 1.1em;
 }
 
 .solution_row_title {
     height: 28px;
-    width: 172px;
+    width: 161px;
     border: 1px solid white;
     float: left;
     padding: 8px 7px 0px 7px;

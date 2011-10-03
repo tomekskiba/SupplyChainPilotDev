@@ -15,46 +15,29 @@ SupplyChainPilot::Application.routes.draw do
   resources :capd_supplies
   resources :ancillary_supplies
 
-  #match "/users/sign_up" => "users#new"
-
-  #match "/users" => "devise/sessions#new"
-
   scope "/admin" do
     resources :users
   end
-
 
   as :admin do
     get "admins/sign_out", :to => "devise/sessions#destroy"
     match "admin" => "devise/sessions#new"
   end
-  devise_for :admins#, :controllers => {
-                     #                 :registrations => "admins/registrations"
-                      #                }
-
+  devise_for :admins
 
   as :user do
     match '/user/confirmation' => 'confirmations#update', :via => :put, :as=> :update_user_confirmation
-    match "/" => "sessions#new"#, :as => :new_user_session, :via => :get
-    #get "sign_in", :to => "devise/sessions#new"
+    match "/" => "sessions#new"
     get "users/sign_out", :to => "devise/sessions#destroy"
     match "change_password" => "registrations#edit"
-    #get "/" => "devise/sessions#new"
-    #match "/users/sing_out" => "devise/sessions#new"
   end
-  devise_for :users, #:path => "users", :path_names => { :sign_in => 'change' },
-                     :controllers => {
-                         :confirmations => "confirmations",
+  devise_for :users, :controllers => {
+                                      :confirmations => "confirmations",
                                       :registrations => "registrations",
                                       :passwords     => "passwords",
                                       :sessions      => "sessions"
-                          } do
-    #get "/", :to => "devise/sessions#new", :as=> :new_user_session
-    #root :to => "pages#home"
-    #root :to => 'devise/sessions#new', :as=> :new_user_session
+                                     } do
   end
 
-
-  #root :to => 'devise/sessions#new'#, :as=> :new_user_session
-  root :to => 'sessions#new'#, :as=> :new_user_session
+  root :to => 'sessions#new'
 end

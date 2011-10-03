@@ -8,13 +8,11 @@
         <% end %></h2>
 
       <% if @requires_password %>
-          <p><%= f.label :password, 'Choose a Password:' %>
-            <br/>
-            <%= f.password_field :password, :class => "login_input_box" %></p>
+          <p><%= f.label :password, 'Choose a Password:' %></p>
+          <p><%= f.password_field :password, :class => "login_input_box" %></p>
 
-          <p><%= f.label :password_confirmation, 'Password Confirmation:' %>
-            <br/>
-            <%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
+          <p><%= f.label :password_confirmation, 'Password Confirmation:' %></p>
+          <p><%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
       <% end %>
       <%= hidden_field_tag :confirmation_token, @confirmation_token %>
       <p><%= f.submit "Activate", :class => "button_sign_in2 top1" %></p>
