@@ -1,6 +1,5 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "prototype" %>
-    <%#= javascript_include_tag "rails" %>
 <% end %>
 
 <p><%= link_to "Create New Patient", new_user_registration_path %></p>
@@ -20,7 +19,7 @@
   <%
      for user in @users
   %>
-      <tr style="background-color:<%#= cycle("red","white") %>">
+      <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>

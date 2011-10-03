@@ -1,7 +1,6 @@
 module ApplicationHelper
 
   def format_date(the_date)
-   #return the_date.strftime('%m/%d/%Y')
     return the_date.strftime('%Y-%m-%d')
   end
 

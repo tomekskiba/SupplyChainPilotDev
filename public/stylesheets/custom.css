@@ -13,7 +13,6 @@ body {
 
 .container {
     width: 1003px;
-    /*overflow-x: hidden;*/
 }
 
 /* header2 */
@@ -27,13 +26,6 @@ body {
     margin: 0;
 }
 
-/*.logo2 {
-    width: 155px;
-    height: 39px;
-    margin: 0 0 2px 0;
-    background: blue url(/images/logo.png) no-repeat 6px 6px;
-    float: left;
-} */
 .logo2 {
     width: 100%;
     height: 30px;
@@ -160,13 +152,12 @@ body {
     float: left;
 }
 
-/*, input[type='password'].login_input_box*/
 .login_input_box {
     padding: 3px;
     width: 200px;
     color: black;
     background-color: transparent;
-    border: 1px solid #7a7c7f;/*#e4e4e4;  */
+    border: 1px solid #7a7c7f;
     font-weight: normal;
     font-size: 14px;
 }
@@ -182,17 +173,6 @@ input.login_input_box:focus, input.login_input_box:hover {
     width: 82px;
     height: 33px;
 }
-
-/*.login_submit2 {
-    border: 1px solid #003C9C;
-    background: url("/images/log_in_button_bg.png") no-repeat;
-    width: 285px;
-    height: 33px;
-    font-family: arial;
-    font-size: 16px;
-    color: black;
-    font-weight: normal;
-} */
 
 .login_window2_1 {
     height: 57px;
@@ -436,18 +416,6 @@ input.field2 {
     border: none;
     height: 31px;
     width: 34px;
-   /* color: #184ea6;
-    font-family: arial;
-    background: #5ed184 url("/images/button_green_2.png");
-    font-family: helvetica, arial, verdana;
-    font-size: 12px;
-    font-weight: bold;
-    height: 22px;
-    border: 1px solid #38a15a;
-    padding: 0px 4px 0 4px;
-    margin: 0px 0 2px 2px;
-    text-align: center;
-    width: 60px;*/
 }
 
 /* Order summary  */
@@ -517,7 +485,6 @@ input.field2 {
     float: left;
     margin: 7px 0 0 15px;
 }
-
 
 #footer2 {
     width: 100%;
@@ -1077,7 +1044,7 @@ a.lightBox {
 }
 
 /* generic */
-input[type='text'], input.field0/*, input[type='password']*/ {
+input[type='text'], input.field0 {
     font-size: 13px;
     border: 1px solid #7a8fab;
     color: #7a8fab;
@@ -1091,16 +1058,6 @@ input[disabled='disabled'] {
     border: none;
     font-weight: bold;
 }
-
-/*
-input[type='submit'], button {
-   color: #ffffff;
-   background-color: #7d7e81;
-   font-size: 0.9em;
-   height: 22px;
-   border: 0;
-   padding: 0 15px 0 15px;
-} */
 
 .button4 {
     color: #ffffff;

@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
       when Admin then
         users_path
       when User then
-        #"/orders/new"
         new_order_path
     end
   end

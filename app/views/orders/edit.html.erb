@@ -8,12 +8,9 @@
 <h2 class="center">Edit Order</h2>
 
 <%= form_for @order do |f| %>
-    <%#= f.error_messages %>
     <%= render 'shared/error_messages', :object => f.object %>
-    <%#= devise_error_messages! %>
 
     <%= render :partial => 'form', :locals => {:f => f} %>
-
 
     <p class="clear"></p>
     <br/><br/>

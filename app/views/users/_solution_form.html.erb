@@ -20,10 +20,8 @@
         <% elsif @user.solutions.include?(solution) %>
             <%= text_field_tag "user[user_solution_xrefs_line_max][]",
                                @user.user_solution_xrefs.find_by_solution_id(solution.id).line_max, :size => 1, :autocomplete => "off" %>
-            <%#= hidden_field_tag "user[solution_ids][]", solution.id %>
         <% else %>
             <%= text_field_tag "user[user_solution_xrefs_line_max][]", "", :size => 1, :autocomplete => "off" %>
-            <%#= hidden_field_tag "user[solution_ids][]", "" %>
         <% end %>
 
       </div>

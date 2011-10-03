@@ -7,7 +7,6 @@
   <% for solution in object_solutions %>
 
       <div class="tbl_width1 tbl_height3 tbl_common4 tbl_left_border <%= row_style %>">
-        <%#= @order.form_val_solutions_on_hand(2)  %>
         <% if @solution_template.include?(solution) %>
             <p class="p3">
               <% restore_val = @order.restore_solutions_on_hand(@order.get_solution_ids_array_index(solution.id)) %>

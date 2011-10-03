@@ -41,13 +41,6 @@ class OrdersController < ApplicationController
   end
 
   def edit
-
-#    unless params[:order][:opt_in].nil?
- #     order = Order.find(params[:id])
-  #    order.opt_in = true
-   #   order.save
-    #end
-
     @order = Order.find(params[:id])
     @user = current_user
   end

@@ -47,20 +47,6 @@ SupplyChainPilot::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-
-
   config.action_mailer.default_url_options = { :host => 'supplychainpilot.heroku.com' }
 
-=begin
-  config.action_mailer.default_url_options = { :host => 'supplychainpilot.heroku.com' }
-  ActionMailer::Base.smtp_settings = {
-  #:enable_starttls_auto => true,
-  :address        => "smtp.sendgrid.net",
-  :port           => "25",
-  :authentication => :plain,
-  :user_name      => 'app723004@heroku.com',
-  :password       => '8c4e24ea19c4ab99f6',
-  :domain         => 'heroku.com'
-}
-=end
 end
