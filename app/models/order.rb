@@ -249,7 +249,7 @@ class Order < ActiveRecord::Base
     #on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
     #logger.info("supplies-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
-    projected_order_quantity = (number_of_unites_used_per_cycle_plus_reserved_days - on_hand_at_delivery)#.ceil
+    projected_order_quantity = (number_of_unites_used_per_cycle_plus_reserved_days - on_hand_at_delivery).round(1)#.ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
 
     vals = {
@@ -282,14 +282,14 @@ class Order < ActiveRecord::Base
     #on_hand_at_delivery2 = on_hand_at_delivery < 0 ? 0 : on_hand_at_delivery
     #logger.info("solutions-onhandYYYYYYYYYYYYYYYYYYYYY--/"+on_hand_at_delivery.to_s)
 
-    projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery)#.ceil
+    projected_order_quantity = (usage_per_day * total_days_of_supplies - on_hand_at_delivery).round(1)#.ceil
     projected_order_quantity = 0 if projected_order_quantity < 0
 
     vals = {
-        "test" => (on_hand_at_delivery),
-        "test2" => (usage_per_day),
-        "test3" => (number_of_days_till_delivery),
-        "test4" => (total_days_of_supplies),
+   #     "test" => (on_hand_at_delivery),
+    #    "test2" => (usage_per_day),
+     #   "test3" => (number_of_days_till_delivery),
+      #  "test4" => (total_days_of_supplies),
         "on_hand_at_delivery" => on_hand_at_delivery,
         "projected_order_quantity" => projected_order_quantity
     }
