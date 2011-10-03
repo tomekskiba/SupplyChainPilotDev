@@ -329,8 +329,16 @@ input.login_input_box:focus, input.login_input_box:hover {
     padding: 15px 20px 15px 20px;
 }
 
+.padding_3 {
+    padding: 15px 20px 5px 20px;
+}
+
 .padding_2 {
     padding: 15px 5px 15px 20px;
+}
+
+.padding_4 {
+    padding: 15px 5px 5px 20px;
 }
 
 #progress_bar {
@@ -525,7 +533,7 @@ input.field2 {
     font-weight: bold;
     color: white;
     padding: 6px 0 4px 12px;
-    margin: 0;
+    margin-left: 185px;
     line-height: 22px;
 }
 
@@ -1208,7 +1216,7 @@ input[type='submit'], button {
 }
 
 .height30 {
-    height: 255px;
+    height: 250px;
 }
 
 #error_explanation {

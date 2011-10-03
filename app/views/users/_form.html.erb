@@ -7,11 +7,13 @@
       <%= f.label "email" %><span class="star">*</span>
     </div>
     <div class="form_right">
+      <p style="margin-top: 4px;">
       <% if @edit_status == "on" %>
           <%= f.text_field :email, :disabled => 'disabled' %>
       <% else %>
           <%= f.text_field :email %>
       <% end %>
+      </p>
     </div>
   </div>
 </div>
@@ -25,22 +27,26 @@
       <%= f.label "First Name" %><span class="star">*</span>
     </div>
     <div class="form_right">
+      <p style="margin-top: 4px;">
       <% if @edit_status == "on" %>
           <%= f.text_field :first_name, :disabled => 'disabled' %>
       <% else %>
           <%= f.text_field :first_name %>
       <% end %>
+      </p>
     </div>
 
     <div class="form_left">
       <%= f.label "Last Name" %><span class="star">*</span>
     </div>
     <div class="form_right" style="padding-top: 3px;">
+      <p style="margin-top: 3px;">
       <% if @edit_status == "on" %>
           <%= f.text_field :last_name, :disabled => 'disabled' %>
       <% else %>
           <%= f.text_field :last_name %>
       <% end %>
+      </p>
     </div>
 
   </div>
@@ -50,11 +56,13 @@
       <%= f.label "Account Number" %><span class="star">*</span>
     </div>
     <div class="form_right">
+      <p style="margin-top: 4px;">
       <% if @edit_status == "on" %>
           <%= f.text_field :account_no, :disabled => 'disabled' %>
       <% else %>
           <%= f.text_field :account_no %>
       <% end %>
+      </p>
     </div>
 
     <div class="form_left" style="height: 42px;">
