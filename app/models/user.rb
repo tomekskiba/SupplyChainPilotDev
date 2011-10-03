@@ -72,9 +72,6 @@ class User < ActiveRecord::Base
             :format => {:with => date_regex}
   validates :JDE_reconciliation_date, :presence => true,
             :format => {:with => date_regex}
-    #validates :caregiver_email, :allow_nil => true,
-    #         :allow_blank => true,
-    #        :format => {:with => email_regex}
   validates :clinic_email, :allow_nil => true,
             :allow_blank => true,
             :format => {:with => email_regex}
@@ -103,7 +100,7 @@ class User < ActiveRecord::Base
           end
 
           if !line_max.blank? and !is_numeric?(line_max)
-            errors.add("Dialysis Solution - ", "Line Max cannot be blank and must be numeric")
+            errors.add("Dialysis Solution - ", "Line Max cannot be blank and only whole numbers are permitted")
             break
           end
         end
@@ -153,12 +150,12 @@ class User < ActiveRecord::Base
         end
 
         if !line_max.blank? and !is_numeric?(line_max)
-          errors.add(name, "Line Max cannot be blank and must be numeric")
+          errors.add(name, "Line Max cannot be blank and only whole numbers are permitted")
           break
         end
 
         if !usage.blank? and !is_numeric?(usage)
-          errors.add(name, "Individual Pieces per Cycle cannot be blank and must be numeric")
+          errors.add(name, "Individual Pieces per Cycle cannot be blank and only whole numbers are permitted")
           break
         end
       end
@@ -385,7 +382,6 @@ class User < ActiveRecord::Base
   end
 
   def is_numeric?(val)
-    #val.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
     val.strip.to_s.match(/^(0|[1-9][0-9]*)$/) == nil ? false : true
   end
 

@@ -5,11 +5,11 @@
       <%= devise_error_messages_psw! %>
       <%= f.hidden_field :reset_password_token %>
 
-      <p><%= f.label :password, "Type new password", :class => "label2" %><br/>
-        <%= f.password_field :password, :class => "login_input_box" %></p>
+      <p><%= f.label :password, "Type new password", :class => "label2" %></p>
+      <p><%= f.password_field :password, :class => "login_input_box" %></p>
 
-      <p><%= f.label :password_confirmation, "Re-type new password", :class => "label2" %><br/>
-        <%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
+      <p><%= f.label :password_confirmation, "Re-type new password", :class => "label2" %></p>
+      <p><%= f.password_field :password_confirmation, :class => "login_input_box" %></p>
 
       <p><%= f.submit "Change my password", :class => "button_sign_in2 top1" %></p>
   <% end %>

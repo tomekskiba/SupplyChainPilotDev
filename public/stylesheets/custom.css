@@ -166,9 +166,13 @@ body {
     width: 200px;
     color: black;
     background-color: transparent;
-    border: 1px solid #e4e4e4;
+    border: 1px solid #7a7c7f;/*#e4e4e4;  */
     font-weight: normal;
     font-size: 14px;
+}
+
+input.login_input_box:focus, input.login_input_box:hover {
+    border: 1px solid black;
 }
 
 .login_submit {
@@ -517,8 +521,8 @@ input.field2 {
 }
 
 #footer2 p {
-    font-size: 12px;
-    font-weight: normal;
+    font-size: 13px;
+    font-weight: bold;
     color: white;
     padding: 6px 0 4px 12px;
     margin: 0;
@@ -550,46 +554,6 @@ input.field2 {
     float: right;
     padding: 4px 2px 0 0;
 }
-
-/*
-.footer_helper {
-   padding: 35px 0 21px 15px;
-   height: 30px;
-   float: left;
-}
-
-.footer_padding {
-   padding-right: 20px;
-}
-
-.footer_phone_skype_issue {
-   width: 195px;
-   overflow-x: hidden;
-}
-
-#footer p {
-   font-size: 0.9em;
-   color: #024285;
-   margin: 0;
-   float: left;
-   font-weight: normal;
-   padding-top: 8px;
-}
-
-#footer a {
-   color: #024285;
-   text-decoration: underline;
-   float: left;
-   font-size: 0.9em;
-   margin: 0;
-   font-weight: normal;
-   padding-top: 8px;
-}
-
-#footer img {
-   float: left;
-   margin: 0px;
-} */
 
 /* solution and supplies tables */
 #tbl {
@@ -1243,8 +1207,8 @@ input[type='submit'], button {
     /*height: 250px;*/
 }
 
-.height305 {
-    height: 305px;
+.height30 {
+    height: 265px;
 }
 
 #error_explanation {

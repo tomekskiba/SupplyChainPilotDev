@@ -338,25 +338,25 @@
       <div class="solution_row_element2 <%= alternate -%>">
         <% restore_val = @user.restore_apd_supplies_line_max(apd_supply.id) %>
         <% if restore_val %>
-            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", restore_val, :size => 1 %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", restore_val, :size => 1, :autocomplete => "off" %>
         <% elsif @user.apd_supplies.include?(apd_supply) %>
             <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]",
-                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max, :size => 1 %>
+                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).line_max, :size => 1, :autocomplete => "off" %>
 
         <% else %>
-            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", "", :size => 1 %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_line_max][]", "", :size => 1, :autocomplete => "off" %>
         <% end %>
       </div>
       <div class="solution_row_element2 <%= alternate -%>">
         <% restore_val = @user.restore_apd_supplies_usage(apd_supply.id) %>
         <% if restore_val %>
-            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1 %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1, :autocomplete => "off" %>
         <% elsif @user.apd_supplies.include?(apd_supply) %>
             <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]",
-                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).units_per_cycle, :size => 1 %>
+                               @user.user_apd_supply_xrefs.find_by_apd_supply_id(apd_supply.id).units_per_cycle, :size => 1, :autocomplete => "off" %>
 
         <% else %>
-            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", "", :size => 1 %>
+            <%= text_field_tag "user[user_apd_supply_xrefs_units_per_cycle][]", "", :size => 1, :autocomplete => "off" %>
         <% end %>
       </div>
     </div>
@@ -398,25 +398,25 @@
       <div class="solution_row_element2 <%= alternate -%>">
         <% restore_val = @user.restore_capd_supplies_line_max(capd_supply.id) %>
         <% if restore_val %>
-            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", restore_val, :size => 1 %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", restore_val, :size => 1, :autocomplete => "off" %>
         <% elsif @user.capd_supplies.include?(capd_supply) %>
             <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]",
-                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max, :size => 1 %>
+                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).line_max, :size => 1, :autocomplete => "off" %>
 
         <% else %>
-            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", "", :size => 1 %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_line_max][]", "", :size => 1, :autocomplete => "off" %>
         <% end %>
       </div>
       <div class="solution_row_element2 <%= alternate -%>">
         <% restore_val = @user.restore_capd_supplies_usage(capd_supply.id) %>
         <% if restore_val %>
-            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1 %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", restore_val, :size => 1, :autocomplete => "off" %>
         <% elsif @user.capd_supplies.include?(capd_supply) %>
             <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]",
-                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).units_per_cycle, :size => 1 %>
+                               @user.user_capd_supply_xrefs.find_by_capd_supply_id(capd_supply.id).units_per_cycle, :size => 1, :autocomplete => "off" %>
 
         <% else %>
-            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", "", :size => 1 %>
+            <%= text_field_tag "user[user_capd_supply_xrefs_units_per_cycle][]", "", :size => 1, :autocomplete => "off" %>
         <% end %>
       </div>
     </div>

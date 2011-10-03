@@ -12,12 +12,12 @@
             <p class="p3">
               <% restore_val = @order.restore_solutions_on_hand(@order.get_solution_ids_array_index(solution.id)) %>
               <% if restore_val %>
-                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", restore_val, :size => 1 %>
+                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", restore_val, :size => 1, :autocomplete => "off" %>
               <% elsif @order.solutions.include?(solution) %>
                   <%= text_field_tag "order[order_solution_xrefs_on_hand][]",
-                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand, :size => 1 %>
+                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).on_hand, :size => 1, :autocomplete => "off" %>
               <% else %>
-                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", "", :size => 1 %>
+                  <%= text_field_tag "order[order_solution_xrefs_on_hand][]", "", :size => 1, :autocomplete => "off" %>
               <% end %>
 
               <%= hidden_field_tag "order[solution_ids][]", solution.id %>
@@ -31,12 +31,12 @@
             <p class="p3">
               <% restore_val = @order.restore_solutions_usage_per_week(@order.get_solution_ids_array_index(solution.id)) %>
               <% if restore_val %>
-                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", restore_val, :size => 1 %>
+                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", restore_val, :size => 1, :autocomplete => "off" %>
               <% elsif @order.solutions.include?(solution) %>
                   <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]",
-                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week, :size => 1 %>
+                                     @order.order_solution_xrefs.find_by_solution_id(solution.id).usage_per_week, :size => 1, :autocomplete => "off" %>
               <% else %>
-                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", "", :size => 1 %>
+                  <%= text_field_tag "order[order_solution_xrefs_usage_per_week][]", "", :size => 1, :autocomplete => "off" %>
               <% end %>
             </p>
         <% end %>

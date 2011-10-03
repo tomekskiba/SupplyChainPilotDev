@@ -32,38 +32,33 @@ class Order < ActiveRecord::Base
 
   $OUT_OF_SUPPLIES_ALERT = "The calculations indicate that you may run out of this item before your next delivery.   A Baxter HomeCare Services Representative will review your order after you submit it and provide you further assistance via email."
 
-
-    #numeric_regex = /[0-9]{5}(?:-[0-9]{4})?/
-  date_regex = /\d{4}\-\d{2}\-\d{2}/
-
   validates_acceptance_of :baxter_terms, :message => " "
-  validates :supplies_counted_at, :presence => { :message => "may not be blank" }#,
-                                  #:format => {:with => date_regex}
+  validates :supplies_counted_at, :presence => { :message => "may not be blank" }
   validate :solutions_and_supplies
 
   def solutions_and_supplies
     validate_tables_input(
         order_solution_xrefs_on_hand,
         "Dialysis Solution -",
-        "on Hand cannot be blank and must be numeric"
+        "on Hand cannot be blank and only whole numbers are permitted"
     )
 
     validate_tables_input(
         order_solution_xrefs_usage_per_week,
         "Dialysis Solution -",
-        "Usage / Week cannot be blank and must be numeric"
+        "Usage / Week cannot be blank and only whole numbers are permitted"
     )
 
     validate_tables_input(
         order_apd_supply_xrefs_on_hand,
         "Pd supplies -",
-        "on Hand cannot be blank and must be numeric"
+        "on Hand cannot be blank and only whole numbers are permitted"
     )
 
     validate_tables_input(
         order_capd_supply_xrefs_on_hand,
         "Pd supplies -",
-        "on Hand cannot be blank and must be numeric"
+        "on Hand cannot be blank and only whole numbers are permitted"
     )
   end
 
@@ -99,7 +94,6 @@ class Order < ActiveRecord::Base
       end
       apd_supply_ids.each do |g|
         x = Integer(apd_supply_ids.index(g)) - 1
-          #logger.info("apdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"+apd_supply_ids.index(g).to_s+" " + order_apd_supply_xrefs_usage_per_week[x])
         self.order_apd_supply_xrefs.create(
             :apd_supply_id => g,
             :on_hand => order_apd_supply_xrefs_on_hand[x]
@@ -199,12 +193,6 @@ class Order < ActiveRecord::Base
       self.ancillary_supplies.include?(ancillary_supply_object)
     end
   end
-
-#  def include_opt_in?
- #   if opt_in == "1"
-  #    true
-   # end
-  #end
 
     #calculations
   def order_quantity_for_apd_supplies(apd_supply_id)
